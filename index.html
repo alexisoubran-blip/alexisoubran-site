@@ -1238,6 +1238,55 @@ section, article, header { scroll-margin-top: 88px; }
     transform: none;
   }
 }
+  /* Mobile growth map centering + cleaner floating CTA */
+@media (max-width: 900px) {
+  .node-main {
+    left: 50% !important;
+    right: auto !important;
+    top: 36% !important;
+    width: calc(100% - 72px) !important;
+    max-width: 640px;
+    transform: translate(-50%, -50%) !important;
+    margin: 0 auto;
+  }
+
+  .node-main span {
+    text-align: center;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 560px) {
+  .node-main {
+    left: 50% !important;
+    right: auto !important;
+    top: 35% !important;
+    width: calc(100% - 56px) !important;
+    transform: translate(-50%, -50%) !important;
+  }
+
+  .node-main span {
+    font-size: 28px;
+    line-height: 1.05;
+  }
+}
+  /* Floating CTA softer shadow */
+.floating-calendly-cta {
+  box-shadow: 0 10px 28px rgba(255,77,46,0.18), 0 8px 20px rgba(0,0,0,0.32);
+}
+
+.floating-calendly-cta:hover {
+  box-shadow: 0 12px 32px rgba(255,77,46,0.24), 0 10px 24px rgba(0,0,0,0.36);
+}
+
+@media (max-width: 720px) {
+  .floating-calendly-cta {
+    left: 20px;
+    right: 20px;
+    bottom: calc(18px + env(safe-area-inset-bottom));
+    box-shadow: 0 8px 22px rgba(255,77,46,0.16), 0 8px 18px rgba(0,0,0,0.30);
+  }
+}
 </style>
 </head>
 <body>
