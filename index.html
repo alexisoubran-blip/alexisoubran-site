@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5752LGG');
+</script>
+<!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Alexis Soubran — Growth systems for global brands in Mexico + LATAM | Author of Oops, I Bought It</title>
@@ -112,6 +121,96 @@ nav a:hover { color: var(--text); }
 
 .hero { padding: 120px 0 80px; }
 .hero h1 { font-size: clamp(44px, 6.5vw, 80px); line-height: 1.05; letter-spacing: -0.03em; font-weight: 700; margin-bottom: 32px; }
+  .hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  gap: 56px;
+  align-items: center;
+}
+
+.hero-copy {
+  min-width: 0;
+}
+
+.hero-photo-wrap {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(255,77,46,0.18), rgba(255,255,255,0.04));
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 28px 80px rgba(0,0,0,0.45);
+  transform: translateY(0);
+  animation: heroPhotoIn 900ms ease both;
+}
+
+.hero-photo-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(255,77,46,0.14), transparent 42%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-photo {
+  display: block;
+  width: 100%;
+  height: min(620px, 70vh);
+  object-fit: cover;
+  object-position: center 35%;
+  filter: saturate(1.02) contrast(1.04);
+  position: relative;
+  z-index: 0;
+}
+
+@keyframes heroPhotoIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    padding: 92px 0 64px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-photo-wrap {
+    max-width: 440px;
+    margin: 0 auto;
+    border-radius: 20px;
+  }
+
+  .hero-photo {
+    height: auto;
+    aspect-ratio: 4 / 5;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero-photo-wrap {
+    max-width: 100%;
+  }
+
+  .hero-photo {
+    aspect-ratio: 1 / 1.12;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-photo-wrap {
+    animation: none;
+  }
+}
 .hero h1 .accent { color: var(--accent); }
 .hero .subtitle { font-size: 22px; color: var(--text-dim); max-width: 760px; margin-bottom: 40px; line-height: 1.5; }
 .hero .meta { display: flex; gap: 24px; flex-wrap: wrap; font-size: 14px; color: var(--text-dim); border-top: 1px solid var(--border); padding-top: 32px; max-width: 760px; }
@@ -507,6 +606,12 @@ section, article, header { scroll-margin-top: 88px; }
 </style>
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5752LGG"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <nav class="site-nav" aria-label="Primary navigation">
   <div class="nav-shell">
@@ -529,13 +634,25 @@ section, article, header { scroll-margin-top: 88px; }
 </nav>
 
 <header class="hero">
-  <div class="container">
-    <h1>Growth systems<br>for global brands<br><span class="accent">scaling in Mexico + LATAM.</span></h1>
-    <p class="subtitle">I design and operate integrated growth systems — GTM, performance, influencer, and measurement — for global brands entering or scaling in Latin America. Built for revenue efficiency. Not vanity metrics.</p>
-    <div class="meta">
-      <span><strong>Based in</strong> Mexico City</span>
-      <span><strong>Languages</strong> English, Spanish, Italian</span>
-      <span><strong>Currently</strong> CEO &amp; Partner, Minimalist Agency</span>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <h1>Growth systems<br>for global brands<br><span class="accent">scaling in Mexico + LATAM.</span></h1>
+      <p class="subtitle">I design and operate integrated growth systems — GTM, performance, influencer, and measurement — for global brands entering or scaling in Latin America. Built for revenue efficiency. Not vanity metrics.</p>
+      <div class="meta">
+        <span><strong>Based in</strong> Mexico City</span>
+        <span><strong>Languages</strong> English, Spanish, Italian</span>
+        <span><strong>Currently</strong> CEO &amp; Partner, Minimalist Agency</span>
+      </div>
+    </div>
+
+    <div class="hero-photo-wrap" aria-label="Portrait of Alexis Soubran">
+      <img 
+        src="/alexis-soubran.jpg" 
+        alt="Alexis Soubran, Growth Systems Operator for global brands scaling in Mexico and LATAM" 
+        class="hero-photo"
+        loading="eager"
+        fetchpriority="high"
+      >
     </div>
   </div>
 </header>
