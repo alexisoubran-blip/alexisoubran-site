@@ -372,7 +372,64 @@ section, article, header { scroll-margin-top: 88px; }
   }
 }
 /* === End patch === */
+.floating-calendly-cta {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 999;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 24px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: -0.01em;
+  box-shadow: 0 10px 28px rgba(255,77,46,0.18), 0 8px 20px rgba(0,0,0,0.32);
+  border: 1px solid rgba(255,255,255,0.16);
+  transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+}
 
+.floating-calendly-cta:hover {
+  transform: translateY(-3px);
+  opacity: 0.95;
+  box-shadow: 0 12px 32px rgba(255,77,46,0.24), 0 10px 24px rgba(0,0,0,0.36);
+}
+
+.floating-calendly-cta:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
+
+@media (max-width: 720px) {
+  .floating-calendly-cta {
+    left: 20px;
+    right: 20px;
+    bottom: calc(18px + env(safe-area-inset-bottom));
+    width: auto;
+    min-height: 56px;
+    font-size: 16px;
+    box-shadow: 0 8px 22px rgba(255,77,46,0.16), 0 8px 18px rgba(0,0,0,0.30);
+  }
+
+  body {
+    padding-bottom: 88px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-calendly-cta {
+    transition: none;
+  }
+
+  .floating-calendly-cta:hover {
+    transform: none;
+  }
+}
 </style>
 </head>
 <body>
@@ -544,6 +601,14 @@ section, article, header { scroll-margin-top: 88px; }
   targets.forEach((el) => observer.observe(el));
 })();
 </script>
-
+<a 
+  href="https://calendly.com/alexis-soubran/contact" 
+  class="floating-calendly-cta" 
+  target="_blank" 
+  rel="noopener"
+  onclick="window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'calendly_click', click_location: 'floating_cta' });"
+>
+  Book a call
+</a>
 </body>
 </html>
