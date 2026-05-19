@@ -1287,6 +1287,121 @@ section, article, header { scroll-margin-top: 88px; }
     box-shadow: 0 8px 22px rgba(255,77,46,0.16), 0 8px 18px rgba(0,0,0,0.30);
   }
 }
+  .brand-ticker {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  background:
+    radial-gradient(circle at 12% 50%, rgba(255,77,46,0.08), transparent 28%),
+    rgba(10,10,10,0.92);
+  overflow: hidden;
+}
+
+.brand-ticker-inner {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 24px;
+}
+
+.brand-ticker-label {
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  white-space: nowrap;
+}
+
+.ticker-track-wrap {
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+  mask-image: linear-gradient(90deg, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
+.ticker-track {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: max-content;
+  animation: tickerScroll 34s linear infinite;
+}
+
+.ticker-track span {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(245,245,245,0.78);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 8px 14px;
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.035);
+}
+
+.ticker-track span::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 14px rgba(255,77,46,0.45);
+}
+
+.brand-ticker:hover .ticker-track {
+  animation-play-state: paused;
+}
+
+@keyframes tickerScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 760px) {
+  .brand-ticker-inner {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 16px 20px;
+  }
+
+  .brand-ticker-label {
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .ticker-track {
+    animation-duration: 28s;
+  }
+
+  .ticker-track span {
+    font-size: 12px;
+    padding: 7px 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: auto;
+  }
+
+  .ticker-track-wrap {
+    mask-image: none;
+  }
+}
 </style>
 </head>
 <body>
@@ -1342,6 +1457,49 @@ section, article, header { scroll-margin-top: 88px; }
     </div>
   </div>
 </header>
+  <section class="brand-ticker" aria-label="Selected brands Alexis Soubran and Minimalist Agency have worked with">
+  <div class="brand-ticker-inner">
+    <div class="brand-ticker-label">Growth systems operated for</div>
+
+    <div class="ticker-track-wrap">
+      <div class="ticker-track">
+        <span>SharkNinja</span>
+        <span>AMD</span>
+        <span>Bitso</span>
+        <span>Edenred</span>
+        <span>Zeekr</span>
+        <span>Lynk &amp; Co</span>
+        <span>Geely</span>
+        <span>Uber Eats</span>
+        <span>Airbnb</span>
+        <span>Miele</span>
+        <span>Motorola</span>
+        <span>Suzuki</span>
+        <span>Royal Canin</span>
+        <span>Thermo Fisher Scientific</span>
+        <span>Petco</span>
+        <span>OnePlus</span>
+
+        <span aria-hidden="true">SharkNinja</span>
+        <span aria-hidden="true">AMD</span>
+        <span aria-hidden="true">Bitso</span>
+        <span aria-hidden="true">Edenred</span>
+        <span aria-hidden="true">Zeekr</span>
+        <span aria-hidden="true">Lynk &amp; Co</span>
+        <span aria-hidden="true">Nintendo</span>
+        <span aria-hidden="true">OnePlus</span>
+        <span aria-hidden="true">Televisa</span>
+        <span aria-hidden="true">Miele</span>
+        <span aria-hidden="true">Motorola</span>
+        <span aria-hidden="true">Mixue</span>
+        <span aria-hidden="true">Royal Canin</span>
+        <span aria-hidden="true">Thermo Fisher Scientific</span>
+        <span aria-hidden="true">GBM</span>
+        <span aria-hidden="true">OnePlus</span>
+      </div>
+    </div>
+  </div>
+</section>
 
   <section id="architecture" class="architecture-section">
   <div class="container">
