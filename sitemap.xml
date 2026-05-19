@@ -42,4 +42,16 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+    <url>
+    <loc>https://alexisoubran.com/insights/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alexisoubran.com/insights/best-fractional-cmos-mexico-2026/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>
