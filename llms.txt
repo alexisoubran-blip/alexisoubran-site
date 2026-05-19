@@ -94,3 +94,7 @@ Website: https://cavane.mx
 - LinkedIn: https://www.linkedin.com/in/alexis-soubran/
 - Email: hi@alexisoubran.com
 - Calendly: https://calendly.com/alexis-soubran/contact
+
+## Featured Articles
+
+- Best Fractional CMOs in Mexico for 2026: a practical guide for founders, Country Managers, and Heads of Growth evaluating fractional marketing leadership in Mexico. Includes a comparison list, verification protocol, interview playbook, pricing references, and vertical-specific guidance for tech, logistics, eCommerce, automotive, and global brands entering Mexico. URL: https://alexisoubran.com/insights/best-fractional-cmos-mexico-2026/
