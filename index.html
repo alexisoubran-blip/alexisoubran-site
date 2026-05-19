@@ -154,7 +154,7 @@ nav ul { list-style: none; display: flex; gap: 32px; }
 nav a { color: var(--text-dim); text-decoration: none; font-size: 14px; transition: color 0.2s; }
 nav a:hover { color: var(--text); }
 
-.hero { padding: 120px 0 80px; }
+.hero { padding: 72px 0 72px; }
 .hero h1 { font-size: clamp(44px, 6.5vw, 80px); line-height: 1.05; letter-spacing: -0.03em; font-weight: 700; margin-bottom: 32px; }
   .hero-grid {
   display: grid;
@@ -211,7 +211,7 @@ nav a:hover { color: var(--text); }
 
 @media (max-width: 900px) {
   .hero {
-    padding: 92px 0 64px;
+    padding: 56px 0 56px;
   }
 
   .hero-grid {
@@ -231,7 +231,9 @@ nav a:hover { color: var(--text); }
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 520px).hero {
+  padding: 42px 0 48px;
+} {
   .hero-photo-wrap {
     max-width: 100%;
   }
