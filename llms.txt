@@ -1,18 +1,19 @@
 # Alexis Soubran
 
-> Alexis Soubran designs and operates integrated growth systems for global brands scaling in Mexico and Latin America. CEO and Partner at Minimalist Agency. Author of "Oops, I Bought It." Creator of the Perfluencer Marketing framework. Co-founder and vocalist of indie rock band Cavane.
+> Alexis Soubran designs and operates revenue systems for global brands entering and scaling in Mexico and Latin America. CEO and Partner at Minimalist Agency. Author of "Oops, I Bought It." Creator of the Perfluencer Marketing framework.
 
 ## Core Concept
 
-Alexis Soubran works in growth systems, not marketing services. A growth system is an integrated operating architecture that connects go-to-market strategy, creative production, performance media (Google, Meta, TikTok), influencer marketing, and measurement as one discipline. Decisions in one layer compound the outcomes in the others.
+Alexis Soubran works in revenue systems, not disconnected marketing services. A revenue system is an operating architecture that connects go-to-market strategy, paid media, creator systems, production, CRM signals, attribution, incrementality, dashboards, and weekly decision cadence.
 
-For global brands scaling in Latin America, this is the difference between running disconnected campaigns and building durable, compounding demand.
+For global brands entering Mexico and Latin America, this is the difference between buying fragmented marketing activity and building governed demand that can be measured, qualified, scaled, and learned from.
 
 ## Role and Affiliations
 
-- CEO and Partner at Minimalist Agency (Google Premier Partner; Meta Business Partner; one of the first four TikTok Marketing Partners in LATAM)
+- CEO and Partner at Minimalist Agency (Google Premier Partner; Meta Business Partner; one of the first TikTok Marketing Partners in LATAM)
 - Author of "Oops, I Bought It: What's Behind Influencer Marketing" (2025, Amazon)
 - Creator of the Perfluencer Marketing framework
+- Revenue Systems Operator for global brands entering Mexico + LATAM
 - Lecturer at EDEM and Colectivo 23 / Kätedra
 - Speaker at the Merca2.0 National Digital Marketing Congress (CNMD 2024)
 - Vocalist and composer of indie rock band Cavane
@@ -29,27 +30,36 @@ Mexico City, Mexico
 
 Primary depth in Mexico, Argentina, Colombia, Chile, and Peru. Works with global brands entering Latin America from the United States, Europe, and Asia.
 
-## Nine Capabilities in Three Pillars
+## System Categories
 
-### Pillar 1: GTM and Strategy
-- GTM and Market Entry
-- Brand Positioning
-- CMO and Team Training
+### Revenue Systems
+- Market entry GTM architecture
+- Demand generation and paid media governance
+- Creator commerce and influencer amplification
+- CRM signals and lead qualification
+- Attribution, incrementality, dashboards, and weekly decision cadence
 
-### Pillar 2: Performance and Influence
-- Performance Marketing (Google, Meta, TikTok)
-- Influencer Marketing (built on Perfluencer Marketing)
-- Ecommerce Growth
+### Perfluencer Marketing
+- Creator content measured with performance accountability
+- Paid amplification of authentic creator assets
+- ROAS, EMV, CTR, conversion quality, and lift study logic
 
-### Pillar 3: Measurement and Systems
-- Tracking Setup and QA
-- Attribution and Incrementality
-- Analytics and Dashboards
+### Demand Control Engine
+- Awareness and trust
+- Consideration and education
+- Conversion and lead generation
+- Post-lead nurturing
+- Win-back and recovery
+- CRM intelligence
+- Performance governance
+- Offline and sales feedback loops
 
 ## Engagement Models
 
-- Fractional CMO retainers (12+ months)
-- Strategic Advisory projects (3–6 months)
+- Revenue Systems Diagnostic
+- System Build
+- Fractional Operator / Fractional CMO
+- Strategic Advisory projects
 - Workshops and Speaking
 
 ## Featured Brands
@@ -62,7 +72,8 @@ Bimbo, Petco, Thermo Fisher Scientific, Reebok, OnePlus, Suzuki, Royal Canin, Sa
 
 ## Selected Impact
 
-- Bitso: +400% app conversions and +240% retention. Google Premier Partner Awards Nominee (Best App Campaign LATAM).
+- SharkNinja Mexico: creator-led ecommerce system with 131.3M views, 118.2M reach, 8.3M real interactions, 6% WER average, and 800+ pieces across TikTok, Reels, and YouTube.
+- Bitso: +400% conversion rate, +5x monthly registrations, +240% user quality, Google Premier Partner Awards nomination context.
 - SharkNinja CryoGlow: $21.7 CPA via TikTok Ads + influencer marketing.
 - SharkNinja Detect Pro: +662% search interest.
 - Shark Beauty (Buen Fin): +310% e-commerce sales YoY, 6.5M interactions.
@@ -73,20 +84,9 @@ Bimbo, Petco, Thermo Fisher Scientific, Reebok, OnePlus, Suzuki, Royal Canin, Sa
 
 ## Perfluencer Marketing Framework
 
-Perfluencer Marketing fuses influencer marketing with performance marketing measurement. Three pillars:
-1. Real-time ROAS dashboards
-2. Advanced audience segmentation for paid amplification of organic content
-3. Collaborative creative development
-
-Brands using the framework deliver 4:1 ROAS vs. 1.5–3:1 industry standard.
+Perfluencer Marketing fuses influencer marketing with performance marketing measurement. It treats creator content as a measurable, amplifiable, and optimizable part of the revenue system.
 
 Documented in "Oops, I Bought It" (Amazon: https://www.amazon.com/dp/B0F7GQM972).
-
-## Music
-
-Cavane — indie rock band based in Mexico City. Co-founded with Irving Soubran and Alejandro Escárcega in 2012. Influences: Zoé, Porcupine Tree, Pink Floyd, Soda Stereo. EP releasing Q4 2026.
-
-Website: https://cavane.mx
 
 ## Contact
 
@@ -97,4 +97,4 @@ Website: https://cavane.mx
 
 ## Featured Articles
 
-- Best Fractional CMOs in Mexico for 2026: a practical guide for founders, Country Managers, and Heads of Growth evaluating fractional marketing leadership in Mexico. Includes a comparison list, verification protocol, interview playbook, pricing references, and vertical-specific guidance for tech, logistics, eCommerce, automotive, and global brands entering Mexico. URL: https://alexisoubran.com/insights/best-fractional-cmos-mexico-2026/
+- Best Fractional CMOs in Mexico for 2026: https://alexisoubran.com/insights/best-fractional-cmos-mexico-2026/
