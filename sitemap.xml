@@ -1,57 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://alexisoubran.com/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://alexisoubran.com/perfluencer-marketing/</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://alexisoubran.com/about/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://alexisoubran.com/work/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://alexisoubran.com/work/bitso/</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://alexisoubran.com/work/sharkninja/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.75</priority>
   </url>
-    <url>
-    <loc>https://alexisoubran.com/privacy/</loc>
-    <lastmod>2026-05-18</lastmod>
+  <url>
+    <loc>https://alexisoubran.com/work/bitso/</loc>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <priority>0.75</priority>
   </url>
-    <url>
+  <url>
+    <loc>https://alexisoubran.com/work/amd/</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://alexisoubran.com/work/edenred/</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://alexisoubran.com/work/suzuki-grand-vitara/</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://alexisoubran.com/work/credijusto/</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://alexisoubran.com/work/measurement-operating-system/</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://alexisoubran.com/work/automotive-demand-control/</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://alexisoubran.com/perfluencer-marketing/</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://alexisoubran.com/insights/</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://alexisoubran.com/insights/best-fractional-cmos-mexico-2026/</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.78</priority>
+  </url>
+  <url>
+    <loc>https://alexisoubran.com/insights/geo-for-brands-mexico-latam/</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://alexisoubran.com/privacy/</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
   </url>
 </urlset>
