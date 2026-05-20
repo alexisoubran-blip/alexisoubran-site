@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5752LGG');
+</script>
+<!-- End Google Tag Manager -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Automotive Demand Control Engine | Alexis Soubran</title>
+<meta name="description" content="A private automotive demand system blueprint connecting media, CRM, dealer routing, MQL/SQL scoring, offline conversion signals and pacing governance.">
+<meta name="author" content="Alexis Soubran">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://alexisoubran.com/work/automotive-demand-control/">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Automotive Demand Control Engine | Alexis Soubran">
+<meta property="og:description" content="How automotive demand moves from raw lead volume to qualified buyer intent.">
+<meta property="og:url" content="https://alexisoubran.com/work/automotive-demand-control/">
+<meta property="og:site_name" content="Alexis Soubran">
+<meta property="og:image" content="https://alexisoubran.com/alexis-soubran.jpg">
+<meta property="og:image:alt" content="Alexis Soubran, Revenue Systems Operator for global brands in Mexico and LATAM">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Automotive Demand Control Engine | Alexis Soubran">
+<meta name="twitter:description" content="A private automotive blueprint connecting media, CRM, dealer routing, MQL/SQL scoring and offline conversion signals.">
+<meta name="twitter:image" content="https://alexisoubran.com/alexis-soubran.jpg">
+
+<meta name="theme-color" content="#0a0a0a">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#080808;
+  --text:#f6f6f3;
+  --text-dim:#a6a6a0;
+  --muted:#74746f;
+  --accent:#ff4d2e;
+  --border:#242424;
+  --border-soft:rgba(255,255,255,.08);
+  --panel:rgba(255,255,255,.035);
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:
+    radial-gradient(circle at 18% 8%,rgba(255,77,46,.13),transparent 28%),
+    radial-gradient(circle at 86% 20%,rgba(34,211,238,.08),transparent 24%),
+    linear-gradient(180deg,#080808 0%,#0a0a0a 42%,#070707 100%);
+  color:var(--text);
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+.container{width:min(1120px,calc(100% - 48px));margin:0 auto}
+.container-narrow{width:min(840px,calc(100% - 48px));margin:0 auto}
+
+.site-nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(8,8,8,.84);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border-soft);
+}
+.nav-shell{
+  width:min(1120px,calc(100% - 48px));
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  padding:16px 0;
+}
+.logo{
+  font-weight:850;
+  letter-spacing:-.03em;
+  text-decoration:none;
+  color:var(--text);
+  white-space:nowrap;
+}
+.nav-links{
+  list-style:none;
+  display:flex;
+  align-items:center;
+  gap:28px;
+}
+.nav-links a{
+  font-size:14px;
+  color:var(--text-dim);
+  text-decoration:none;
+  transition:.2s ease;
+}
+.nav-links a:hover{color:var(--text)}
+.nav-toggle{
+  display:none;
+  width:42px;
+  height:42px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  background:rgba(255,255,255,.03);
+  color:var(--text);
+  cursor:pointer;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  gap:5px;
+}
+.nav-toggle span{
+  width:18px;
+  height:2px;
+  background:currentColor;
+  border-radius:999px;
+  transition:.2s ease;
+}
+.nav-toggle[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle[aria-expanded=true] span:nth-child(2){opacity:0}
+.nav-toggle[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+.breadcrumb{
+  padding:30px 0 0;
+  color:var(--muted);
+  font-size:13px;
+}
+.breadcrumb a{
+  color:var(--text-dim);
+  text-decoration:none;
+}
+.breadcrumb a:hover{color:var(--text)}
+
+.hero{padding:58px 0 76px}
+.hero-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr);
+  gap:56px;
+  align-items:center;
+}
+.kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  color:var(--accent);
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  font-weight:850;
+  margin-bottom:18px;
+}
+.kicker::before{
+  content:"";
+  width:7px;
+  height:7px;
+  border-radius:999px;
+  background:var(--accent);
+  box-shadow:0 0 18px rgba(255,77,46,.55);
+}
+h1{
+  font-size:clamp(42px,6vw,78px);
+  line-height:1.01;
+  letter-spacing:-.055em;
+  font-weight:850;
+  margin-bottom:26px;
+}
+.lead{
+  font-size:clamp(18px,2vw,22px);
+  line-height:1.5;
+  color:var(--text-dim);
+  max-width:820px;
+}
+.hero-actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:34px;
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:16px 22px;
+  border-radius:999px;
+  background:var(--accent);
+  color:#fff;
+  text-decoration:none;
+  font-weight:800;
+  font-size:14px;
+  border:1px solid rgba(255,255,255,.14);
+  box-shadow:0 16px 44px rgba(255,77,46,.18);
+  transition:.2s ease;
+}
+.btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 20px 54px rgba(255,77,46,.26);
+}
+.btn.secondary{
+  background:rgba(255,255,255,.04);
+  color:var(--text);
+  border-color:var(--border-soft);
+  box-shadow:none;
+}
+.hero-card{
+  position:relative;
+  overflow:hidden;
+  border:1px solid var(--border-soft);
+  border-radius:28px;
+  min-height:410px;
+  background:
+    radial-gradient(circle at 20% 10%,rgba(255,77,46,.18),transparent 38%),
+    linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.018));
+  box-shadow:0 30px 90px rgba(0,0,0,.45);
+}
+.hero-photo{
+  width:100%;
+  height:100%;
+  min-height:410px;
+  object-fit:cover;
+  object-position:center 35%;
+  display:block;
+  filter:saturate(1.03) contrast(1.04);
+}
+.overlay{
+  position:absolute;
+  inset:auto 18px 18px 18px;
+  padding:18px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:20px;
+  background:rgba(8,8,8,.72);
+  backdrop-filter:blur(14px);
+}
+.overlay strong{
+  display:block;
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  color:var(--accent);
+  margin-bottom:6px;
+}
+.overlay span{
+  display:block;
+  font-size:14px;
+  color:var(--text-dim);
+  line-height:1.45;
+}
+
+.result-wall{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+  margin:0 0 42px;
+}
+.result-tile{
+  border:1px solid var(--border-soft);
+  border-radius:18px;
+  padding:22px;
+  background:
+    radial-gradient(circle at 20% 0%,rgba(255,77,46,.09),transparent 36%),
+    var(--panel);
+}
+.result-tile strong{
+  display:block;
+  font-size:34px;
+  letter-spacing:-.05em;
+  color:var(--accent);
+  line-height:1;
+  margin-bottom:8px;
+}
+.result-tile span{
+  font-size:13px;
+  color:var(--text-dim);
+}
+
+.article{padding:20px 0 84px}
+.article-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 320px;
+  gap:54px;
+  align-items:start;
+}
+.article-content h2{
+  font-size:34px;
+  line-height:1.1;
+  letter-spacing:-.035em;
+  margin:58px 0 18px;
+}
+.article-content h2:first-child{margin-top:0}
+.article-content h3{
+  font-size:21px;
+  margin:30px 0 10px;
+  letter-spacing:-.02em;
+}
+.article-content p,
+.article-content li{
+  font-size:17px;
+  color:#d7d7d1;
+  line-height:1.66;
+}
+.article-content p{margin-bottom:18px}
+.article-content ul{margin:16px 0 24px 22px}
+.article-content li{margin-bottom:10px}
+.article-content a{
+  color:var(--accent);
+  text-decoration:none;
+}
+
+.callout{
+  border:1px solid rgba(255,77,46,.5);
+  border-radius:24px;
+  padding:28px;
+  background:
+    radial-gradient(circle at top left,rgba(255,77,46,.12),transparent 42%),
+    rgba(255,255,255,.025);
+  margin:34px 0;
+}
+.callout strong{color:var(--accent)}
+
+.sidebar{
+  position:sticky;
+  top:92px;
+  display:grid;
+  gap:16px;
+}
+.side-card{
+  border:1px solid var(--border-soft);
+  border-radius:22px;
+  padding:22px;
+  background:var(--panel);
+}
+.side-card strong{
+  display:block;
+  color:var(--accent);
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  margin-bottom:10px;
+}
+.side-card p,
+.side-card li{
+  font-size:14px;
+  color:var(--text-dim);
+  line-height:1.5;
+}
+.side-card ul{margin-left:18px}
+
+.related{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  margin-top:28px;
+}
+.related a{
+  border:1px solid var(--border-soft);
+  border-radius:18px;
+  padding:18px;
+  text-decoration:none;
+  color:var(--text);
+  background:rgba(255,255,255,.025);
+  transition:.2s ease;
+}
+.related a:hover{
+  border-color:rgba(255,77,46,.5);
+  transform:translateY(-2px);
+}
+.related small{
+  display:block;
+  color:var(--accent);
+  letter-spacing:.11em;
+  text-transform:uppercase;
+  font-size:10px;
+  margin-bottom:8px;
+}
+.related strong{
+  display:block;
+  font-size:15px;
+  margin-bottom:5px;
+}
+.related span{
+  display:block;
+  color:var(--text-dim);
+  font-size:14px;
+}
+
+.cta{
+  padding:86px 0;
+  border-top:1px solid var(--border-soft);
+  text-align:center;
+  background:radial-gradient(circle at 50% 0%,rgba(255,77,46,.11),transparent 34%);
+}
+.cta h2{
+  font-size:clamp(34px,5vw,60px);
+  letter-spacing:-.05em;
+  line-height:1.04;
+  margin-bottom:18px;
+}
+.cta p{
+  color:var(--text-dim);
+  font-size:18px;
+  max-width:650px;
+  margin:0 auto 28px;
+}
+
+footer{
+  border-top:1px solid var(--border-soft);
+  padding:46px 0;
+  color:var(--text-dim);
+  font-size:14px;
+}
+footer .container{
+  display:flex;
+  justify-content:space-between;
+  gap:24px;
+  flex-wrap:wrap;
+}
+footer a{
+  color:var(--text-dim);
+  text-decoration:none;
+  margin-right:20px;
+}
+footer a:hover{color:var(--text)}
+
+.floating-calendly-cta{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  z-index:999;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:52px;
+  padding:0 22px;
+  border-radius:999px;
+  background:var(--accent);
+  color:#fff;
+  text-decoration:none;
+  font-weight:850;
+  font-size:14px;
+  border:1px solid rgba(255,255,255,.15);
+  box-shadow:0 12px 32px rgba(255,77,46,.22),0 10px 24px rgba(0,0,0,.34);
+  transition:.2s ease;
+}
+.floating-calendly-cta:hover{transform:translateY(-3px)}
+
+[data-animate]{
+  opacity:0;
+  transform:translate3d(0,22px,0);
+  transition:opacity .65s ease,transform .65s ease;
+}
+[data-animate].is-visible{
+  opacity:1;
+  transform:none;
+}
+
+@media(max-width:930px){
+  .hero-grid,
+  .article-grid{grid-template-columns:1fr}
+  .result-wall{grid-template-columns:repeat(2,1fr)}
+  .related{grid-template-columns:1fr}
+  .sidebar{position:static}
+}
+@media(max-width:760px){
+  .nav-shell{width:min(100% - 32px,1120px)}
+  .nav-toggle{display:inline-flex}
+  .nav-links{
+    position:fixed;
+    top:64px;
+    left:16px;
+    right:16px;
+    display:grid;
+    gap:2px;
+    padding:10px;
+    border:1px solid var(--border);
+    border-radius:16px;
+    background:rgba(8,8,8,.96);
+    box-shadow:0 24px 80px rgba(0,0,0,.55);
+    transform:translateY(-12px) scale(.98);
+    opacity:0;
+    pointer-events:none;
+    transition:.22s ease;
+  }
+  .nav-links.is-open{
+    transform:translateY(0) scale(1);
+    opacity:1;
+    pointer-events:auto;
+  }
+  .nav-links a{
+    display:block;
+    padding:14px 12px;
+    border-radius:10px;
+    font-size:15px;
+  }
+  body.nav-open{overflow:hidden}
+  .hero{padding:46px 0 58px}
+  .hero-card,
+  .hero-photo{min-height:360px}
+  .result-wall{grid-template-columns:1fr}
+  .container,
+  .container-narrow{width:min(100% - 36px,1120px)}
+  .floating-calendly-cta{
+    left:18px;
+    right:18px;
+    bottom:calc(16px + env(safe-area-inset-bottom));
+    min-height:56px;
+  }
+  body{padding-bottom:82px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important}
+  [data-animate]{opacity:1!important;transform:none!important}
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://alexisoubran.com/work/automotive-demand-control/#article",
+  "headline": "Automotive Demand Control Engine — From Raw Lead Volume to Qualified Buyer Intent",
+  "description": "A private automotive system blueprint connecting media, CRM, dealer routing, MQL/SQL scoring, offline conversion signals and pacing governance.",
+  "mainEntityOfPage": "https://alexisoubran.com/work/automotive-demand-control/",
+  "datePublished": "2026-05-19",
+  "dateModified": "2026-05-19",
+  "author": {
+    "@type": "Person",
+    "@id": "https://alexisoubran.com/#person",
+    "name": "Alexis Soubran",
+    "url": "https://alexisoubran.com",
+    "image": "https://alexisoubran.com/alexis-soubran.jpg",
+    "jobTitle": "Revenue Systems Operator for Global Brands in Mexico and LATAM",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Minimalist Agency",
+      "url": "https://minimalist.mx"
+    }
+  },
+  "publisher": {
+    "@type": "Person",
+    "@id": "https://alexisoubran.com/#person",
+    "name": "Alexis Soubran",
+    "url": "https://alexisoubran.com",
+    "image": "https://alexisoubran.com/alexis-soubran.jpg"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Automotive Demand Control Engine"
+    },
+    {
+      "@type": "Thing",
+      "name": "CRM Lead Qualification"
+    },
+    {
+      "@type": "Thing",
+      "name": "Dealer Routing"
+    },
+    {
+      "@type": "Thing",
+      "name": "Offline Conversion Signals"
+    },
+    {
+      "@type": "Thing",
+      "name": "Automotive Marketing Mexico"
+    }
+  ],
+  "keywords": [
+    "Automotive Demand Control Engine",
+    "Automotive Lead Qualification",
+    "Dealer CRM",
+    "MQL SQL",
+    "Offline Conversion Signals",
+    "Automotive Marketing Mexico",
+    "Revenue Systems",
+    "Alexis Soubran"
+  ]
+}
+</script>
+
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5752LGG"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav class="site-nav" aria-label="Primary navigation">
+  <div class="nav-shell">
+    <a class="logo" href="/" aria-label="Alexis Soubran home">Alexis Soubran</a>
+
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul id="primary-menu" class="nav-links">
+      <li><a href="/#what">What I do</a></li>
+      <li><a href="/work/">Work</a></li>
+      <li><a href="/perfluencer-marketing/">Framework</a></li>
+      <li><a href="/insights/">Insights</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="breadcrumb container">
+  <a href="/">Home</a> / <a href="/work/">Work</a> / Automotive Demand Control
+</div>
+
+<header class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="kicker">Automotive OEM · Demand Control Engine</div>
+      <h1>How automotive demand moves from raw lead volume to qualified buyer intent.</h1>
+      <p class="lead">A private system blueprint connecting media, CRM, dealer routing, MQL/SQL scoring, offline conversion signals and pacing governance.</p>
+
+      <div class="hero-actions">
+        <a class="btn" href="https://calendly.com/alexis-soubran/contact" target="_blank" rel="noopener">Book diagnostic</a>
+        <a class="btn secondary" href="/work/">Back to work</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <img
+        class="hero-photo"
+        src="/alexis-soubran.jpg"
+        alt="Alexis Soubran, architect of automotive demand control systems in Mexico and LATAM"
+        loading="eager"
+        fetchpriority="high"
+      >
+      <div class="overlay">
+        <strong>Scope</strong>
+        <span>Automotive OEM · CRM · Lead scoring · Dealer intelligence · Offline conversion feedback</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="result-wall">
+    <div class="result-tile">
+      <strong>MQL</strong>
+      <span>appointment-confirmed lead logic</span>
+    </div>
+    <div class="result-tile">
+      <strong>SQL</strong>
+      <span>test-drive attended signal</span>
+    </div>
+    <div class="result-tile">
+      <strong>&lt;5 min</strong>
+      <span>lead response target</span>
+    </div>
+    <div class="result-tile">
+      <strong>CRM</strong>
+      <span>closed-loop feedback</span>
+    </div>
+  </div>
+</div>
+
+<main class="article">
+  <div class="container article-grid">
+    <article class="article-content">
+      <div class="callout">
+        <p><strong>Publishing note:</strong> this is an anonymized methodology page based on private automotive demand-control work. It explains the system without exposing confidential client-specific details.</p>
+      </div>
+
+      <h2>The business problem</h2>
+      <p>Automotive marketing teams often ask for more leads when the real problem is control. Media can generate forms, but without lead quality scoring, dealer routing, CRM feedback and commercial governance, the system cannot distinguish browsers from buyers.</p>
+
+      <p>The visible symptoms are familiar: rising CPL, inconsistent dealer follow-up, PMA-level performance gaps, CRM silence, low test-drive attendance, and campaigns that optimize toward cheap forms instead of qualified buyer intent.</p>
+
+      <p>The real issue is not lack of demand. It is demand orchestration.</p>
+
+      <h2>The operating principle</h2>
+      <p>The Demand Control Engine is not a campaign. It is the connective intelligence layer that governs every funnel stage: from first impression to lead capture, CRM qualification, dealer follow-up, test drive, purchase and post-sale feedback.</p>
+
+      <p>The goal is simple: stop treating CPL as the king KPI. Cost per lead measures entry. Cost per qualified buyer intent measures opportunity.</p>
+
+      <h2>The system architecture</h2>
+
+      <h3>1. Demand generation</h3>
+      <p>Google, Meta, TikTok, OOH, DOOH, CTV and other media sources create demand and capture attention. Each touchpoint needs source, campaign, creative, model, PMA and funnel-stage metadata.</p>
+
+      <h3>2. Capture, tracking and experimentation</h3>
+      <p>Website forms, WhatsApp, QR codes, landing pages and lead ads capture intent. GTM, GA4, pixels, UTMs, QR governance, heatmaps and CRO tests create the measurement layer.</p>
+
+      <h3>3. Traffic quality and lead integrity</h3>
+      <p>Captcha, click-fraud filtering and lead validation reduce junk traffic, bot contamination and fake form submissions. If platforms are fed garbage, they optimize for garbage. Stunning, but true.</p>
+
+      <h3>4. Qualification and dealer sales ops</h3>
+      <p>Leads are enriched, scored and routed based on buyer intent, location, preferred model, purchase timeline, PMA and dealer capacity. The system defines when a lead becomes MQL, SQL and purchase-qualified.</p>
+
+      <h3>5. Data infrastructure and automation backbone</h3>
+      <p>Funnel connectors, BigQuery, Make, CRM syncs and dashboard layers normalize the data so media and commercial teams are no longer reading different versions of reality.</p>
+
+      <h3>6. Measurement, attribution and intelligence</h3>
+      <p>The system connects source, creative, audience, model, dealer, appointment, test-drive attendance and purchase value. Attribution becomes useful because it is tied to commercial stages, not only platform-side conversions.</p>
+
+      <h3>7. Governance and activation feedback loop</h3>
+      <p>Offline conversion signals return to platforms: appointment confirmed, test drive attended, purchase registered, no-show, lead cold, dealer SLA breach. Better signals create better optimization.</p>
+
+      <h2>The five-stage demand architecture</h2>
+      <ul>
+        <li><strong>Awareness & Trust:</strong> brand equity, premium video, CTV, OOH-digital, social proof and brand consideration.</li>
+        <li><strong>Consideration & Education:</strong> product-led content, YouTube sequences, Meta retargeting, comparators, owner testimonials and aftersales proof.</li>
+        <li><strong>Conversion & Lead Gen:</strong> high-intent search, Performance Max, Meta lead forms, WhatsApp capture and offer-specific landing pages.</li>
+        <li><strong>Post-Lead Nurturing:</strong> WhatsApp Business API, email sequences, dealer CRM, reminders, QR check-ins and showroom activation.</li>
+        <li><strong>Win-Back & Recovery:</strong> no-show recovery, lost prospect retargeting, finance offer sequencing and dealer reassignment.</li>
+      </ul>
+
+      <h2>Events and triggers</h2>
+      <p>The system reacts in real time:</p>
+
+      <ul>
+        <li><strong>Lead created:</strong> welcome flow, CRM entry and platform lead signal.</li>
+        <li><strong>MQL:</strong> appointment confirmed, priority dealer notification and reminder sequence.</li>
+        <li><strong>SQL:</strong> test drive attended, QR check-in and stronger offline conversion signal.</li>
+        <li><strong>Purchase:</strong> sale registered, value returned to platforms and revenue attributed to source, creative and dealer.</li>
+        <li><strong>Lead cold:</strong> recovery WhatsApp, retargeting or reassignment.</li>
+        <li><strong>No-show:</strong> reschedule message, dealer follow-up and appointment recovery.</li>
+        <li><strong>Dealer SLA breach:</strong> escalation to dealer manager or zone manager.</li>
+        <li><strong>Creative fatigue:</strong> refresh queue when CTR drops or frequency rises.</li>
+        <li><strong>Budget off-pace:</strong> analyst alert or pacing adjustment before the month burns itself down.</li>
+      </ul>
+
+      <div class="callout">
+        <p><strong>Operating lesson:</strong> the close does not happen on the form. It happens when the lead becomes an appointment, a visit, a test drive, a quote and eventually a sale.</p>
+      </div>
+
+      <h2>Why it matters</h2>
+      <p>Automotive brands in Mexico do not just compete for attention. They compete for trust, local availability, financing confidence, dealer responsiveness and perceived support after the sale.</p>
+
+      <p>A lead is only the beginning. The commercial system must answer: who is the buyer, what are they considering, which dealer should receive the lead, how quickly were they contacted, did they book, did they show up, did they buy, and which signals should return to media platforms?</p>
+
+      <h2>Reusable pattern</h2>
+      <p>This model applies to automotive OEMs, dealer networks, mobility brands, motorcycle brands, real estate developers and any high-consideration category where media creates demand but sales execution closes it.</p>
+
+      <h2>Related systems</h2>
+      <div class="related">
+        <a href="/work/suzuki-grand-vitara/">
+          <small>Suzuki</small>
+          <strong>Brand Experience Launch</strong>
+          <span>How a vehicle launch became a cultural moment.</span>
+        </a>
+
+        <a href="/work/amd/">
+          <small>AMD</small>
+          <strong>Retail Intent Engine</strong>
+          <span>Paid media optimized toward high-intent retail behavior.</span>
+        </a>
+
+        <a href="/work/measurement-operating-system/">
+          <small>DTC</small>
+          <strong>Measurement Operating System</strong>
+          <span>Attribution governance before scaling budget.</span>
+        </a>
+      </div>
+    </article>
+
+    <aside class="sidebar">
+      <div class="side-card">
+        <strong>Client / Category</strong>
+        <p>Anonymized automotive OEM<br>Dealer network / CRM<br>Mexico</p>
+      </div>
+
+      <div class="side-card">
+        <strong>System type</strong>
+        <p>Demand Control Engine</p>
+      </div>
+
+      <div class="side-card">
+        <strong>Core mechanism</strong>
+        <ul>
+          <li>Media + CRM integration</li>
+          <li>MQL / SQL scoring</li>
+          <li>Dealer routing</li>
+          <li>WhatsApp Business API</li>
+          <li>Offline conversion feedback</li>
+          <li>PMA-level budget governance</li>
+        </ul>
+      </div>
+
+      <div class="side-card">
+        <strong>Operator role</strong>
+        <p>System architecture, commercial funnel logic, measurement strategy, CRM feedback design and performance governance.</p>
+      </div>
+
+      <div class="side-card">
+        <strong>Useful for</strong>
+        <ul>
+          <li>Automotive OEMs entering Mexico</li>
+          <li>Dealer networks with lead-quality issues</li>
+          <li>Country Managers under sales pressure</li>
+          <li>CMOs tired of CPL theater</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<section class="cta">
+  <div class="container-narrow">
+    <h2>Stop buying forms. Start governing demand.</h2>
+    <p>If your dealer network says “we need more leads,” the correct answer may be: “show me lead quality, SLA, appointment rate, test-drive attendance and sales feedback.” Very annoying. Very useful.</p>
+
+    <div class="hero-actions" style="justify-content:center">
+      <a class="btn" href="https://calendly.com/alexis-soubran/contact" target="_blank" rel="noopener">Book diagnostic</a>
+      <a class="btn secondary" href="mailto:hi@alexisoubran.com">hi@alexisoubran.com</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div>© 2026 Alexis Soubran. Mexico City.</div>
+    <div>
+      <a href="https://www.linkedin.com/in/alexis-soubran/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://medium.com/@alexisoubran" target="_blank" rel="noopener">Medium</a>
+      <a href="https://www.instagram.com/alexissoubran/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://cavane.mx" target="_blank" rel="noopener">Cavane</a>
+      <a href="/insights/">Insights</a>
+      <a href="/privacy/">Privacy</a>
+    </div>
+  </div>
+</footer>
+
+<a
+  href="https://calendly.com/alexis-soubran/contact"
+  class="floating-calendly-cta"
+  target="_blank"
+  rel="noopener"
+  onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'calendly_click',click_location:'floating_cta_automotive_dce'});"
+>
+  Book diagnostic
+</a>
+
+<script>
+(function(){
+  const toggle=document.querySelector('.nav-toggle');
+  const menu=document.querySelector('.nav-links');
+
+  if(toggle&&menu){
+    const close=()=>{
+      toggle.setAttribute('aria-expanded','false');
+      menu.classList.remove('is-open');
+      document.body.classList.remove('nav-open');
+    };
+
+    toggle.addEventListener('click',()=>{
+      const open=toggle.getAttribute('aria-expanded')==='true';
+      toggle.setAttribute('aria-expanded',String(!open));
+      menu.classList.toggle('is-open',!open);
+      document.body.classList.toggle('nav-open',!open);
+    });
+
+    menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));
+
+    document.addEventListener('keydown',e=>{
+      if(e.key==='Escape') close();
+    });
+
+    document.addEventListener('click',e=>{
+      if(!menu.contains(e.target)&&!toggle.contains(e.target)) close();
+    });
+  }
+
+  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const targets=document.querySelectorAll('.hero,section,.article-content h2,.result-tile,.side-card,.callout,.related a');
+
+  if(reduce) return;
+
+  targets.forEach((el,i)=>{
+    el.setAttribute('data-animate','');
+    el.style.transitionDelay=Math.min((i%6)*45,180)+'ms';
+  });
+
+  if(!('IntersectionObserver' in window)){
+    targets.forEach(el=>el.classList.add('is-visible'));
+    return;
+  }
+
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(!entry.isIntersecting) return;
+      entry.target.classList.add('is-visible');
+      io.unobserve(entry.target);
+    });
+  },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+
+  targets.forEach(el=>io.observe(el));
+})();
+</script>
+
+</body>
+</html>
