@@ -1662,6 +1662,371 @@ section, article, header { scroll-margin-top: 88px; }
 @media (max-width: 520px) { .hero-actions { display: grid; } .proof-card strong { font-size: 18px; } .problem-panel, .operating-card, .mode-card, .fit-card { padding: 24px; } }
 /* === End Revenue Systems positioning upgrade === */
 
+
+/* === Home visual upgrade: command-center layer === */
+:root {
+  --tech-cyan: #22d3ee;
+  --tech-green: #34d399;
+  --tech-gold: #d7a44a;
+  --panel-glass: rgba(255,255,255,0.045);
+}
+body {
+  background:
+    radial-gradient(circle at 14% 6%, rgba(255,77,46,0.16), transparent 30%),
+    radial-gradient(circle at 82% 14%, rgba(34,211,238,0.10), transparent 28%),
+    radial-gradient(circle at 50% 80%, rgba(215,164,74,0.055), transparent 34%),
+    linear-gradient(180deg, #070707 0%, #0a0a0a 44%, #060606 100%);
+}
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 92px 0 58px;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.028) 1px, transparent 1px);
+  background-size: 52px 52px;
+  mask-image: radial-gradient(circle at 48% 28%, black, transparent 72%);
+  pointer-events: none;
+}
+.hero-copy,
+.hero-photo-wrap {
+  position: relative;
+  z-index: 1;
+}
+.hero h1 {
+  max-width: 820px;
+  text-wrap: balance;
+}
+.hero .subtitle {
+  max-width: 750px;
+}
+.hero-photo-wrap {
+  border-radius: 30px;
+  border: 1px solid rgba(255,255,255,0.12);
+  overflow: hidden;
+  box-shadow: 0 34px 90px rgba(0,0,0,0.46);
+  background:
+    radial-gradient(circle at 20% 0%, rgba(255,77,46,0.22), transparent 38%),
+    linear-gradient(160deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+}
+.hero-photo-wrap::after {
+  content: "Revenue Systems Operator";
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(8,8,8,0.72);
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  backdrop-filter: blur(14px);
+}
+.hero-proof {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.proof-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(255,77,46,0.13), transparent 40%),
+    rgba(255,255,255,0.04);
+}
+.proof-card::after {
+  content: "";
+  position: absolute;
+  inset: auto 16px 0 16px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  opacity: 0.65;
+}
+.tech-section {
+  position: relative;
+  padding: 44px 0 86px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  overflow: hidden;
+}
+.tech-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 12% 22%, rgba(255,77,46,0.11), transparent 28%),
+    radial-gradient(circle at 88% 60%, rgba(34,211,238,0.09), transparent 30%);
+  pointer-events: none;
+}
+.command-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+.command-copy,
+.dashboard-panel {
+  position: relative;
+  z-index: 1;
+}
+.command-copy {
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 28px;
+  padding: 34px;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(255,77,46,0.13), transparent 36%),
+    rgba(255,255,255,0.035);
+}
+.command-copy h2 {
+  font-size: clamp(32px, 4.2vw, 56px);
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+  margin: 10px 0 18px;
+}
+.command-copy p {
+  color: var(--text-dim);
+  font-size: 17px;
+  line-height: 1.62;
+}
+.command-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 26px;
+}
+.command-tags span {
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 999px;
+  padding: 8px 11px;
+  color: var(--text-dim);
+  font-size: 12px;
+  background: rgba(255,255,255,0.03);
+}
+.dashboard-panel {
+  border: 1px solid rgba(255,255,255,0.11);
+  border-radius: 28px;
+  padding: 22px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.025));
+  box-shadow: 0 30px 88px rgba(0,0,0,0.34);
+}
+.panel-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  padding: 4px 2px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 18px;
+}
+.panel-dots {
+  display: flex;
+  gap: 7px;
+}
+.panel-dots i {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  display: block;
+  background: var(--accent);
+  box-shadow: 0 0 16px rgba(255,77,46,0.45);
+}
+.panel-dots i:nth-child(2) { background: var(--tech-gold); box-shadow: 0 0 16px rgba(215,164,74,0.35); }
+.panel-dots i:nth-child(3) { background: var(--tech-cyan); box-shadow: 0 0 16px rgba(34,211,238,0.35); }
+.panel-label {
+  color: var(--muted);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 800;
+}
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.metric-tile {
+  min-height: 118px;
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 18px;
+  padding: 16px;
+  background: rgba(8,8,8,0.42);
+}
+.metric-tile strong {
+  display: block;
+  color: var(--accent);
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  margin-bottom: 8px;
+}
+.metric-tile span {
+  display: block;
+  color: var(--text-dim);
+  font-size: 12px;
+  line-height: 1.42;
+}
+.chart-row {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 14px;
+}
+.chart-card,
+.loop-card {
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 22px;
+  padding: 18px;
+  background: rgba(8,8,8,0.42);
+}
+.chart-title {
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+.bar-chart {
+  display: grid;
+  gap: 13px;
+}
+.bar-line {
+  display: grid;
+  grid-template-columns: 82px 1fr 44px;
+  gap: 10px;
+  align-items: center;
+}
+.bar-line label,
+.bar-line em {
+  color: var(--text-dim);
+  font-size: 12px;
+  font-style: normal;
+}
+.bar-track {
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.07);
+  overflow: hidden;
+}
+.bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), var(--tech-cyan));
+  box-shadow: 0 0 22px rgba(255,77,46,0.20);
+}
+.loop-list {
+  display: grid;
+  gap: 10px;
+}
+.loop-item {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 10px;
+  align-items: start;
+}
+.loop-item b {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: rgba(255,77,46,0.14);
+  color: var(--accent);
+  font-size: 12px;
+}
+.loop-item span {
+  color: var(--text-dim);
+  font-size: 13px;
+  line-height: 1.38;
+}
+.signal-stack-section {
+  padding: 82px 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.signal-stack-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 36px;
+  align-items: start;
+}
+.signal-stack-copy h2 {
+  font-size: clamp(32px, 4vw, 50px);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+  margin: 10px 0 18px;
+}
+.signal-stack-copy p {
+  color: var(--text-dim);
+  font-size: 17px;
+  line-height: 1.62;
+}
+.stack-visual {
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 28px;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(255,77,46,0.11), transparent 36%),
+    rgba(255,255,255,0.035);
+}
+.stack-stage {
+  display: grid;
+  grid-template-columns: 140px 1fr 86px;
+  gap: 18px;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.stack-stage:last-child { border-bottom: none; }
+.stack-stage small {
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  font-weight: 850;
+  font-size: 10px;
+}
+.stack-stage p {
+  color: var(--text-dim);
+  font-size: 14px;
+  line-height: 1.45;
+}
+.stage-score {
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  overflow: hidden;
+}
+.stage-score i {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), var(--tech-cyan));
+}
+@media (max-width: 980px) {
+  .command-grid,
+  .signal-stack-grid,
+  .chart-row { grid-template-columns: 1fr; }
+  .dashboard-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 620px) {
+  .hero { padding-top: 64px; }
+  .hero-proof,
+  .dashboard-grid { grid-template-columns: 1fr; }
+  .command-copy,
+  .dashboard-panel,
+  .stack-visual { padding: 22px; }
+  .stack-stage { grid-template-columns: 1fr; gap: 8px; }
+  .bar-line { grid-template-columns: 72px 1fr 38px; }
+}
+/* === End Home visual upgrade === */
+
 </style>
 </head>
 <body>
@@ -1729,6 +2094,61 @@ section, article, header { scroll-margin-top: 88px; }
     </div>
   </div>
 </header>
+
+<section class="tech-section" id="command-layer" aria-label="Revenue command layer dashboard">
+  <div class="container command-grid">
+    <div class="command-copy">
+      <div class="section-kicker">Command Layer</div>
+      <h2>Cleaner signals. Faster decisions. Less budget cosplay.</h2>
+      <p>The home needed to feel as sharp as the work pages, so this layer shows the actual operating logic: acquisition, creators, CRM, measurement, and weekly budget governance in one command center.</p>
+      <div class="command-tags" aria-label="Revenue system inputs">
+        <span>GTM</span>
+        <span>Paid Media</span>
+        <span>Creators</span>
+        <span>CRM</span>
+        <span>Attribution</span>
+        <span>CRO</span>
+        <span>Decision Log</span>
+      </div>
+    </div>
+
+    <div class="dashboard-panel" aria-label="Example revenue systems dashboard">
+      <div class="panel-topbar">
+        <div class="panel-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="panel-label">Revenue OS / Weekly Signal Review</div>
+      </div>
+
+      <div class="dashboard-grid">
+        <div class="metric-tile"><strong>131.3M</strong><span>creator-led views from SharkNinja's ecommerce engine</span></div>
+        <div class="metric-tile"><strong>+400%</strong><span>Bitso mobile conversion-rate lift</span></div>
+        <div class="metric-tile"><strong>154K</strong><span>AMD high-intent retail clicks</span></div>
+        <div class="metric-tile"><strong>+259%</strong><span>Edenred B2B conversion volume</span></div>
+      </div>
+
+      <div class="chart-row">
+        <div class="chart-card">
+          <div class="chart-title">Signal quality by operating layer</div>
+          <div class="bar-chart">
+            <div class="bar-line"><label>Media</label><div class="bar-track"><div class="bar-fill" style="width:84%"></div></div><em>84%</em></div>
+            <div class="bar-line"><label>Creative</label><div class="bar-track"><div class="bar-fill" style="width:76%"></div></div><em>76%</em></div>
+            <div class="bar-line"><label>CRM</label><div class="bar-track"><div class="bar-fill" style="width:68%"></div></div><em>68%</em></div>
+            <div class="bar-line"><label>Revenue</label><div class="bar-track"><div class="bar-fill" style="width:91%"></div></div><em>91%</em></div>
+          </div>
+        </div>
+
+        <div class="loop-card">
+          <div class="chart-title">Weekly loop</div>
+          <div class="loop-list">
+            <div class="loop-item"><b>1</b><span>Read platform, CRM, bank and sales signals.</span></div>
+            <div class="loop-item"><b>2</b><span>Find CPA/CAC variance and attribution gaps.</span></div>
+            <div class="loop-item"><b>3</b><span>Scale, pause, rebuild or kill with a deadline.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
   <section class="brand-ticker" aria-label="Selected brands Alexis Soubran and Minimalist Agency have worked with">
   <div class="brand-ticker-inner">
     <div class="brand-ticker-label">Revenue systems operated for</div>
@@ -1789,6 +2209,46 @@ section, article, header { scroll-margin-top: 88px; }
         <div class="signal-item"><strong>Creative decisioning</strong>Which hook, proof, creator, product angle, or offer deserves more budget?</div>
         <div class="signal-item"><strong>CRM feedback</strong>Which leads became MQLs, appointments, test drives, purchases, repeat buyers, or noise?</div>
         <div class="signal-item"><strong>Weekly governance</strong>What gets scaled, paused, rebuilt, tested, or killed before more budget burns?</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="signal-stack-section" id="signal-stack" aria-label="Revenue signal stack">
+  <div class="container signal-stack-grid">
+    <div class="signal-stack-copy">
+      <div class="section-kicker">Signal Stack</div>
+      <h2>Every layer should create a better decision.</h2>
+      <p>A revenue system is not a deck, a dashboard, or a campaign calendar. It is the operating discipline that turns market inputs into budget decisions, creative iterations, sales signals, and compounding learning.</p>
+    </div>
+
+    <div class="stack-visual">
+      <div class="stack-stage">
+        <small>01 · Market</small>
+        <p>GTM hypothesis, audience tension, category context, competitive pressure.</p>
+        <div class="stage-score"><i style="width:72%"></i></div>
+      </div>
+      <div class="stack-stage">
+        <small>02 · Demand</small>
+        <p>Paid media, search, creators, social proof, PR, and creator-led amplification.</p>
+        <div class="stage-score"><i style="width:84%"></i></div>
+      </div>
+      <div class="stack-stage">
+        <small>03 · Capture</small>
+        <p>Landing pages, lead forms, ecommerce, WhatsApp, CRM routing, PDP behavior.</p>
+        <div class="stage-score"><i style="width:68%"></i></div>
+      </div>
+      <div class="stack-stage">
+        <small>04 · Quality</small>
+        <p>MQL, SQL, user value, NC CPA, LTV, test drive, purchase or revenue event.</p>
+        <div class="stage-score"><i style="width:91%"></i></div>
+      </div>
+      <div class="stack-stage">
+        <small>05 · Learning</small>
+        <p>Experiment log, budget rule, creative refresh, next decision, owner and deadline.</p>
+        <div class="stage-score"><i style="width:96%"></i></div>
       </div>
     </div>
   </div>
