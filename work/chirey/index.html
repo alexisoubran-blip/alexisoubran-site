@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chirey | Interactive Process Map</title>
+  <style>
+    :root {
+      --bg: #050a13;
+      --navy: #0d1b2a;
+      --navy-2: #13243a;
+      --charcoal: #101820;
+      --gold: #d4a843;
+      --gold-2: #c8922a;
+      --green: #3a7a32;
+      --green-2: #59b86a;
+      --cyan: #6ed6d4;
+      --white: #f7f4ee;
+      --muted: #b8c1cc;
+      --line: rgba(212, 168, 67, .32);
+      --panel: rgba(13, 27, 42, .82);
+      --panel-soft: rgba(255, 255, 255, .045);
+      --danger: #ff8c6f;
+      --radius: 22px;
+      --shadow: 0 28px 80px rgba(0, 0, 0, .45);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--white);
+      background:
+        radial-gradient(circle at 8% 88%, rgba(58, 122, 50, .26), transparent 34%),
+        radial-gradient(circle at 78% 10%, rgba(212, 168, 67, .14), transparent 28%),
+        linear-gradient(135deg, #03060b 0%, #07101d 48%, #020407 100%);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,.85), transparent 80%);
+    }
+
+    .app {
+      width: min(1580px, calc(100vw - 40px));
+      margin: 0 auto;
+      padding: 34px 0 54px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.24fr .76fr;
+      gap: 22px;
+      margin-bottom: 22px;
+    }
+
+    .card {
+      background: linear-gradient(145deg, rgba(13,27,42,.92), rgba(7,16,29,.78));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px);
+    }
+
+    .hero-card {
+      padding: 30px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      width: 360px;
+      height: 360px;
+      right: -145px;
+      top: -145px;
+      border-radius: 999px;
+      border: 1px solid rgba(212,168,67,.35);
+      box-shadow: 0 0 80px rgba(212,168,67,.18);
+    }
+
+    .brand {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+      color: var(--gold);
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .brand-pill {
+      padding: 7px 11px;
+      border: 1px solid rgba(212,168,67,.35);
+      border-radius: 999px;
+      color: var(--white);
+      background: rgba(255,255,255,.04);
+      letter-spacing: .11em;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(34px, 4.6vw, 74px);
+      line-height: .94;
+      letter-spacing: -.055em;
+    }
+
+    .subtitle {
+      margin: 0;
+      max-width: 920px;
+      color: var(--muted);
+      font-size: clamp(15px, 1.25vw, 19px);
+      line-height: 1.52;
+    }
+
+    .principles {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .principle {
+      padding: 14px;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 16px;
+      background: rgba(255,255,255,.04);
+    }
+
+    .principle strong {
+      display: block;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+
+    .principle span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .controls-card {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      justify-content: space-between;
+    }
+
+    .section-title, .controls-card h2 {
+      margin: 0;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: .13em;
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    .controls {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 9px;
+    }
+
+    button {
+      border: 1px solid rgba(212,168,67,.32);
+      border-radius: 14px;
+      background: rgba(255,255,255,.045);
+      color: var(--white);
+      padding: 12px 13px;
+      font-weight: 850;
+      cursor: pointer;
+      transition: .18s ease;
+      text-align: left;
+    }
+
+    button:hover {
+      transform: translateY(-1px);
+      border-color: rgba(212,168,67,.75);
+      background: rgba(212,168,67,.09);
+    }
+
+    button.active {
+      background: linear-gradient(135deg, var(--gold), #f1d17d);
+      color: #07101d;
+      border-color: transparent;
+      box-shadow: 0 16px 34px rgba(212,168,67,.15);
+    }
+
+    .legend {
+      display: grid;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    .legend-item { display: flex; gap: 9px; align-items: center; }
+    .dot { width: 10px; height: 10px; border-radius: 999px; flex: 0 0 auto; box-shadow: 0 0 14px rgba(255,255,255,.2); }
+    .dot.agency { background: var(--gold); }
+    .dot.chirey { background: var(--green-2); }
+    .dot.dealer { background: var(--cyan); }
+    .dot.joint { background: #fff; }
+
+    .map-section { margin-top: 18px; }
+
+    .process-map {
+      display: grid;
+      grid-template-columns: repeat(8, minmax(205px, 1fr));
+      gap: 15px;
+      overflow-x: auto;
+      padding: 10px 4px 26px;
+      scroll-snap-type: x proximity;
+    }
+
+    .stage {
+      scroll-snap-align: center;
+      min-height: 382px;
+      position: relative;
+      padding: 18px;
+      border-radius: 21px;
+      background: linear-gradient(180deg, rgba(12,31,49,.9), rgba(5,14,25,.76));
+      border: 1px solid rgba(212,168,67,.30);
+      box-shadow: 0 20px 54px rgba(0,0,0,.38);
+      cursor: pointer;
+      transition: .2s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .stage::after {
+      content: "→";
+      position: absolute;
+      top: 44%;
+      right: -17px;
+      color: var(--gold);
+      font-size: 24px;
+      z-index: 4;
+      text-shadow: 0 0 16px rgba(212,168,67,.75);
+    }
+
+    .stage:last-child::after { display: none; }
+
+    .stage:hover, .stage.selected {
+      transform: translateY(-5px);
+      border-color: rgba(212,168,67,.88);
+      box-shadow: 0 0 0 1px rgba(212,168,67,.22), 0 26px 84px rgba(212,168,67,.16);
+    }
+
+    .stage.filtered-out { opacity: .25; filter: grayscale(.9); }
+
+    .stage-number {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      border: 1px solid rgba(212,168,67,.8);
+      color: var(--gold);
+      font-weight: 950;
+      background: rgba(0,0,0,.18);
+      margin-bottom: 14px;
+    }
+
+    .icon { font-size: 34px; margin-bottom: 10px; }
+
+    .stage h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      line-height: 1.06;
+      letter-spacing: -.02em;
+    }
+
+    .stage p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 12.5px;
+      line-height: 1.38;
+    }
+
+    .platform-mini {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 12px 0;
+    }
+
+    .chip {
+      border-radius: 999px;
+      padding: 5px 7px;
+      border: 1px solid rgba(255,255,255,.11);
+      background: rgba(255,255,255,.045);
+      color: var(--muted);
+      font-size: 10.5px;
+      font-weight: 750;
+    }
+
+    .owner-stack { display: flex; flex-wrap: wrap; gap: 6px; }
+
+    .badge {
+      border-radius: 999px;
+      padding: 6px 8px;
+      font-size: 10.5px;
+      font-weight: 950;
+      letter-spacing: .045em;
+      text-transform: uppercase;
+      border: 1px solid rgba(255,255,255,.13);
+      background: rgba(255,255,255,.045);
+      color: var(--muted);
+    }
+
+    .badge.agency { color: var(--gold); border-color: rgba(212,168,67,.45); }
+    .badge.chirey { color: var(--green-2); border-color: rgba(89,184,106,.45); }
+    .badge.dealer { color: var(--cyan); border-color: rgba(110,214,212,.45); }
+    .badge.joint { color: #fff; border-color: rgba(255,255,255,.35); }
+    .badge.risk { color: var(--danger); border-color: rgba(255,140,111,.42); }
+
+    .risk-meter {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .bar {
+      height: 8px;
+      flex: 1;
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      overflow: hidden;
+    }
+
+    .bar span {
+      display: block;
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--green-2), var(--gold), var(--danger));
+    }
+
+    .detail-panel {
+      padding: 24px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .detail-head {
+      grid-column: 1 / -1;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .detail-head h2 {
+      margin: 0;
+      font-size: clamp(24px, 3vw, 44px);
+      line-height: 1;
+      letter-spacing: -.045em;
+    }
+
+    .detail-head p {
+      margin: 8px 0 0;
+      max-width: 880px;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .detail-box {
+      min-height: 170px;
+      padding: 16px;
+      border: 1px solid rgba(255,255,255,.09);
+      border-radius: 18px;
+      background: rgba(255,255,255,.035);
+    }
+
+    .detail-box.wide { grid-column: span 2; }
+
+    .detail-box h4 {
+      margin: 0 0 11px;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: .10em;
+      font-size: 11px;
+      font-weight: 950;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.52;
+    }
+
+    li + li { margin-top: 6px; }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .meeting, .must, .timeline, .raci {
+      padding: 24px;
+    }
+
+    .meeting-intro {
+      margin: 10px 0 0;
+      color: var(--muted);
+      line-height: 1.45;
+      max-width: 1060px;
+      font-size: 14px;
+    }
+
+    .pillar-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .pillar-card {
+      border: 1px solid rgba(255,255,255,.09);
+      background: rgba(255,255,255,.035);
+      border-radius: 18px;
+      padding: 16px;
+      min-height: 300px;
+    }
+
+    .pillar-card h3 {
+      margin: 0 0 12px;
+      font-size: 17px;
+      line-height: 1.08;
+      letter-spacing: -.02em;
+    }
+
+    .number {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      border: 1px solid rgba(212,168,67,.75);
+      color: var(--gold);
+      font-weight: 950;
+      margin-bottom: 10px;
+    }
+
+    .mini-label {
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 950;
+      letter-spacing: .10em;
+      text-transform: uppercase;
+      margin: 13px 0 7px;
+    }
+
+    .meeting-flow {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .flow-item {
+      padding: 13px;
+      border-radius: 15px;
+      border: 1px solid rgba(212,168,67,.20);
+      background: rgba(212,168,67,.055);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    .flow-item strong { display: block; color: var(--white); margin-bottom: 5px; }
+
+    .must-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .must-item {
+      padding: 14px;
+      border: 1px solid rgba(255,255,255,.09);
+      border-radius: 16px;
+      background: rgba(255,255,255,.035);
+    }
+
+    .must-item strong { display: block; color: var(--white); margin-bottom: 6px; }
+    .must-item span { display: block; color: var(--muted); font-size: 13px; line-height: 1.4; }
+
+    .timeline-steps {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .step {
+      min-height: 162px;
+      padding: 14px;
+      border-left: 3px solid var(--gold);
+      border-radius: 15px;
+      background: rgba(255,255,255,.035);
+    }
+
+    .step strong { display: block; color: var(--gold); margin-bottom: 7px; }
+    .step span { display: block; color: var(--muted); font-size: 12.5px; line-height: 1.42; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+      font-size: 13px;
+      overflow: hidden;
+      border-radius: 16px;
+    }
+
+    th, td {
+      padding: 13px 12px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      text-align: left;
+      vertical-align: top;
+      color: var(--muted);
+    }
+
+    th {
+      color: var(--gold);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .10em;
+      background: rgba(212,168,67,.07);
+    }
+
+    td strong { color: var(--white); }
+
+    .footer-note {
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+      opacity: .88;
+    }
+
+    @media (max-width: 1280px) {
+      .hero, .two-col { grid-template-columns: 1fr; }
+      .principles, .must-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .detail-panel { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .pillar-grid, .meeting-flow, .timeline-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .process-map { grid-template-columns: repeat(8, minmax(235px, 1fr)); }
+    }
+
+    @media (max-width: 760px) {
+      .app { width: min(100vw - 24px, 1580px); padding-top: 18px; }
+      .hero-card, .controls-card, .detail-panel, .meeting, .must, .timeline, .raci { padding: 18px; }
+      .principles, .must-grid, .detail-panel, .pillar-grid, .meeting-flow, .timeline-steps { grid-template-columns: 1fr; }
+      .detail-box.wide { grid-column: auto; }
+      .detail-head { flex-direction: column; }
+      table { font-size: 12px; }
+      th, td { padding: 10px 8px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <div class="hero-card card">
+        <div class="brand">
+          <span class="brand-pill">CHIREY</span>
+          <span class="brand-pill">OMODA</span>
+          <span class="brand-pill">JAECOO</span>
+          <span>Data Architecture · Lead Acquisition · Measurement Ops</span>
+        </div>
+        <h1>Operational map to capture, measure and convert leads</h1>
+        <p class="subtitle">Process model to connect media, capture, lead quality, CRM, dealers, warehouse, attribution and operational governance. The objective is for Chirey, the agency and the dealer network to operate with one shared source of truth, clear quality criteria and actionable decisions.</p>
+        <div class="principles">
+          <div class="principle"><strong>Principle 1</strong><span>Commercial traceability requires an updated CRM, standardized lead status and connection to sales outcomes.</span></div>
+          <div class="principle"><strong>Principle 2</strong><span>The agency operates, measures and optimizes; Chirey enables data, access, compliance, business rules and decisions.</span></div>
+          <div class="principle"><strong>Principle 3</strong><span>Dealer response quality defines how much of the investment turns into real commercial opportunity.</span></div>
+        </div>
+      </div>
+
+      <aside class="controls-card card">
+        <h2>Interactive view</h2>
+        <div class="controls">
+          <button class="active" data-filter="all">Full process</button>
+          <button data-filter="agency">Agency</button>
+          <button data-filter="chirey">Chirey</button>
+          <button data-filter="dealer">Dealers</button>
+          <button data-filter="joint">Shared responsibility</button>
+          <button data-filter="technical">Technical / data layer</button>
+        </div>
+        <div class="legend">
+          <div class="legend-item"><span class="dot agency"></span> Agency: execution, tracking, dashboards, optimization and tool operations.</div>
+          <div class="legend-item"><span class="dot chirey"></span> Chirey: approvals, access, compliance, commercial data and governance.</div>
+          <div class="legend-item"><span class="dot dealer"></span> Dealers: contact, follow-up, CRM, sales and feedback.</div>
+          <div class="legend-item"><span class="dot joint"></span> Shared: committee, scorecards, escalations and continuous improvement.</div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="map-section">
+      <div id="processMap" class="process-map"></div>
+    </section>
+
+    <section id="detailPanel" class="detail-panel card"></section>
+
+    <section class="meeting card">
+      <h2 class="section-title">Working plan for the Chirey session</h2>
+      <p class="meeting-intro">The session should translate the ecosystem into daily operations: what is delivered, when it is delivered, who validates it, what evidence is kept, what data the agency needs and which decisions Chirey must enable to operate consistently.</p>
+
+      <div class="pillar-grid">
+        <article class="pillar-card">
+          <div class="number">01</div>
+          <h3>Media Operations and Reporting</h3>
+          <div class="mini-label">Meeting check</div>
+          <ul>
+            <li>Monthly media proposal format: investment, channel, flight, objective, KPI, asset, market, model and owner.</li>
+            <li>Timings: proposal, validation, campaign setup, QA, weekly follow-up and monthly close.</li>
+            <li>Evidence: platform screenshots, IOs/orders, active links, QR codes, UTMs, platform captures and approved changes.</li>
+            <li>Monthly report: initial proposal vs. actual execution vs. billed amount vs. performance.</li>
+          </ul>
+          <div class="mini-label">Platforms / supports</div>
+          <ul><li>Google Ads, Meta Ads, TikTok Ads, OOH, DOOH, TV, media plan matrix, Looker Studio and BigQuery.</li></ul>
+        </article>
+
+        <article class="pillar-card">
+          <div class="number">02</div>
+          <h3>Lead Optimization and Quality</h3>
+          <div class="mini-label">Meeting check</div>
+          <ul>
+            <li>Tools: Seekop CRM, Biky.ai, Website Forms, WhatsApp, Captcha, ClickCease and dashboards.</li>
+            <li>Quality criteria: unique lead, contactable, valid model/market, consent, traceable source and updated status.</li>
+            <li>Monitoring: CPL, CPLQ, contact rate, speed to lead, appointment, show, quote, sale and lost reasons.</li>
+            <li>Seekop triggers: lead_created, assigned_to_dealer, first_contact, appointment_set, test_drive, quote, sold, lost.</li>
+          </ul>
+          <div class="mini-label">Critical condition</div>
+          <ul><li>Optimization must connect with CRM quality and stage progression, not only platform CPL.</li></ul>
+        </article>
+
+        <article class="pillar-card">
+          <div class="number">03</div>
+          <h3>Tools, Access and Integration</h3>
+          <div class="mini-label">Meeting check</div>
+          <ul>
+            <li>Chirey access: Looker Studio, reports, media matrix, campaign status, action tracker and BigQuery views.</li>
+            <li>Agency access: ad platforms, GA4, GTM, website/landing pages, Seekop exports/API, WhatsApp, Funnel/Supermetrics, SegmentStream, Hawky AI and Make.</li>
+            <li>Required data: inventory, promotions, vehicle offers, active dealers, sales, appointments, quotes and billing.</li>
+            <li>Integration: unique lead ID, source of truth, BigQuery data schema, permissions and trigger documentation.</li>
+          </ul>
+          <div class="mini-label">Critical condition</div>
+          <ul><li>Data must live in the warehouse with update, cleaning and ownership rules by source.</li></ul>
+        </article>
+
+        <article class="pillar-card">
+          <div class="number">04</div>
+          <h3>Administration and Team</h3>
+          <div class="mini-label">Meeting check</div>
+          <ul>
+            <li>Monthly billing: reconciliation of approved proposal vs. contracted media vs. executed media vs. billed amount.</li>
+            <li>Cutoffs: evidence deadline, discrepancy review, approval and invoice issuance.</li>
+            <li>Team: org chart, main contact, escalation paths and owners for media, data, creative, account, finance and leadership.</li>
+            <li>Cadence: weekly operations meeting, monthly business review and financial close.</li>
+          </ul>
+          <div class="mini-label">Critical condition</div>
+          <ul><li>A decision log must exist so investment, asset or process changes remain traceable.</li></ul>
+        </article>
+      </div>
+
+      <div class="meeting-flow">
+        <div class="flow-item"><strong>0-10 min</strong>Session objective, owners and definition of success.</div>
+        <div class="flow-item"><strong>10-30 min</strong>Media, monthly proposal, evidence and reports.</div>
+        <div class="flow-item"><strong>30-50 min</strong>Leads, quality, Seekop triggers and dealer SLA.</div>
+        <div class="flow-item"><strong>50-70 min</strong>Tools, access, BigQuery, APIs and integration.</div>
+        <div class="flow-item"><strong>70-90 min</strong>Billing, team, calendar, pending items and owners.</div>
+      </div>
+    </section>
+
+    <section class="two-col">
+      <div class="must card">
+        <h2 class="section-title">Minimum operating requirements</h2>
+        <div class="must-grid">
+          <div class="must-item"><strong>1. Unified taxonomy</strong><span>UTM, campaign naming, QR codes, links, model, market, dealer, creative and objective.</span></div>
+          <div class="must-item"><strong>2. Formal access</strong><span>GTM, GA4, Google Ads, Meta, TikTok, website, WhatsApp, Seekop, Looker, BigQuery, Funnel/Supermetrics, SegmentStream, Hawky AI and Make.</span></div>
+          <div class="must-item"><strong>3. Usable Seekop CRM</strong><span>Unique lead ID, source, campaign, dealer, status, triggers, lost reason, contact, test drive, quote and sale.</span></div>
+          <div class="must-item"><strong>4. Dealer SLA</strong><span>Contact time, minimum follow-up attempts, status updates, scorecard and escalation protocol.</span></div>
+          <div class="must-item"><strong>5. Legal + privacy</strong><span>Consent, Enhanced Conversions, CAPI, MAIDs, data processing, contracts, retention policy and permissions.</span></div>
+          <div class="must-item"><strong>6. Creative intelligence</strong><span>Final PNGs, brand manuals, guidelines, approved claims, commercial offers and creative taxonomy.</span></div>
+        </div>
+      </div>
+
+      <div class="raci card">
+        <h2 class="section-title">Executive RACI by process</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Process</th>
+              <th>Responsible</th>
+              <th>Approves</th>
+              <th>Critical input</th>
+            </tr>
+          </thead>
+          <tbody id="raciRows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="timeline card" style="margin-top: 18px;">
+      <h2 class="section-title">Recommended implementation roadmap · 6 months</h2>
+      <div class="timeline-steps">
+        <div class="step"><strong>Month 1 · Diagnosis and compliance</strong><span>Inventory of access, platforms, privacy policies, vendors, forms, CRM, current flows and dealer network.</span></div>
+        <div class="step"><strong>Month 2 · Taxonomy and instrumentation</strong><span>Naming, UTMs, QR/links, GTM, GA4, events, data layer, media matrix and offline tracking/MAID requirements.</span></div>
+        <div class="step"><strong>Month 3 · CRM + warehouse pilot</strong><span>Seekop triggers, BigQuery schema, connectors, base dashboards and pilot with prioritized dealers.</span></div>
+        <div class="step"><strong>Month 4 · Offline conversions and attribution</strong><span>Google Offline/EC, Meta CAPI/Offline, SegmentStream, attribution models and matching field validation.</span></div>
+        <div class="step"><strong>Month 5 · Dealer rollout</strong><span>Progressive scaling to approximately 90 dealers, training, SLA, scorecards and CRM update audits.</span></div>
+        <div class="step"><strong>Month 6 · Governance and optimization</strong><span>Operating committee, monthly reconciliation, final dashboards, Brandintelle, action tracker and continuous optimization backlog.</span></div>
+      </div>
+      <p class="footer-note">Operational consideration: due to compliance, integrations, commercial data, offline conversions and a network of approximately 90 dealers, the rollout must be phased. The priority is to secure adoption, traceability and data quality before scaling automation and advanced attribution.</p>
+    </section>
+  </main>
+
+  <script>
+    const stages = [
+      {
+        id: 1,
+        icon: "📣",
+        title: "Demand Generation",
+        subtitle: "Paid and offline demand generation",
+        owners: ["agency", "chirey", "technical"],
+        risk: 48,
+        platforms: ["Google Ads", "Meta Ads", "TikTok Ads", "OOH", "DOOH", "TV"],
+        conditions: [
+          "Monthly plan by channel, model, market, flight, objective, KPI and approved budget.",
+          "Standardized naming convention for campaign, audience, creative, format, model and dealer/market.",
+          "Inventory, promotions and commercial offers by vehicle available before campaign activation.",
+          "Alignment between national media, local campaigns and dealer commercial capacity."
+        ],
+        agency: [
+          "Develops the media plan by model, market, channel and objective.",
+          "Executes and optimizes campaigns in Google Ads, Meta Ads, TikTok Ads and approved digital media.",
+          "Evaluates channel performance and recommends budget reallocations based on results."
+        ],
+        chirey: [
+          "Defines commercial objectives, priority models, markets, inventory and approved budget.",
+          "Approves campaigns, claims, promotions, legal assets and brand mandatories.",
+          "Shares real unit availability to ensure consistency between communication, generated demand and commercial capacity."
+        ],
+        dealer: [
+          "Confirms commercial capacity by market and unit availability.",
+          "Aligns local promotions with the national strategy."
+        ],
+        requires: ["Monthly commercial brief", "Launch/promotion calendar", "Budget by channel", "Inventory by market", "Model and priority matrix", "Current commercial offers"],
+        kpi: ["Spend", "Reach", "CTR", "CPC", "CPL", "Lead volume", "Share by model/market"],
+        output: "Traceable demand, active campaigns and initial signals by channel, model and market.",
+        raci: ["Agency", "Chirey Marketing", "Brief + budget + inventory"]
+      },
+      {
+        id: 2,
+        icon: "▦",
+        title: "Offline Attribution",
+        subtitle: "OOH, DOOH, TV, QR, vanity URLs, short links and MAIDs",
+        owners: ["agency", "chirey", "technical"],
+        risk: 68,
+        platforms: ["QR Codes", "Link Attribution", "Vanity URLs", "Short Links", "OOH", "DOOH", "TV", "MAID vendors"],
+        conditions: [
+          "Evaluate offline measurement vendors with strong MAID coverage and quality when attribution by exposure, visit or lift is required.",
+          "Each offline asset must have a unique QR/link by media, market, location, creative, model and flight.",
+          "Before printing or launching, destination, UTM, QR reading, naming and analytics/warehouse capture must be validated.",
+          "Offline measurement must separate direct scans, assisted traffic, geolift/MAIDs and modeled contribution."
+        ],
+        agency: [
+          "Creates the QR/link structure by channel, market, creative, media and date.",
+          "Configures UTMs, landing destination and naming compatible with dashboards and BigQuery.",
+          "Evaluates offline measurement vendors considering coverage, MAID quality, methodology, attribution windows and data stack compatibility."
+        ],
+        chirey: [
+          "Requests that media and vendors use the correct QR/link for each asset.",
+          "Provides location plan, flight dates, creative assets and responsible vendor.",
+          "Approves final artwork after validating tracking, codes, links and measurement routes."
+        ],
+        dealer: [
+          "Uses local materials with assigned codes.",
+          "Reports offline activations, showroom traffic and associated visit signals when applicable."
+        ],
+        requires: ["Shortener or vanity URLs", "UTM governance", "Landing page by objective", "Offline asset matrix", "Pre-print/pre-launch QA", "Vendor evaluation with MAIDs"],
+        kpi: ["Scans", "Landing sessions", "Form starts", "Lead conversion", "Cost per scan", "Offline assisted leads", "Exposed-to-visit", "Geo/MAID lift"],
+        output: "Offline media with actionable measurement, clear evidence and contribution reading within the full ecosystem.",
+        raci: ["Agency", "Chirey Marketing + Media", "Offline plan + artwork + QR matrix"]
+      },
+      {
+        id: 3,
+        icon: "🧲",
+        title: "Capture, Tracking & Experimentation",
+        subtitle: "Website Forms, WhatsApp, GTM, GA4, Hotjar, Kameleoon",
+        owners: ["agency", "chirey", "technical"],
+        risk: 70,
+        platforms: ["Website Forms", "WhatsApp", "Google Tag Manager", "GA4", "Hotjar", "Kameleoon", "QR Codes", "Link Attribution"],
+        conditions: [
+          "GTM and GA4 must have standardized events for lead_start, lead_submit, whatsapp_click, brochure_download, test_drive_request and quote_request where applicable.",
+          "Forms must capture source, campaign, model, market, dealer, consent and lead ID without adding unnecessary friction.",
+          "Hotjar and Kameleoon require consent, clear segmentation and an experiment matrix with hypothesis, variable, window and decision criteria.",
+          "Events must reach the warehouse consistently so they can be matched with Seekop CRM and media platforms."
+        ],
+        agency: [
+          "Implements events, conversions, tags, pixels, CAPI where applicable and form QA.",
+          "Designs CRO experiments across landing pages, forms, CTAs, model, offer and creative message.",
+          "Maintains an experiment log with hypothesis, date, variable, result and decision."
+        ],
+        chirey: [
+          "Provides access to website, GTM, GA4, platforms, WhatsApp Business and required legal validations.",
+          "Authorizes landing/form changes and defines mandatory fields.",
+          "Enables coordination with IT and legal to ensure compliance, permissions, privacy and operational continuity."
+        ],
+        dealer: [
+          "Receives leads with complete fields and no additional operational friction.",
+          "Provides feedback on whether captured fields support or limit the sale."
+        ],
+        requires: ["GTM/GA4 ownership", "Pixel/CAPI", "Standard events", "Consent mode", "Hotjar/Kameleoon", "QA checklist", "Documented data layer"],
+        kpi: ["Form CVR", "WhatsApp starts", "Event match quality", "Drop-off", "Experiment lift", "Cost per qualified lead"],
+        output: "Measurable capture and documented experimentation with hypotheses, results and optimization decisions.",
+        raci: ["Agency + Chirey IT", "Chirey Marketing/Legal", "Access + permissions + events"]
+      },
+      {
+        id: 4,
+        icon: "🛡️",
+        title: "Traffic Quality & Lead Integrity",
+        subtitle: "Captcha, ClickCease, duplicates, fraud and validation",
+        owners: ["agency", "chirey", "technical"],
+        risk: 62,
+        platforms: ["Captcha", "ClickCease", "GA4", "Google Ads", "Meta Ads", "TikTok Ads", "Seekop CRM"],
+        conditions: [
+          "Define rules for valid lead, duplicate, non-contactable, out-of-area, fake, internal test and spam.",
+          "ClickCease must be configured with criteria for IP, frequency, device, location, source and anomalous click patterns.",
+          "Quality must be evaluated against Seekop CRM data, not only platform signals.",
+          "Budget must be optimized against CPLQ and contact rate, not only CPL."
+        ],
+        agency: [
+          "Configures spam filters, captcha, anti-fraud rules, exclusions and anomaly monitoring.",
+          "Detects suspicious variations: abnormal CPL, repeated clicks, anomalous IPs or out-of-range time patterns.",
+          "Reports lead quality by channel and recommends investment adjustments when low-quality or invalid traffic signals are detected."
+        ],
+        chirey: [
+          "Approves tools such as ClickCease/Captcha and lead validation criteria.",
+          "Defines which fields are mandatory and which reduce conversion without adding commercial value.",
+          "Prioritizes quality and commercial conversion over isolated lead volume."
+        ],
+        dealer: [
+          "Marks invalid leads with a standardized reason.",
+          "Reports duplicates, fake phone numbers and unreachable contacts."
+        ],
+        requires: ["Captcha", "Fraud detection", "Duplicate rules", "Basic lead scoring", "Invalid reason taxonomy", "Cross-check with Seekop status"],
+        kpi: ["Invalid rate", "Duplicate rate", "Bot rate", "Qualified lead rate", "Fraud-adjusted CPL", "Contactable rate"],
+        output: "Validated lead volume with auditable quality criteria and stronger alignment between marketing and sales.",
+        raci: ["Agency", "Chirey CRM/Marketing", "Quality rules + anti-fraud tool"]
+      },
+      {
+        id: 5,
+        icon: "💬",
+        title: "Qualification & Dealer Sales Ops",
+        subtitle: "Biky.ai, Seekop CRM and dealer follow-up",
+        owners: ["chirey", "dealer", "agency", "technical"],
+        risk: 86,
+        platforms: ["Biky.ai", "Seekop CRM", "Dealer CRM", "WhatsApp", "Google Ads Offline Conversions", "Meta Offline Events"],
+        conditions: [
+          "Seekop CRM must document event triggers: lead_created, assigned_to_dealer, first_contact, contacted, appointment_set, show, test_drive, quote, sold, lost and lost_reason.",
+          "Each trigger must include timestamp, dealer, model, market, lead ID, source/campaign and standardized status to be sent to the warehouse.",
+          "Biky.ai must be aligned with scripts, qualification criteria, brand tone and dealer handoff.",
+          "Dealer SLA must be auditable by dealer and stage, considering progressive rollout for approximately 90 dealers."
+        ],
+        agency: [
+          "Monitors intake quality, response times and stage drop-off.",
+          "Proposes source/campaign optimizations based on lead-to-sale, not only CPL.",
+          "Delivers insights to improve scripts, assignment routes, remarketing and offline conversion signals."
+        ],
+        chirey: [
+          "Defines national response SLA and status update guidelines in Seekop CRM.",
+          "Aligns Biky.ai, Seekop CRM and dealer CRM to maintain unique lead ID and stage traceability.",
+          "Audits dealer compliance and defines monitoring, escalation and correction mechanisms."
+        ],
+        dealer: [
+          "Contacts leads within the agreed target time and records the outcome.",
+          "Updates status: contacted, interested, appointment, test drive, quote, sale, lost and reason.",
+          "Follows up with a defined and auditable cadence."
+        ],
+        requires: ["Mandatory Seekop CRM", "Unique lead ID", "Event triggers", "Signed SLA", "Sales script", "Status taxonomy", "Dealer scorecard"],
+        kpi: ["Speed to lead", "Contact rate", "Appointment rate", "Show rate", "Quote rate", "Sale rate", "Lost reason mix"],
+        output: "Commercial conversion visible by dealer, model, campaign and real funnel stage.",
+        raci: ["Chirey Sales + Dealers", "Commercial Leadership", "Seekop CRM + SLA + training"]
+      },
+      {
+        id: 6,
+        icon: "🗄️",
+        title: "Data Infrastructure & Automation Backbone",
+        subtitle: "Funnel.io, Supermetrics, BigQuery and Make",
+        owners: ["agency", "chirey", "technical"],
+        risk: 78,
+        platforms: ["Funnel.io", "Supermetrics", "BigQuery", "Make", "Seekop API/exports", "GA4", "Ad Platforms"],
+        conditions: [
+          "BigQuery must be organized by datasets/tables: spend, campaign_taxonomy, web_events, leads, seekop_events, dealer_status, offline_conversions, sales, inventory and creative_assets.",
+          "Define update frequency by source: near-real-time, daily, weekly or monthly close depending on criticality and availability.",
+          "The data dictionary must define owner, source, field, format, frequency, cleaning rule and use case for each variable.",
+          "Make should be used for controlled and documented workflows, not as a substitute for stable integrations when APIs are available."
+        ],
+        agency: [
+          "Designs data architecture, dashboards, Make workflows, Funnel/Supermetrics connectors and load QA.",
+          "Standardizes naming and builds the data dictionary so every metric has one definition.",
+          "Automates anomaly alerts and recurring extraction/load processes."
+        ],
+        chirey: [
+          "Defines the source of truth and provides credentials/API/exports from Seekop CRM and platforms.",
+          "Ensures legal data ownership, permissions, security and infrastructure budget.",
+          "Appoints an internal data owner to ensure governance, continuity and effective use of the infrastructure."
+        ],
+        dealer: [
+          "Updates Seekop CRM with discipline to feed the warehouse.",
+          "Provides offline sales and closures with dates and lead ID when applicable."
+        ],
+        requires: ["BigQuery", "Funnel.io", "Supermetrics", "Make", "Data dictionary", "Access governance", "Backup/export policy", "Seekop schema"],
+        kpi: ["Data freshness", "Match rate", "Pipeline completeness", "API failure rate", "Dashboard uptime", "Manual work hours saved"],
+        output: "Reliable data backbone so reporting, attribution and decisions operate from one source of truth.",
+        raci: ["Agency Data + Chirey IT", "Chirey Marketing/Data", "Credentials + warehouse + source of truth"]
+      },
+      {
+        id: 7,
+        icon: "📊",
+        title: "Measurement, Attribution & Intelligence",
+        subtitle: "SegmentStream, Looker Studio, Hawky AI and attribution models",
+        owners: ["agency", "chirey", "technical"],
+        risk: 73,
+        platforms: ["SegmentStream", "Looker Studio", "Hawky AI", "BigQuery", "Google Ads Offline/EC", "Meta CAPI/Offline"],
+        conditions: [
+          "Review sales attribution models: last click, data-driven, multi-touch, media mix modeling, incrementality/lift and predictive attribution with SegmentStream.",
+          "Offline conversions require reliable triggers from Seekop CRM and enough matching fields for Google Enhanced Conversions and Meta CAPI/Offline.",
+          "Hawky AI integrates via API, but requires final PNGs/creative assets, brand manuals, visual guidelines, commercial offers by vehicle and creative taxonomy.",
+          "Looker Studio must read from BigQuery to avoid reports with different definitions across platforms."
+        ],
+        agency: [
+          "Builds dashboards with views by channel, campaign, dealer, model and stage.",
+          "Analyzes attribution models, marginal efficiency, creative fatigue, cohorts and intent signals.",
+          "Integrates Hawky AI for creative intelligence when assets, manuals, offers and metadata are complete."
+        ],
+        chirey: [
+          "Shares offline conversions, sales, appointments, quotes, inventory and margin when available.",
+          "Makes budget decisions based on lead-to-sale and commercial quality, not only CPL.",
+          "Provides final PNGs/creative assets, brand manuals, approved claims and commercial offers by vehicle for creative analysis."
+        ],
+        dealer: [
+          "Validates commercial quality and lost reasons.",
+          "Shares feedback from calls, objections, availability and real closures."
+        ],
+        requires: ["Funnel dashboard", "Offline conversions", "Attribution models", "SegmentStream", "Hawky API", "Creative taxonomy", "PNGs", "Brand manuals", "Commercial offers"],
+        kpi: ["CAC", "CPLQ", "Lead-to-sale", "Real ROAS", "CPA by stage", "Marginal efficiency", "Creative win rate", "Attribution confidence"],
+        output: "Actionable intelligence to reallocate investment, improve experience, increase lead quality and make evidence-based decisions.",
+        raci: ["Agency Performance/Data", "Chirey Marketing/Commercial", "CRM data + sales + investment + assets"]
+      },
+      {
+        id: 8,
+        icon: "🔁",
+        title: "Governance & Activation Feedback Loop",
+        subtitle: "Brandintelle, Offline Conversions, CAPI and operational governance",
+        owners: ["joint", "chirey", "agency", "dealer", "technical"],
+        risk: 81,
+        platforms: ["Brandintelle", "Google Ads Offline/EC", "Meta CAPI/Offline", "Looker Studio", "BigQuery", "Dealer Scorecards"],
+        conditions: [
+          "Brandintelle can operate as the budget governance, sourcing, investment tracking and ROI visibility layer if financial and execution data are integrated.",
+          "Google Ads Offline/Enhanced Conversions and Meta CAPI/Offline must be activated with clean events, consent, matching fields and defined attribution windows.",
+          "The committee must review approved vs. executed vs. billed investment, performance, lead quality, dealer progress and action backlog.",
+          "An escalation protocol must exist for dealers or vendors that affect traceability, response times or data quality."
+        ],
+        agency: [
+          "Leads the weekly performance review with diagnosis, insights, trade-offs and experiment backlog.",
+          "Documents learnings by campaign, model and market; proposes corrections.",
+          "Closes the loop with changes in targeting, creative, landing page, investment, measurement and offline conversion uploads."
+        ],
+        chirey: [
+          "Decides priorities, unlocks dependencies and escalates dealer/vendor non-compliance.",
+          "Maintains the committee with marketing, sales, CRM, IT/legal, finance and agency.",
+          "Approves changes in budget, promotions, processes and data governance."
+        ],
+        dealer: [
+          "Participates in the compliance scorecard and shares showroom learnings.",
+          "Corrects follow-up, scripts and CRM discipline with deadlines."
+        ],
+        requires: ["Weekly ritual", "Action tracker", "Decision log", "Dealer scorecard", "Experiment backlog", "Escalation path", "Offline/CAPI governance"],
+        kpi: ["Action closure rate", "SLA compliance", "Budget reallocation speed", "Experiment velocity", "Sales feedback completeness", "Offline event upload rate"],
+        output: "Continuous improvement system where every investment generates learning, every deviation has an owner and every action is tracked to closure.",
+        raci: ["Shared", "Chirey Leadership", "Committee + scorecard + action tracker"]
+      }
+    ];
+
+    const ownerLabels = {
+      agency: "Agency",
+      chirey: "Chirey",
+      dealer: "Dealers",
+      joint: "Shared",
+      technical: "Data / Tech"
+    };
+
+    const processMap = document.getElementById("processMap");
+    const detailPanel = document.getElementById("detailPanel");
+    const raciRows = document.getElementById("raciRows");
+    let selectedId = 1;
+    let currentFilter = "all";
+
+    function list(items) {
+      return `<ul>${items.map(item => `<li>${item}</li>`).join("")}</ul>`;
+    }
+
+    function chips(items) {
+      return items.slice(0, 5).map(item => `<span class="chip">${item}</span>`).join("");
+    }
+
+    function ownerBadges(stage) {
+      return stage.owners
+        .filter(owner => owner !== "technical")
+        .map(owner => `<span class="badge ${owner}">${ownerLabels[owner]}</span>`)
+        .join("") + (stage.owners.includes("technical") ? `<span class="badge joint">${ownerLabels.technical}</span>` : "");
+    }
+
+    function renderMap() {
+      processMap.innerHTML = stages.map(stage => {
+        const visible = currentFilter === "all" || stage.owners.includes(currentFilter);
+        return `
+          <article class="stage ${stage.id === selectedId ? "selected" : ""} ${visible ? "" : "filtered-out"}" data-id="${stage.id}">
+            <div>
+              <div class="stage-number">${String(stage.id).padStart(2, "0")}</div>
+              <div class="icon">${stage.icon}</div>
+              <h3>${stage.title}</h3>
+              <p>${stage.subtitle}</p>
+              <div class="platform-mini">${chips(stage.platforms)}</div>
+            </div>
+            <div>
+              <div class="owner-stack">${ownerBadges(stage)}</div>
+              <div class="risk-meter"><span>Complexity</span><div class="bar"><span style="width:${stage.risk}%"></span></div><strong>${stage.risk}%</strong></div>
+            </div>
+          </article>
+        `;
+      }).join("");
+
+      document.querySelectorAll(".stage").forEach(card => {
+        card.addEventListener("click", () => {
+          selectedId = Number(card.dataset.id);
+          renderMap();
+          renderDetail();
+          window.scrollTo({ top: detailPanel.offsetTop - 18, behavior: "smooth" });
+        });
+      });
+    }
+
+    function renderDetail() {
+      const stage = stages.find(s => s.id === selectedId);
+      detailPanel.innerHTML = `
+        <div class="detail-head">
+          <div>
+            <h2>${String(stage.id).padStart(2, "0")} · ${stage.title}</h2>
+            <p>${stage.output}</p>
+          </div>
+          <div class="owner-stack">${ownerBadges(stage)}<span class="badge risk">Complexity ${stage.risk}%</span></div>
+        </div>
+        <div class="detail-box"><h4>Platforms / tools</h4>${list(stage.platforms)}</div>
+        <div class="detail-box wide"><h4>Key conditions</h4>${list(stage.conditions)}</div>
+        <div class="detail-box"><h4>KPIs / control signals</h4>${list(stage.kpi)}</div>
+        <div class="detail-box"><h4>What the agency does</h4>${list(stage.agency)}</div>
+        <div class="detail-box"><h4>What Chirey must enable</h4>${list(stage.chirey)}</div>
+        <div class="detail-box"><h4>What the dealer network must operate</h4>${list(stage.dealer)}</div>
+        <div class="detail-box"><h4>Minimum requirements</h4>${list(stage.requires)}</div>
+        <div class="detail-box"><h4>Definition of ready</h4><ul><li>Owner assigned.</li><li>Data traceable from source to Seekop CRM and BigQuery.</li><li>Dashboard updated.</li><li>Corrective action if KPI crosses threshold.</li><li>Learning documented in backlog.</li></ul></div>
+      `;
+    }
+
+    function renderRaci() {
+      raciRows.innerHTML = stages.map(stage => `
+        <tr>
+          <td><strong>${String(stage.id).padStart(2, "0")} · ${stage.title}</strong></td>
+          <td>${stage.raci[0]}</td>
+          <td>${stage.raci[1]}</td>
+          <td>${stage.raci[2]}</td>
+        </tr>
+      `).join("");
+    }
+
+    document.querySelectorAll("button[data-filter]").forEach(button => {
+      button.addEventListener("click", () => {
+        currentFilter = button.dataset.filter;
+        document.querySelectorAll("button[data-filter]").forEach(b => b.classList.remove("active"));
+        button.classList.add("active");
+        renderMap();
+      });
+    });
+
+    renderMap();
+    renderDetail();
+    renderRaci();
+  </script>
+</body>
+</html>
