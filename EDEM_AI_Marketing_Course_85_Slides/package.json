@@ -1,0 +1,20 @@
+{
+  "name": "edem-ai-marketing",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "check": "node scripts/check-deck.mjs"
+  },
+  "dependencies": {
+    "@fontsource/anton": "^5.2.6",
+    "@fontsource/inter": "^5.2.6",
+    "reveal.js": "^5.2.1"
+  },
+  "devDependencies": {
+    "vite": "^7.0.0"
+  }
+}

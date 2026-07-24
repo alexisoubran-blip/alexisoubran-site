@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#e10600" />
+    <meta
+      name="description"
+      content="IA para líderes de marketing — curso ejecutivo de Alexis Soubran para EDEM."
+    />
+    <title>IA para líderes de marketing | EDEM</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#deck">Saltar a la presentación</a>
+    <div class="app-shell">
+      <header class="topbar" aria-label="Controles de presentación">
+        <button class="brand-lockup" data-jump="0" aria-label="Volver al inicio">
+          <span class="brand-shield" aria-hidden="true">E</span>
+          <span>EDEM</span>
+        </button>
+        <div class="course-label">IA PARA LÍDERES DE MARKETING · 2026</div>
+        <nav class="toolbar">
+          <button data-action="overview" title="Vista general (Esc)">ÍNDICE</button>
+          <button data-action="notes" title="Vista del presentador (S)">PRESENTER</button>
+          <button data-action="toolbox" title="Abrir arsenal de herramientas">ARSENAL</button>
+          <button data-action="pdf" title="Exportar a PDF">PDF</button>
+          <button data-action="fullscreen" title="Pantalla completa (F)">FULL</button>
+        </nav>
+      </header>
+
+      <main id="deck" class="reveal" aria-label="Presentación IA para líderes de marketing">
+        <div class="slides"></div>
+      </main>
+
+      <aside class="toolbox" aria-hidden="true" aria-label="Arsenal de herramientas de IA">
+        <div class="toolbox-head">
+          <div>
+            <span class="kicker">BONUS · ACTUALIZABLE</span>
+            <h2>ARSENAL 2026</h2>
+          </div>
+          <button data-action="close-toolbox" aria-label="Cerrar arsenal">×</button>
+        </div>
+        <div class="toolbox-body" id="toolbox-content"></div>
+      </aside>
+
+      <div class="toast" role="status" aria-live="polite"></div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
