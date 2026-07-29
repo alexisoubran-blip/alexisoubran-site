@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Supermercados Morelos · Venta semanal por tienda</title>
+<meta name="description" content="Venta semanal por tienda desde 2024, con detección de picos y caídas y desglose por área.">
+<style>
+:root{
+  --rojo:#C8102E; --rojo-d:#9E0C24; --verde:#1A7A4C; --verde-d:#0F5132; --verde-l:#E8F2ED;
+  --ink:#1C1C1C; --txt:#414141; --mute:#6E6E6E; --faint:#9A9A9A;
+  --line:#E3E3E3; --line2:#F0F0F0; --bg:#F5F5F3; --card:#FFFFFF; --amb:#C88A00;
+  --ui:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,Roboto,Helvetica,sans-serif;
+  --num:ui-monospace,"SF Mono","Cascadia Mono",Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--ui);font-size:14px;line-height:1.5;
+ -webkit-font-smoothing:antialiased;padding-bottom:60px}
+.wrap{max-width:1400px;margin:0 auto;padding:0 20px}
+
+.top{background:var(--ink);color:#fff;font-size:11.5px;padding:7px 0}
+.top .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.top .r{color:#B5B5B5}
+
+.hero{background:var(--rojo);color:#fff}
+.hero .bar{height:4px;background:var(--verde)}
+.hero .in{padding:24px 0 28px}
+.brandrow{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:20px}
+.logo{display:flex;align-items:center;gap:11px}
+.logo .mk{width:34px;height:34px;border:2px solid #fff;border-radius:50%;display:flex;
+ align-items:center;justify-content:center;font-weight:700;font-size:15px;flex:none}
+.logo b{font-size:17px;letter-spacing:.05em;display:block;line-height:1.1}
+.logo span{font-size:9px;letter-spacing:.24em;color:#F3C9CF;display:block}
+.tagline{font-size:15px;font-style:italic;color:#FFD9DE}
+.heroflex{display:flex;justify-content:space-between;gap:26px;flex-wrap:wrap;align-items:flex-start}
+.hero h1{font-size:27px;font-weight:700;letter-spacing:-.02em;line-height:1.2;max-width:24ch}
+.hero p{font-size:13px;color:#FAD7DC;margin-top:9px;max-width:76ch}
+.chips{display:flex;gap:9px;flex-wrap:wrap}
+.chip{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.25);padding:8px 13px;min-width:142px}
+.chip .l{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#F3C9CF}
+.chip .v{font-size:13.5px;font-weight:600;margin-top:3px}
+.chip.g{background:var(--verde);border-color:var(--verde)}
+
+.picker{background:var(--card);border-bottom:1px solid var(--line);padding:12px 0;
+ position:sticky;top:0;z-index:30}
+.picker .wrap{display:flex;gap:7px;flex-wrap:wrap;align-items:center}
+.pick{background:#fff;border:1px solid var(--line);color:var(--txt);font:inherit;font-size:12.5px;
+ padding:7px 13px;cursor:pointer;transition:.12s}
+.pick:hover{border-color:var(--faint)}
+.pick[aria-pressed="true"]{background:var(--rojo);color:#fff;border-color:var(--rojo);font-weight:600}
+.pick .c{font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--faint);margin-left:6px}
+.pick[aria-pressed="true"] .c{color:#F3C9CF}
+.pspace{flex:1}
+.btn{font:inherit;font-size:12px;padding:7px 13px;border:1px solid var(--line);background:#fff;
+ color:var(--txt);cursor:pointer}
+.btn:hover{border-color:var(--faint)}
+.btn.p{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+main{padding-top:22px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;
+ background:var(--line);border:1px solid var(--line);margin-bottom:22px}
+.kpi{background:var(--card);padding:14px 15px}
+.kpi .l{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:6px}
+.kpi .v{font-family:var(--num);font-size:20px;font-weight:600;letter-spacing:-.02em;line-height:1.1}
+.kpi .s{font-size:11px;color:var(--mute);margin-top:5px}
+.pos{color:var(--verde)} .neg{color:var(--rojo)} .amber{color:var(--amb)}
+
+.sec{margin-bottom:26px}
+.sechead{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;
+ border-bottom:1px solid var(--line);padding-bottom:9px;margin-bottom:16px;flex-wrap:wrap}
+.sectag{font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--rojo);font-weight:700}
+.sechead h2{font-size:19px;font-weight:700;letter-spacing:-.015em;margin-top:4px}
+.sechead p{font-size:12.5px;color:var(--mute);margin-top:4px;max-width:92ch}
+.limit{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--amb);
+ border:1px solid var(--amb);padding:4px 9px;white-space:nowrap}
+.limit.n{color:var(--faint);border-color:var(--line)}
+
+.card{background:var(--card);border:1px solid var(--line);padding:16px 17px}
+.card .ch{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.card h3{font-size:13.5px;font-weight:700}
+.card .cs{font-size:11.5px;color:var(--faint);margin-bottom:14px}
+.card .cn{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);white-space:nowrap}
+
+.chartbox{position:relative}
+svg{display:block;width:100%;height:auto;overflow:visible}
+.ax{font-family:var(--num);font-size:10px;fill:var(--faint)}
+.lb{font-family:var(--ui);font-size:11.5px;fill:var(--txt)}
+.vl{font-family:var(--num);font-size:10.5px;font-weight:600}
+.hit{fill:transparent;cursor:crosshair}
+
+/* tooltip */
+.tip{position:absolute;pointer-events:none;background:var(--ink);color:#fff;padding:11px 13px;
+ font-size:12px;line-height:1.45;min-width:186px;box-shadow:0 6px 22px rgba(0,0,0,.28);
+ opacity:0;transition:opacity .1s;z-index:20;border-top:3px solid var(--verde)}
+.tip.on{opacity:1}
+.tip.ev{border-top-color:var(--amb)}
+.tip .tw{font-family:var(--num);font-size:10.5px;color:#B5B5B5;letter-spacing:.05em}
+.tip .tv{font-family:var(--num);font-size:19px;font-weight:600;margin:4px 0 2px}
+.tip .td{font-size:11.5px;color:#D9D9D9}
+.tip .tg{font-size:11px;color:#FFD9A0;margin-top:7px;font-weight:600}
+.tip hr{border:none;border-top:1px solid #3A3A3A;margin:8px 0 6px}
+.tip .dr{display:flex;justify-content:space-between;gap:12px;font-size:11px;padding:2px 0}
+.tip .dr span{color:#B5B5B5}
+.tip .dr b{font-family:var(--num)}
+.up{color:#7FD1A3} .dn{color:#F79A94}
+
+.lg{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;font-size:11.5px;color:var(--mute);align-items:center}
+.lg i{display:inline-block;width:12px;height:2.5px;margin-right:5px;vertical-align:middle}
+.lg b.d{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:middle}
+.hint{font-size:11.5px;color:var(--faint);margin-top:8px}
+
+.evs{display:grid;grid-template-columns:repeat(auto-fill,minmax(292px,1fr));gap:12px}
+.ev{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--verde);padding:13px 15px}
+.ev.dn{border-top-color:var(--rojo)}
+.ev .hd{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.ev .wk{font-family:var(--num);font-size:11px;color:var(--faint)}
+.ev .pc{font-family:var(--num);font-size:18px;font-weight:600}
+.ev .tg{margin:6px 0 8px;font-size:12.5px;font-weight:700}
+.ev .amt{font-family:var(--num);font-size:11.5px;color:var(--faint);margin-bottom:8px}
+.dr{display:flex;justify-content:space-between;gap:10px;font-size:11.5px;padding:4px 0;
+ border-top:1px solid var(--line2)}
+.dr span:first-child{color:var(--mute)}
+.dr b{font-family:var(--num);font-weight:600}
+.ev .pc.up,.dr b.up{color:var(--verde)} .ev .pc.dn,.dr b.dn{color:var(--rojo)}
+.mu{color:var(--faint)}
+
+.foot{border-top:1px solid var(--line);margin-top:28px;padding-top:18px;color:var(--faint);
+ font-size:11.5px;max-width:96ch}
+.foot p+p{margin-top:7px}
+@media print{.picker{position:static}.btn{display:none}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap">
+  <span>Supermercados Morelos · Venta semanal</span>
+  <span class="r">Serie histórica 2024 – 2026</span>
+</div></div>
+
+<div class="hero">
+  <div class="bar"></div>
+  <div class="wrap in">
+    <div class="brandrow">
+      <div class="logo"><div class="mk">M</div><div><b>MORELOS</b><span>SUPERMERCADOS</span></div></div>
+      <div class="tagline">¡Viva la tradición!</div>
+    </div>
+    <div class="heroflex">
+      <div>
+        <h1>Venta semanal por tienda y por área</h1>
+        <p>Serie completa desde enero de 2024 con detección automática de picos y caídas.
+         Cada evento trae el desglose de qué programa lo movió, y el flujo por área muestra
+         cómo se recompone la mezcla de carnicería, carnitas, cocina y panadería semana a semana.</p>
+      </div>
+      <div class="chips">
+        <div class="chip"><div class="l">Periodo</div><div class="v">ene 2024 – jul 2026</div></div>
+        <div class="chip g"><div class="l">Cobertura</div><div class="v">11 tiendas · 133 semanas</div></div>
+        <div class="chip"><div class="l">Corte de venta</div><div class="v">20 julio 2026</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="picker"><div class="wrap" id="pick"></div></nav>
+
+<main class="wrap">
+  <div class="kpis" id="kpis"></div>
+
+  <div class="sec">
+    <div class="sechead">
+      <div><div class="sectag">Serie semanal</div>
+        <h2 id="ttl">Red completa</h2>
+        <p>La línea punteada es la mediana móvil de trece semanas: el nivel normal de cada momento,
+         que se ajusta conforme crece el negocio. Los puntos marcan semanas que se despegan de ese nivel.</p></div>
+      <span class="limit n" id="lim">Semanas con seis días o más</span>
+    </div>
+    <div class="card">
+      <div class="ch"><h3>Venta por semana</h3><span class="cn">Pasa el cursor sobre la gráfica</span></div>
+      <div class="cs">Dólares por semana calendario</div>
+      <div class="chartbox" id="box-linea"><div id="c-linea"></div><div class="tip" id="tip"></div></div>
+      <div class="lg">
+        <span><i style="background:var(--verde)"></i>Venta semanal</span>
+        <span><i style="background:var(--faint)"></i>Nivel normal · mediana móvil 13 semanas</span>
+        <span><b class="d" style="background:var(--verde)"></b>Pico detectado</span>
+        <span><b class="d" style="background:var(--rojo)"></b>Caída detectada</span>
+      </div>
+      <p class="hint" id="hint"></p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sechead">
+      <div><div class="sectag">Mezcla por área</div>
+        <h2>Cómo se recompone la venta</h2>
+        <p>Flujo apilado de las áreas operativas. La vista de participación muestra el peso relativo
+         de cada área; la vista de dólares muestra el volumen absoluto.</p></div>
+      <div style="display:flex;gap:7px">
+        <button class="btn" id="b-abs" aria-pressed="false">Dólares</button>
+        <button class="btn p" id="b-pct" aria-pressed="true">Participación</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ch"><h3>Venta por área operativa</h3><span class="cn" id="stmode">Participación</span></div>
+      <div class="cs">Carnicería, carnitas, cocina, panadería, congelados y abarrote</div>
+      <div class="chartbox" id="box-stream"><div id="c-stream"></div><div class="tip" id="tip2"></div></div>
+      <div class="lg" id="lg-stream"></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sechead">
+      <div><div class="sectag">Eventos detectados</div>
+        <h2 id="evt">Picos y caídas</h2>
+        <p id="evsub"></p></div>
+      <span class="limit">Umbral 14% red · 20% tienda</span>
+    </div>
+    <div class="evs" id="evs"></div>
+  </div>
+
+  <div class="foot">
+    <p>Solo se incluyen semanas con seis o más días registrados. Un evento se marca cuando la venta se
+     desvía más de 14% de su mediana móvil en la red, o más de 20% en una tienda individual.</p>
+    <p>El desglose de cada evento compara cada programa contra su propio promedio de las seis semanas
+     anteriores y las seis posteriores, de modo que aísla el movimiento de esa semana y no la tendencia del año.</p>
+    <p>Admiral abrió el 11 de abril de 2026 y solo tiene catorce semanas de historia, insuficientes para
+     calcular un nivel normal confiable.</p>
+  </div>
+</main>
+
+<script src="assets/data.js"></script>
+<script>
+(function(){
+var D=window.VENTAS, NS="http://www.w3.org/2000/svg";
+function $(s){return document.querySelector(s);}
+var C={rojo:"#C8102E",verde:"#1A7A4C",verdeD:"#0F5132",amb:"#C88A00",faint:"#9A9A9A",
+       line:"#E3E3E3",ink:"#1C1C1C",txt:"#414141"};
+var PAL=["#0F5132","#1A7A4C","#4E9E76","#C8102E","#E0796F","#C88A00","#9A9A9A"];
+function money(n){return "$"+Math.round(n).toLocaleString("en-US");}
+function kf(n){var a=Math.abs(n);return (n<0?"-$":"$")+Math.round(a/1000)+"K";}
+function pf(n){return (n>0?"+":"")+n.toFixed(1)+"%";}
+function el(t,a){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);return e;}
+function svg(w,h,t){var s=el("svg",{viewBox:"0 0 "+w+" "+h,role:"img"});
+  var ti=el("title",{});ti.textContent=t||"";s.appendChild(ti);return s;}
+function tx(s,x,y,t,cls,an,sz,fill){var e=el("text",{x:x,y:y,"class":cls||"ax"});
+  if(an)e.setAttribute("text-anchor",an); if(sz)e.setAttribute("font-size",sz);
+  if(fill)e.setAttribute("fill",fill); e.textContent=t; s.appendChild(e); return e;}
+var MES=["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"];
+function fecha(w){var p=w.split("-");return (+p[2])+" "+MES[+p[1]-1]+" "+p[0];}
+
+var ALL=[D.net].concat(D.stores), cur="NET", stPct=true;
+
+/* ---------- selector ---------- */
+ALL.forEach(function(o){
+  var b=document.createElement("button");
+  b.className="pick"; b.setAttribute("aria-pressed",o.id===cur); b.dataset.id=o.id;
+  b.innerHTML=(o.id==="NET"?"Red completa":o.nombre)+
+    (o.id==="NET"?"":'<span class="c">'+(o.ciudad==="Oklahoma City"?"OKC":"Tulsa")+'</span>');
+  b.onclick=function(){
+    cur=o.id;
+    document.querySelectorAll(".pick").forEach(function(x){x.setAttribute("aria-pressed",x.dataset.id===o.id);});
+    render();
+  };
+  $("#pick").appendChild(b);
+});
+var sp=document.createElement("div"); sp.className="pspace"; $("#pick").appendChild(sp);
+var bc=document.createElement("button"); bc.className="btn"; bc.textContent="Descargar CSV";
+bc.onclick=csv; $("#pick").appendChild(bc);
+var bp=document.createElement("button"); bp.className="btn p"; bp.textContent="Imprimir / PDF";
+bp.onclick=function(){window.print();}; $("#pick").appendChild(bp);
+
+$("#b-pct").onclick=function(){stPct=true;flipSt();};
+$("#b-abs").onclick=function(){stPct=false;flipSt();};
+function flipSt(){
+  $("#b-pct").className=stPct?"btn p":"btn"; $("#b-abs").className=stPct?"btn":"btn p";
+  $("#b-pct").setAttribute("aria-pressed",stPct); $("#b-abs").setAttribute("aria-pressed",!stPct);
+  $("#stmode").textContent=stPct?"Participación":"Dólares";
+  drawStream(ALL.filter(function(x){return x.id===cur;})[0]);
+}
+
+/* ---------- linea con hover ---------- */
+function drawLine(o){
+  var ws=o.weeks, n=ws.length;
+  var W=1240,H=340,P={t:20,r:18,b:36,l:62};
+  var vs=ws.map(function(d){return d.v;});
+  var top=Math.max.apply(null,vs)*1.12;
+  function X(i){return P.l+i*(W-P.l-P.r)/Math.max(n-1,1);}
+  function Y(v){return H-P.b-v/top*(H-P.t-P.b);}
+  var s=svg(W,H,"Venta semanal de "+o.nombre);
+  var step=top>400000?100000:(top>150000?50000:20000);
+  for(var v=0;v<=top;v+=step){
+    s.appendChild(el("line",{x1:P.l,x2:W-P.r,y1:Y(v),y2:Y(v),stroke:C.line,"stroke-width":1}));
+    tx(s,P.l-9,Y(v)+4,kf(v),"ax","end");
+  }
+  var lastY=null;
+  ws.forEach(function(d,i){
+    var yr=d.w.slice(0,4);
+    if(yr!==lastY){lastY=yr;
+      s.appendChild(el("line",{x1:X(i),x2:X(i),y1:P.t-6,y2:H-P.b,stroke:"#CFCFCF","stroke-width":1}));
+      tx(s,X(i)+5,P.t+2,yr,"lb","start",11,C.mute);}
+    else if(i%13===0) tx(s,X(i),H-P.b+16,MES[+d.w.slice(5,7)-1],"ax","middle");
+  });
+  var bp=[];
+  ws.forEach(function(d,i){if(d.b!=null)bp.push(X(i)+","+Y(d.b));});
+  if(bp.length)s.appendChild(el("polyline",{points:bp.join(" "),fill:"none",stroke:C.faint,
+    "stroke-width":1.5,"stroke-dasharray":"5 4"}));
+  s.appendChild(el("polyline",{points:ws.map(function(d,i){return X(i)+","+Y(d.v);}).join(" "),
+    fill:"none",stroke:C.verde,"stroke-width":2.1,"stroke-linejoin":"round","stroke-linecap":"round"}));
+  var emap={}; o.events.forEach(function(e){emap[e.w]=e;});
+  ws.forEach(function(d,i){
+    var e=emap[d.w]; if(!e)return;
+    s.appendChild(el("circle",{cx:X(i),cy:Y(d.v),r:4,fill:e.dev>0?C.verde:C.rojo,
+      stroke:"#fff","stroke-width":1.4}));
+    if(Math.abs(e.dev)>=28 && e.tags.length)
+      tx(s,X(i),Y(d.v)-13,e.tags[0],"lb","middle",10,e.dev>0?C.verde:C.rojo);
+  });
+  var gl=el("line",{x1:0,x2:0,y1:P.t,y2:H-P.b,stroke:C.amb,"stroke-width":1,opacity:0});
+  var gc=el("circle",{cx:0,cy:0,r:5.5,fill:"none",stroke:C.amb,"stroke-width":2,opacity:0});
+  s.appendChild(gl); s.appendChild(gc);
+  var hit=el("rect",{x:P.l,y:P.t,width:W-P.l-P.r,height:H-P.t-P.b,"class":"hit"});
+  s.appendChild(hit);
+  $("#c-linea").innerHTML=""; $("#c-linea").appendChild(s);
+
+  var tip=$("#tip"), box=$("#box-linea");
+  function show(ev){
+    var r=s.getBoundingClientRect();
+    var px=(ev.clientX-r.left)/r.width*W;
+    var i=Math.round((px-P.l)/((W-P.l-P.r)/Math.max(n-1,1)));
+    i=Math.max(0,Math.min(n-1,i));
+    var d=ws[i], e=emap[d.w];
+    gl.setAttribute("x1",X(i)); gl.setAttribute("x2",X(i)); gl.setAttribute("opacity",1);
+    gc.setAttribute("cx",X(i)); gc.setAttribute("cy",Y(d.v)); gc.setAttribute("opacity",1);
+    var dev=d.b?((d.v/d.b-1)*100):null;
+    var h='<div class="tw">SEMANA DEL '+fecha(d.w).toUpperCase()+'</div>'+
+      '<div class="tv">'+money(d.v)+'</div>';
+    if(dev!==null) h+='<div class="td">Nivel normal '+kf(d.b)+' · <b class="'+(dev>0?"up":"dn")+'">'+
+      pf(dev)+'</b></div>';
+    if(e){
+      if(e.tags.length) h+='<div class="tg">'+e.tags.join(" · ")+'</div>';
+      if(e.drv.length){ h+='<hr>';
+        e.drv.slice(0,4).forEach(function(x){
+          h+='<div class="dr"><span>'+x.p+'</span><b class="'+(x.delta>0?"up":"dn")+'">'+
+             (x.delta>0?"+":"")+kf(x.delta)+(x.pct!==null?" ("+(x.pct>0?"+":"")+x.pct+"%)":"")+'</b></div>';});
+      }
+    }
+    tip.innerHTML=h;
+    tip.className="tip on"+(e?" ev":"");
+    var bw=box.clientWidth, tw=tip.offsetWidth||200;
+    var lx=X(i)/W*bw+16; if(lx+tw>bw) lx=X(i)/W*bw-tw-16;
+    tip.style.left=Math.max(0,lx)+"px";
+    tip.style.top=Math.max(0,Y(d.v)/H*box.clientHeight-18)+"px";
+  }
+  hit.addEventListener("mousemove",show);
+  hit.addEventListener("mouseleave",function(){
+    tip.className="tip"; gl.setAttribute("opacity",0); gc.setAttribute("opacity",0);});
+  hit.addEventListener("touchstart",function(e){if(e.touches[0])show(e.touches[0]);},{passive:true});
+  hit.addEventListener("touchmove",function(e){if(e.touches[0])show(e.touches[0]);},{passive:true});
+}
+
+/* ---------- streamgraph por area ---------- */
+function drawStream(o){
+  var st=o.stream, ws=o.weeks, n=ws.length;
+  if(!st.length){$("#c-stream").innerHTML="";return;}
+  var W=1240,H=320,P={t:18,r:18,b:36,l:62};
+  var s=svg(W,H,"Venta por área de "+o.nombre);
+  var tot=[];
+  for(var i=0;i<n;i++){var t=0; st.forEach(function(a){t+=a.v[i]||0;}); tot.push(t);}
+  var top=stPct?100:Math.max.apply(null,tot)*1.06;
+  function X(i){return P.l+i*(W-P.l-P.r)/Math.max(n-1,1);}
+  function Y(v){return H-P.b-v/top*(H-P.t-P.b);}
+  var step=stPct?25:(top>400000?100000:50000);
+  for(var v=0;v<=top;v+=step){
+    s.appendChild(el("line",{x1:P.l,x2:W-P.r,y1:Y(v),y2:Y(v),stroke:C.line,"stroke-width":1}));
+    tx(s,P.l-9,Y(v)+4,stPct?(v+"%"):kf(v),"ax","end");
+  }
+  var lastY=null;
+  ws.forEach(function(d,i){
+    var yr=d.w.slice(0,4);
+    if(yr!==lastY){lastY=yr;
+      s.appendChild(el("line",{x1:X(i),x2:X(i),y1:P.t-6,y2:H-P.b,stroke:"#CFCFCF","stroke-width":1}));
+      tx(s,X(i)+5,P.t+2,yr,"lb","start",11,C.mute);}
+    else if(i%13===0) tx(s,X(i),H-P.b+16,MES[+d.w.slice(5,7)-1],"ax","middle");
+  });
+  var base=new Array(n).fill(0);
+  st.forEach(function(a,k){
+    var up=[],dn=[];
+    for(var i=0;i<n;i++){
+      var val=stPct?(tot[i]?(a.v[i]||0)/tot[i]*100:0):(a.v[i]||0);
+      var y0=base[i], y1=base[i]+val;
+      up.push(X(i)+","+Y(y1)); dn.unshift(X(i)+","+Y(y0));
+      base[i]=y1;
+    }
+    s.appendChild(el("path",{d:"M"+up.join(" L")+" L"+dn.join(" L")+" Z",
+      fill:PAL[k%PAL.length],opacity:.92}));
+  });
+  var gl2=el("line",{x1:0,x2:0,y1:P.t,y2:H-P.b,stroke:"#fff","stroke-width":1.4,opacity:0});
+  s.appendChild(gl2);
+  var hit=el("rect",{x:P.l,y:P.t,width:W-P.l-P.r,height:H-P.t-P.b,"class":"hit"});
+  s.appendChild(hit);
+  $("#c-stream").innerHTML=""; $("#c-stream").appendChild(s);
+  $("#lg-stream").innerHTML=st.map(function(a,k){
+    return '<span><b class="d" style="background:'+PAL[k%PAL.length]+'"></b>'+a.k+'</span>';}).join("")+
+    '<span class="mu">· pasa el cursor para ver el detalle de la semana</span>';
+
+  var tip=$("#tip2"), box=$("#box-stream");
+  function show(ev){
+    var r=s.getBoundingClientRect();
+    var px=(ev.clientX-r.left)/r.width*W;
+    var i=Math.round((px-P.l)/((W-P.l-P.r)/Math.max(n-1,1)));
+    i=Math.max(0,Math.min(n-1,i));
+    gl2.setAttribute("x1",X(i)); gl2.setAttribute("x2",X(i)); gl2.setAttribute("opacity",1);
+    var h='<div class="tw">SEMANA DEL '+fecha(ws[i].w).toUpperCase()+'</div>'+
+      '<div class="tv">'+money(tot[i])+'</div><hr>';
+    st.slice().map(function(a,k){return {k:a.k,v:a.v[i]||0,c:PAL[k%PAL.length]};})
+      .sort(function(a,b){return b.v-a.v;})
+      .filter(function(a){return a.v>0;})
+      .forEach(function(a){
+        var pc=tot[i]?(a.v/tot[i]*100):0;
+        h+='<div class="dr"><span><b class="d" style="display:inline-block;width:8px;height:8px;'+
+           'background:'+a.c+';margin-right:6px"></b>'+a.k+'</span><b>'+kf(a.v)+
+           ' <span style="color:#8A8A8A">'+pc.toFixed(0)+'%</span></b></div>';});
+    tip.innerHTML=h; tip.className="tip on";
+    var bw=box.clientWidth, tw=tip.offsetWidth||210;
+    var lx=X(i)/W*bw+16; if(lx+tw>bw) lx=X(i)/W*bw-tw-16;
+    tip.style.left=Math.max(0,lx)+"px"; tip.style.top="10px";
+  }
+  hit.addEventListener("mousemove",show);
+  hit.addEventListener("mouseleave",function(){tip.className="tip";gl2.setAttribute("opacity",0);});
+  hit.addEventListener("touchstart",function(e){if(e.touches[0])show(e.touches[0]);},{passive:true});
+  hit.addEventListener("touchmove",function(e){if(e.touches[0])show(e.touches[0]);},{passive:true});
+}
+
+/* ---------- render ---------- */
+function render(){
+  var o=ALL.filter(function(x){return x.id===cur;})[0];
+  $("#ttl").textContent = o.id==="NET" ? "Red completa" : o.nombre+" · "+o.ciudad;
+  var ws=o.weeks, vs=ws.map(function(d){return d.v;});
+  var tot=vs.reduce(function(a,b){return a+b;},0), avg=tot/vs.length;
+  var mx=ws.reduce(function(a,b){return b.v>a.v?b:a;});
+  var mn=ws.reduce(function(a,b){return b.v<a.v?b:a;});
+  var ups=o.events.filter(function(e){return e.dev>0;}).length;
+  var top=o.stream.slice().map(function(a){return {k:a.k,v:a.v.reduce(function(x,y){return x+y;},0)};})
+    .sort(function(a,b){return b.v-a.v;})[0];
+  $("#kpis").innerHTML=[
+   ["Semanas",ws.length,"con seis días o más",""],
+   ["Venta acumulada",money(tot),"periodo completo",""],
+   ["Promedio semanal",money(avg),"del periodo",""],
+   ["Mejor semana",kf(mx.v),fecha(mx.w),"pos"],
+   ["Semana más baja",kf(mn.v),fecha(mn.w),"neg"],
+   ["Eventos",o.events.length,ups+" picos · "+(o.events.length-ups)+" caídas","amber"],
+   ["Área principal",top?top.k:"—",top?Math.round(top.v/tot*100)+"% de la venta":"",""]
+  ].map(function(r){return '<div class="kpi"><div class="l">'+r[0]+'</div><div class="v '+r[3]+
+    '">'+r[1]+'</div><div class="s">'+r[2]+'</div></div>';}).join("");
+
+  drawLine(o); drawStream(o);
+
+  $("#hint").textContent = o.events.length
+    ? "Las etiquetas sobre la línea marcan los movimientos de 28% o más. El detalle completo aparece al pasar el cursor."
+    : "Sin eventos detectados: la historia es demasiado corta para calcular un nivel normal confiable.";
+  $("#evt").textContent = "Picos y caídas · "+o.events.length;
+  $("#evsub").textContent = o.events.length
+    ? "Ordenados por magnitud. El desglose muestra el cambio en dólares de cada programa y, entre paréntesis, cuánto representa contra su propio nivel normal."
+    : "Admiral abrió el 11 de abril de 2026. Con catorce semanas no hay base suficiente para detectar desviaciones con confianza.";
+  var ev=o.events.slice().sort(function(a,b){return Math.abs(b.dev)-Math.abs(a.dev);});
+  $("#evs").innerHTML=ev.map(function(e){
+    var up=e.dev>0;
+    var drv=e.drv.map(function(x){
+      return '<div class="dr"><span>'+x.p+'</span><b class="'+(x.delta>0?"up":"dn")+'">'+
+        (x.delta>0?"+":"")+money(x.delta)+
+        (x.pct!==null?' <span class="mu">('+(x.pct>0?"+":"")+x.pct+'%)</span>':"")+'</b></div>';}).join("")
+      || '<div class="dr"><span class="mu">Sin programa dominante</span><b class="mu">—</b></div>';
+    return '<div class="ev '+(up?"":"dn")+'"><div class="hd">'+
+      '<span class="wk">semana del '+fecha(e.w)+'</span>'+
+      '<span class="pc '+(up?"up":"dn")+'">'+pf(e.dev)+'</span></div>'+
+      '<div class="tg">'+(e.tags.length?e.tags.join(" · "):"Sin evento de calendario identificado")+'</div>'+
+      '<div class="amt">'+money(e.v)+' en la semana</div>'+drv+'</div>';
+  }).join("");
+}
+
+function csv(){
+  var o=ALL.filter(function(x){return x.id===cur;})[0];
+  var deps=o.stream.map(function(a){return a.k;});
+  var head=["Semana","Venta","Nivel normal","Desviacion %","Evento"].concat(deps);
+  var lines=[head.join(",")];
+  var emap={}; o.events.forEach(function(e){emap[e.w]=e;});
+  o.weeks.forEach(function(d,i){
+    var e=emap[d.w];
+    var row=[d.w,d.v,d.b||"",d.b?((d.v/d.b-1)*100).toFixed(1):"",
+      e?'"'+(e.tags.join(" / ")||"evento")+'"':""];
+    o.stream.forEach(function(a){row.push(a.v[i]||0);});
+    lines.push(row.join(","));
+  });
+  var blob=new Blob(["\ufeff"+lines.join("\n")],{type:"text/csv;charset=utf-8;"});
+  var a=document.createElement("a");
+  a.href=URL.createObjectURL(blob);
+  a.download="morelos-venta-semanal-"+(o.id==="NET"?"red":o.nombre.toLowerCase().replace(/\s+/g,"-"))+".csv";
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+}
+
+render();
+window.addEventListener("resize",function(){drawLine(ALL.filter(function(x){return x.id===cur;})[0]);});
+})();
+</script>
+</body>
+</html>
