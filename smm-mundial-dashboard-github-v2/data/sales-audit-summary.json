@@ -1,0 +1,64 @@
+{
+  "source_rows_with_dates": 416294,
+  "exact_duplicate_rows_removed": 5,
+  "duplicate_sales_removed_usd": 37,
+  "duplicate_units_removed": 12,
+  "full_campaign": {
+    "window": [
+      "2026-06-01",
+      "2026-07-19"
+    ],
+    "tracked_sales_all_stores_2026": 2717072.0,
+    "comparable_portfolio_sales_2026": 2519485.0,
+    "comparable_portfolio_sales_2025": 2326360.0,
+    "comparable_portfolio_delta": 193125.0,
+    "comparable_portfolio_yoy": 0.08301595625784497,
+    "like_for_like_departments": [
+      "BAKERY",
+      "CARNITAS",
+      "GROCERY",
+      "KITCHEN",
+      "MEAT",
+      "NON GROCERY"
+    ],
+    "like_for_like_sales_2026": 2393032.0,
+    "like_for_like_sales_2025": 2326360.0,
+    "like_for_like_delta": 66672.0,
+    "like_for_like_yoy": 0.028659364844650037,
+    "departments_without_prior_baseline": [
+      "FROZEN"
+    ]
+  },
+  "live_campaign": {
+    "window": [
+      "2026-06-11",
+      "2026-07-19"
+    ],
+    "tracked_sales_all_stores_2026": 2268016.0,
+    "comparable_portfolio_sales_2026": 2103802.0,
+    "comparable_portfolio_sales_2025": 1875908.0,
+    "comparable_portfolio_delta": 227894.0,
+    "comparable_portfolio_yoy": 0.12148463570708157,
+    "like_for_like_departments": [
+      "BAKERY",
+      "CARNITAS",
+      "GROCERY",
+      "KITCHEN",
+      "MEAT",
+      "NON GROCERY"
+    ],
+    "like_for_like_sales_2026": 2000766.0,
+    "like_for_like_sales_2025": 1875908.0,
+    "like_for_like_delta": 124858.0,
+    "like_for_like_yoy": 0.06655870117297868,
+    "departments_without_prior_baseline": [
+      "FROZEN"
+    ]
+  },
+  "partial_date_excluded": {
+    "date": "2026-07-20",
+    "sales_usd": 499,
+    "reason": "Only 32 source rows; treated as incomplete day"
+  },
+  "sales_scope": "Seven supplied departments only; not full-chain POS revenue."
+}

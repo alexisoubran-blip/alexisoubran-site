@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Dashboard omnicanal del Mundial 2026 para Supermercados Morelos." />
+  <title>Mundial 2026 | Supermercados Morelos</title>
+  <link rel="icon" href="assets/morelos-logo.png" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#overview" aria-label="Ir al resumen ejecutivo">
+        <img src="assets/morelos-logo.png" alt="Supermercados Morelos" />
+      </a>
+      <div class="topbar-copy">
+        <span class="eyebrow">REPORTE OMNICANAL · MUNDIAL 2026</span>
+        <strong>Impacto de campaña, tienda y contenido</strong>
+      </div>
+      <div class="topbar-actions">
+        <button class="button button-ghost" id="exportBtn" type="button">Exportar resumen</button>
+        <button class="button button-primary" id="printBtn" type="button">Imprimir / PDF</button>
+      </div>
+    </header>
+
+    <nav class="section-nav" aria-label="Navegación del dashboard">
+      <a href="#overview">Resumen</a>
+      <a href="#sales">Ventas</a>
+      <a href="#paid">Meta Ads</a>
+      <a href="#organic">Organic</a>
+      <a href="#offline">Offline</a>
+      <a href="#activations">Activaciones</a>
+      <a href="#integrated">Impacto integrado</a>
+      <a href="#actions">Acciones</a>
+    </nav>
+
+    <main>
+      <section class="hero" id="overview">
+        <div class="hero-copy">
+          <span class="eyebrow hero-eyebrow">SUPERMERCADOS MORELOS · JUNIO–JULIO 2026</span>
+          <h1>Qué pasó en ventas, qué presión de marketing existió y dónde concentrar la siguiente inversión.</h1>
+          <p>Un solo tablero para conectar las categorías rastreadas con Meta Ads, contenido orgánico, TV, radio y activaciones en tienda.</p>
+          <div class="hero-tags">
+            <span>10 tiendas comparables</span>
+            <span>1 tienda sin baseline</span>
+            <span>7 departamentos rastreados</span>
+            <span>2 mercados</span>
+          </div>
+        </div>
+        <aside class="hero-summary" aria-label="Definiciones del reporte">
+          <div>
+            <small>Campaña completa</small>
+            <strong>1 jun – 19 jul</strong>
+          </div>
+          <div>
+            <small>Ventana live comparable</small>
+            <strong>11 jun – 19 jul</strong>
+          </div>
+          <div>
+            <small>Mercados</small>
+            <strong>OKC + Tulsa</strong>
+          </div>
+          <div>
+            <small>Moneda</small>
+            <strong>USD</strong>
+          </div>
+        </aside>
+      </section>
+
+      <section class="filter-panel" aria-label="Filtros globales">
+        <div class="filter-panel-head">
+          <div>
+            <span class="eyebrow">CONTROLES</span>
+            <h2>Explora el desempeño</h2>
+          </div>
+          <button class="text-button" id="resetBtn" type="button">Restablecer filtros</button>
+        </div>
+        <div class="filters-grid">
+          <label>
+            <span>Fase</span>
+            <select id="phaseFilter">
+              <option value="full">Campaña completa</option>
+              <option value="prelaunch">Pre-launch</option>
+              <option value="live">Campaña live</option>
+              <option value="custom">Personalizado</option>
+            </select>
+          </label>
+          <label>
+            <span>Desde</span>
+            <input id="startDate" type="date" min="2026-06-01" max="2026-07-19" value="2026-06-01" />
+          </label>
+          <label>
+            <span>Hasta</span>
+            <input id="endDate" type="date" min="2026-06-01" max="2026-07-19" value="2026-07-19" />
+          </label>
+          <label>
+            <span>Zona</span>
+            <select id="zoneFilter">
+              <option value="All">Todas</option>
+              <option value="OKC">OKC</option>
+              <option value="Tulsa">Tulsa</option>
+            </select>
+          </label>
+          <label>
+            <span>Tienda</span>
+            <select id="storeFilter"><option value="All">Todas</option></select>
+          </label>
+          <label>
+            <span>Departamento</span>
+            <select id="departmentFilter"><option value="All">Todos</option></select>
+          </label>
+          <label>
+            <span>Scope de medios</span>
+            <select id="mediaScopeFilter">
+              <option value="mundial">Campaña Mundial</option>
+              <option value="all">Toda la actividad</option>
+            </select>
+          </label>
+          <label>
+            <span>Contenido</span>
+            <select id="contentScopeFilter">
+              <option value="owned">Owned</option>
+              <option value="all">Owned + earned</option>
+            </select>
+          </label>
+          <label>
+            <span>Granularidad</span>
+            <select id="granularityFilter">
+              <option value="week">Semanal</option>
+              <option value="day">Diaria</option>
+            </select>
+          </label>
+        </div>
+        <div class="filter-footnote" id="filterFootnote"></div>
+      </section>
+
+      <section class="alert data-alert">
+        <div class="alert-icon">!</div>
+        <div>
+          <strong>Lectura correcta de ventas</strong>
+          <p>La base comercial incluye siete departamentos y no representa el POS total. Los KPIs se nombran <b>Tracked Category Sales</b>; no se calcula Average Ticket, Store Visits ni incremental ROAS.</p>
+        </div>
+      </section>
+
+      <section class="section-block overview-block">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">EXECUTIVE OVERVIEW</span>
+            <h2>Resultado comercial y presión de campaña</h2>
+          </div>
+          <p>Los KPIs se recalculan con los filtros. El YoY usa únicamente fechas y tiendas comparables.</p>
+        </div>
+        <div class="kpi-grid" id="overviewKpis"></div>
+        <div class="insight-grid" id="executiveInsights"></div>
+      </section>
+
+      <section class="section-block" id="sales">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">SALES PERFORMANCE</span>
+            <h2>Qué cambió en tiendas y categorías</h2>
+          </div>
+          <span class="section-badge">Same-date YoY · portfolio + like-for-like</span>
+        </div>
+        <div class="mini-kpi-grid" id="salesKpis"></div>
+        <div class="category-movement-grid" id="categoryMovement"></div>
+        <div class="chart-grid">
+          <article class="chart-card chart-card-wide">
+            <div class="chart-header"><div><h3>Evolución de ventas</h3><p>Tiendas comparables, mismas fechas de 2025 y 2026; el portfolio y el LFL se reportan por separado.</p></div></div>
+            <div class="chart" id="salesTrendChart"></div>
+          </article>
+          <article class="chart-card">
+            <div class="chart-header"><div><h3>Ventas por zona</h3><p>Escala y crecimiento comparable.</p></div></div>
+            <div class="chart" id="zoneSalesChart"></div>
+          </article>
+          <article class="chart-card">
+            <div class="chart-header"><div><h3>Contribución por tienda</h3><p>Cambio absoluto like-for-like; excluye categorías sin baseline.</p></div></div>
+            <div class="chart" id="storeGrowthChart"></div>
+          </article>
+          <article class="chart-card">
+            <div class="chart-header"><div><h3>Matriz de desempeño</h3><p>Volumen total vs. crecimiento like-for-like; Admiral aparece sin baseline.</p></div></div>
+            <div class="chart" id="storeMatrixChart"></div>
+          </article>
+          <article class="chart-card">
+            <div class="chart-header"><div><h3>Categorías que subieron y bajaron</h3><p>Cambio absoluto vs. 2025; FROZEN se muestra como nueva categoría sin baseline.</p></div></div>
+            <div class="chart" id="departmentChart"></div>
+          </article>
+        </div>
+        <article class="table-card">
+          <div class="chart-header"><div><h3>Detalle de tiendas</h3><p>Ordena la tabla para identificar scale, recovery y growth opportunities.</p></div></div>
+          <div class="table-wrap"><table id="salesTable"></table></div>
+        </article>
+      </section>
+
+      <section class="section-block" id="paid">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">META ADS</span>
+            <h2>Distribución, eficiencia y señales de intención</h2>
+          </div>
+          <span class="section-badge" id="metaScopeBadge">Campaña Mundial</span>
+        </div>
+        <div class="mini-kpi-grid" id="metaKpis"></div>
+        <div class="context-note">La exportación tiene breakdown diario. La suma de Reach es acumulada entre días y no equivale a alcance único del periodo.</div>
+        <div class="chart-grid">
+          <article class="chart-card">
+            <div class="chart-header"><div><h3>Mix de inversión</h3><p>Spend por campaña y share del presupuesto seleccionado.</p></div></div>
+            <div class="chart" id="metaMixChart"></div>
+          </article>
+          <article class="chart-card">
+            <div class="chart-header"><div><h3>Distribución por objetivo</h3><p>Cómo se asignó la inversión entre awareness, engagement, tráfico y otras señales.</p></div></div>
+            <div class="chart" id="metaObjectiveChart"></div>
+          </article>
+          <article class="chart-card chart-card-wide">
+            <div class="chart-header"><div><h3>Matriz de eficiencia</h3><p>CPM vs. Link CTR; tamaño de burbuja = inversión.</p></div></div>
+            <div class="chart" id="metaEfficiencyChart"></div>
+          </article>
+        </div>
+        <article class="table-card">
+          <div class="chart-header"><div><h3>Campañas</h3><p>KPIs ponderados; recomendaciones basadas en escala y eficiencia.</p></div></div>
+          <div class="table-wrap"><table id="metaTable"></table></div>
+        </article>
+      </section>
+
+      <section class="section-block" id="organic">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">ORGANIC CONTENT</span>
+            <h2>Distribución ganada, amplificación y calidad creativa</h2>
+          </div>
+          <span class="section-badge" id="contentScopeBadge">Owned</span>
+        </div>
+        <div class="mini-kpi-grid organic-kpi-grid" id="organicKpis"></div>
+        <div class="chart-grid">
+          <article class="chart-card chart-card-wide">
+            <div class="chart-header"><div><h3>Total Content Reach</h3><p>El total suma distribución orgánica + amplificación identificada como “from ads”, manteniendo ambos componentes separados.</p></div></div>
+            <div class="chart" id="organicStackChart"></div>
+          </article>
+          <article class="chart-card">
+            <div class="chart-header"><div><h3>Eficiencia por formato</h3><p>Reach promedio por publicación: orgánico + boost; Total ER como señal de calidad.</p></div></div>
+            <div class="chart" id="formatChart"></div>
+          </article>
+          <article class="chart-card">
+            <div class="chart-header"><div><h3>Matriz de contenidos</h3><p>Total Reach vs. Total Engagement Rate, con detalle orgánico y boost en hover.</p></div></div>
+            <div class="chart" id="contentMatrixChart"></div>
+          </article>
+        </div>
+        <div class="top-content-grid" id="topContentGrid"></div>
+      </section>
+
+      <section class="section-block" id="offline">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">OFFLINE MEDIA</span>
+            <h2>Presión de TV y radio</h2>
+          </div>
+          <span class="section-badge">Totales por periodo</span>
+        </div>
+        <div class="mini-kpi-grid" id="offlineKpis"></div>
+        <div class="context-note">La fuente offline no contiene fechas diarias para cada spot. Los filtros de fecha no prorratean artificialmente la inversión.</div>
+        <div class="chart-grid">
+          <article class="chart-card">
+            <div class="chart-header"><div><h3>Mix por ciudad y medio</h3><p>Inversión de TV y radio en OKC y Tulsa.</p></div></div>
+            <div class="chart" id="offlineMixChart"></div>
+          </article>
+          <article class="chart-card">
+            <div class="chart-header"><div><h3>Eficiencia mensual</h3><p>Inversión, spots y Cost per Spot.</p></div></div>
+            <div class="chart" id="offlineMonthChart"></div>
+          </article>
+          <article class="chart-card chart-card-wide">
+            <div class="chart-header"><div><h3>Ranking de outlets</h3><p>Spots acumulados por canal o emisora.</p></div></div>
+            <div class="chart" id="outletChart"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block" id="activations">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">ACTIVATIONS & PROMOTION</span>
+            <h2>Participación en tienda y utilización de inventario</h2>
+          </div>
+          <span class="section-badge">11 tiendas</span>
+        </div>
+        <div class="mini-kpi-grid" id="activationKpis"></div>
+        <div class="chart-grid">
+          <article class="chart-card chart-card-wide">
+            <div class="chart-header"><div><h3>Premios por tienda</h3><p>Balones y loncheras entregados.</p></div></div>
+            <div class="chart" id="prizesChart"></div>
+          </article>
+          <article class="chart-card">
+            <div class="chart-header"><div><h3>Pasaportes en urna</h3><p>Participaciones completas; no es una tasa de conversión.</p></div></div>
+            <div class="chart" id="passportsChart"></div>
+          </article>
+          <article class="chart-card">
+            <div class="chart-header"><div><h3>Futbolito</h3><p>Interacciones directas en MacArthur y Admiral.</p></div></div>
+            <div class="chart" id="activationChart"></div>
+          </article>
+          <article class="chart-card chart-card-wide">
+            <div class="chart-header"><div><h3>Evolución de QR scans</h3><p>Puntos de medición acumulados; no se interpola una serie diaria artificial.</p></div></div>
+            <div class="chart" id="qrChart"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block integrated-section" id="integrated">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">INTEGRATED IMPACT</span>
+            <h2>Ventas y distribución de contenido en una misma lectura</h2>
+          </div>
+          <span class="section-badge">Asociación temporal ≠ causalidad</span>
+        </div>
+        <article class="chart-card chart-card-wide integrated-chart-card">
+          <div class="chart-header"><div><h3>Lectura integrada sin timeline de inversión</h3><p>Índice de ventas comparables, Total Content Reach y volumen de publicaciones. La inversión se presenta agregada en Overview, Meta y Offline.</p></div></div>
+          <div class="chart chart-tall" id="integratedChart"></div>
+        </article>
+        <div class="city-scorecards" id="cityScorecards"></div>
+      </section>
+
+      <section class="section-block" id="actions">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">AGENCY ACTIONS</span>
+            <h2>Qué escalar, qué corregir y cómo medir mejor</h2>
+          </div>
+        </div>
+        <div class="action-grid" id="actionGrid"></div>
+        <article class="methodology-card">
+          <details>
+            <summary>Metodología, fuentes y límites de interpretación</summary>
+            <div class="methodology-grid" id="methodologyContent"></div>
+          </details>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <img src="assets/morelos-logo.png" alt="" />
+      <div><strong>Supermercados Morelos · Mundial 2026</strong><span>Dashboard preparado desde la perspectiva de la agencia, con separación entre resultados observados y atribución no demostrada.</span></div>
+    </footer>
+  </div>
+
+  <div id="loadingOverlay"><div class="loader"></div><span>Construyendo lectura integrada…</span></div>
+  <script src="assets/plotly.min.js"></script>
+  <script src="data/dashboard-data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
