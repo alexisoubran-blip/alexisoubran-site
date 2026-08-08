@@ -302,6 +302,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM-friendly site summary">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -2028,6 +2032,7 @@ body {
 /* === End Home visual upgrade === */
 
 </style>
+<link rel="stylesheet" href="/assets/marcus-editorial.css">
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -2036,6 +2041,11 @@ body {
   height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
+
+<div class="mv-preloader" role="status" aria-live="polite" aria-label="Loading Alexis Soubran">
+  <div class="mv-preloader-brand">Alexis Soubran</div>
+  <div class="mv-preloader-count"><b data-mv-counter>0</b><span>%</span></div>
+</div>
 
 <nav class="site-nav" aria-label="Primary navigation">
   <div class="nav-shell">
@@ -2063,12 +2073,24 @@ body {
 
 <header class="hero">
   <div class="container hero-grid">
+    <div class="mv-hero-roles" role="group" aria-label="Roles">
+      <span><i>Founder</i></span>
+      <span><i>Operator</i></span>
+      <span><i>Strategist</i></span>
+      <span><i>Contrarian</i></span>
+    </div>
+    <div class="mv-hero-signature" aria-hidden="true">
+      <span>Alexis</span>
+      <span>Soubran</span>
+    </div>
     <div class="hero-copy">
+      <div class="mv-hero-copy-inner">
       <h1>Revenue systems<br>for global brands<br><span class="accent">entering Mexico + LATAM.</span></h1>
       <p class="subtitle">I build the operating layer between GTM, paid media, creators, production, CRM, and measurement — so brands do not just buy attention. They turn it into qualified demand, sales signals, and revenue.</p>
       <div class="hero-actions">
         <a href="https://calendly.com/alexis-soubran/contact" class="btn" target="_blank" rel="noopener" onclick="window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'calendly_click', click_location: 'hero_primary' });">Book a Revenue Systems Diagnostic</a>
         <a href="/work/" class="btn secondary">See proof</a>
+      </div>
       </div>
       <div class="hero-proof" aria-label="Selected proof points">
         <div class="proof-card"><strong>131.3M</strong><span>views from SharkNinja's creator-led ecommerce system.</span></div>
@@ -2094,6 +2116,13 @@ body {
     </div>
   </div>
 </header>
+
+<section class="mv-principles" aria-label="Operating principles">
+  <div class="mv-principles-track" aria-hidden="true">
+    <span>Build systems</span><span>Measure truth</span><span>Allocate capital</span><span>Move before consensus</span><span>Compound learning</span>
+    <span>Build systems</span><span>Measure truth</span><span>Allocate capital</span><span>Move before consensus</span><span>Compound learning</span>
+  </div>
+</section>
 
 <section class="tech-section" id="command-layer" aria-label="Revenue command layer dashboard">
   <div class="container command-grid">
@@ -2788,5 +2817,6 @@ body {
 >
   Book diagnostic
 </a>
+<script type="module" src="/assets/marcus-editorial.js"></script>
 </body>
 </html>
