@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://alexisoubran.com/amd-performance/data-contract.json",
+  "title": "AMD Performance Dashboard Data Contract",
+  "version": "1.0.0-mvp",
+  "description": "Canonical payload between platform/Power BI adapters and the dashboard UI.",
+  "type": "object",
+  "required": ["meta", "filters", "kpi_forecast", "campaigns", "ads", "forecast_scenarios", "data_health"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["period_id", "currency", "timezone", "as_of", "data_status"],
+      "properties": {
+        "period_id": {"type": "string", "examples": ["2026-Q3"]},
+        "currency": {"const": "USD"},
+        "timezone": {"type": "string", "examples": ["America/Mexico_City"]},
+        "as_of": {"type": "string", "format": "date-time"},
+        "data_status": {"enum": ["demo", "partial", "validated"]}
+      }
+    },
+    "filters": {
+      "type": "object",
+      "properties": {
+        "country_codes": {"type": "array", "items": {"type": "string"}},
+        "platforms": {"type": "array", "items": {"enum": ["meta", "google", "tiktok"]}},
+        "campaign_ids": {"type": "array", "items": {"type": "string"}},
+        "retailer_ids": {"type": "array", "items": {"type": "string"}},
+        "oem_ids": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "kpi_forecast": {
+      "type": "array",
+      "minItems": 4,
+      "items": {"$ref": "#/$defs/kpiForecast"}
+    },
+    "campaigns": {"type": "array", "items": {"$ref": "#/$defs/campaign"}},
+    "ads": {"type": "array", "items": {"$ref": "#/$defs/ad"}},
+    "forecast_scenarios": {"type": "array", "items": {"$ref": "#/$defs/forecastScenario"}},
+    "data_health": {"type": "array", "items": {"$ref": "#/$defs/sourceHealth"}}
+  },
+  "$defs": {
+    "kpiForecast": {
+      "type": "object",
+      "required": ["metric", "actual", "forecast_to_date", "quarter_target", "unit", "variance_pct"],
+      "properties": {
+        "metric": {"enum": ["investment", "impressions", "link_clicks", "etailer_clicks"]},
+        "actual": {"type": "number"},
+        "forecast_to_date": {"type": "number"},
+        "quarter_target": {"type": "number"},
+        "unit": {"enum": ["usd", "count"]},
+        "variance_pct": {"type": "number"},
+        "actual_series": {"type": "array", "items": {"$ref": "#/$defs/point"}},
+        "forecast_series": {"type": "array", "items": {"$ref": "#/$defs/point"}}
+      }
+    },
+    "point": {
+      "type": "object",
+      "required": ["date", "value"],
+      "properties": {"date": {"type": "string", "format": "date"}, "value": {"type": "number"}}
+    },
+    "campaign": {
+      "type": "object",
+      "required": ["campaign_id", "campaign_name", "country_code", "platform", "investment", "impressions", "link_clicks", "etailer_clicks"],
+      "properties": {
+        "campaign_id": {"type": "string"}, "campaign_name": {"type": "string"}, "country_code": {"type": "string"},
+        "platform": {"enum": ["meta", "google", "tiktok"]}, "investment": {"type": "number"}, "impressions": {"type": "number"},
+        "link_clicks": {"type": "number"}, "etailer_clicks": {"type": "number"}, "ad_count": {"type": "integer", "minimum": 0}
+      }
+    },
+    "ad": {
+      "type": "object",
+      "required": ["ad_id", "campaign_id", "country_code", "platform", "ad_name", "status", "investment", "impressions", "link_clicks", "etailer_clicks"],
+      "properties": {
+        "ad_id": {"type": "string"}, "campaign_id": {"type": "string"}, "country_code": {"type": "string"}, "platform": {"type": "string"},
+        "ad_name": {"type": "string"}, "status": {"enum": ["active", "paused", "ended", "draft"]}, "format": {"type": "string"},
+        "thumbnail_url": {"type": ["string", "null"], "format": "uri"}, "creative_url": {"type": ["string", "null"], "format": "uri"},
+        "platform_permalink": {"type": ["string", "null"], "format": "uri"}, "investment": {"type": "number"}, "impressions": {"type": "number"},
+        "link_clicks": {"type": "number"}, "etailer_clicks": {"type": "number"}
+      }
+    },
+    "forecastScenario": {
+      "type": "object",
+      "required": ["incremental_investment_pct", "incremental_investment_usd", "projected_kpis", "confidence_pct", "model_version"],
+      "properties": {
+        "incremental_investment_pct": {"type": "number"}, "incremental_investment_usd": {"type": "number"},
+        "projected_kpis": {"type": "object", "properties": {"investment": {"type": "number"}, "impressions": {"type": "number"}, "link_clicks": {"type": "number"}, "etailer_clicks": {"type": "number"}}},
+        "confidence_pct": {"type": "number", "minimum": 0, "maximum": 100}, "model_version": {"type": "string"}, "is_experimental": {"const": true}
+      }
+    },
+    "sourceHealth": {
+      "type": "object",
+      "required": ["source", "status", "last_success_at"],
+      "properties": {"source": {"type": "string"}, "status": {"enum": ["ready", "delayed", "error", "pending_validation"]}, "last_success_at": {"type": ["string", "null"], "format": "date-time"}, "row_count": {"type": "integer"}, "notes": {"type": ["string", "null"]}}
+    }
+  }
+}
