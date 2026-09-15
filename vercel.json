@@ -3,23 +3,47 @@
     {
       "source": "/amd-performance",
       "headers": [
-        {"key":"X-Robots-Tag","value":"noindex, nofollow, noarchive, nosnippet, noimageindex"},
-        {"key":"Cache-Control","value":"private, no-store, max-age=0"}
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive, nosnippet, noimageindex"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "private, no-store, max-age=0"
+        }
       ]
     },
     {
       "source": "/amd-performance/",
       "headers": [
-        {"key":"X-Robots-Tag","value":"noindex, nofollow, noarchive, nosnippet, noimageindex"},
-        {"key":"Cache-Control","value":"private, no-store, max-age=0"}
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive, nosnippet, noimageindex"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "private, no-store, max-age=0"
+        }
       ]
     },
     {
       "source": "/amd-performance/:path*",
       "headers": [
-        {"key":"X-Robots-Tag","value":"noindex, nofollow, noarchive, nosnippet, noimageindex"},
-        {"key":"Cache-Control","value":"private, no-store, max-age=0"}
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive, nosnippet, noimageindex"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "private, no-store, max-age=0"
+        }
       ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/radiografia-del-consumidor-2026",
+      "destination": "/radiografia-del-consumidor-2026/index.html"
     }
   ]
 }
