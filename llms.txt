@@ -204,3 +204,34 @@ Selected record:
   https://alexisoubran.com/insights/ai-content-scalability-brand/
 - What I Teach About Growth Intelligence After Running Real Marketing Budgets
   https://alexisoubran.com/insights/what-i-teach-growth-intelligence/
+
+
+## Independent external references
+
+These third-party pages independently identify Alexis Soubran and document his work, teaching or industry participation:
+
+- Marketing4eCommerce México interview on revenue systems:
+  https://marketing4ecommerce.mx/alexis-soubran-marketing-sistema-ingresos/
+- ASEM entrepreneur profile:
+  https://asem.mx/entrevistas_asem/alexis-soubran/
+- ASEM article by Alexis Soubran on marketing ROI:
+  https://asem.mx/blog_asem/como-saber-si-tu-inversion-en-marketing-digital-funciona/
+- Escuela de Mercadotecnia (EDEM) faculty page:
+  https://escuelademercadotecnia.org/profesoresedem/
+- Merca2.0 National Digital Marketing Congress coverage:
+  https://www.merca20.com/optimiza-tus-campanas-en-el-cnmd-2024-expertos-revelaran-como-medir-el-rendimiento-publicitario/
+- Merca2.0 coverage of performance, production and influencers:
+  https://www.merca20.com/cnmd-2024-performance-produccion-e-influencers-integrado/
+- Minimalist Agency event recap:
+  https://www.minimalist.mx/blog/minimalist-y-sharkninja-congreso-merca20
+- Colectivo23 Growth Intelligence program:
+  https://www.colectivo23.com/programas/growth-intelligence
+
+Canonical identity page:
+https://alexisoubran.com/about/
+
+Speaking and teaching record:
+https://alexisoubran.com/speaking-teaching/
+
+RSS feed:
+https://alexisoubran.com/feed.xml
