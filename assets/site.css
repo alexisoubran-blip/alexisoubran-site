@@ -1,5 +1,6 @@
 /* Shared visual system for the public Alexis Soubran website. */
 :root{color-scheme:dark;--bg:#101010;--bg-alt:#1b1b1b;--bg-soft:#1b1b1b;--panel:#1b1b1b;--card:#1b1b1b;--text:#f3f0eb;--text-dim:#b8b8b8;--text-soft:#d4d4d4;--dim:#b8b8b8;--muted:#b8b8b8;--accent:#ff4d2e;--accent-soft:rgba(255,77,46,.08);--border:#333;--border-strong:#555;--line:#333;--focus:#ff4d2e;--shadow:none}
+:root{--bg-card:#1b1b1b;--border-soft:#333;--violet:#ff4d2e;--pink:#b8b8b8;--cyan:#b8b8b8}
 html{scroll-behavior:smooth;scroll-padding-top:100px}
 body.site-page,body.site-home{margin:0;background:#101010;color:var(--text);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
 .site-page *, .site-home *{box-sizing:border-box}
@@ -25,6 +26,8 @@ body.site-page,body.site-home{margin:0;background:#101010;color:var(--text);font
 .site-page .btn:hover{background:#ff725a;transform:translateY(-2px);opacity:1;text-decoration:none}
 .site-page :is(.btn.secondary,.btn-secondary,.button):hover{background:#242424;color:var(--text)}
 .site-page .hero-card{background:transparent;border:0;padding:0;box-shadow:none;overflow:visible;min-width:0;border-radius:0}
+.site-page .hero-photo-wrap{background:transparent;border:0;border-radius:0;box-shadow:none;overflow:visible}
+.site-page .hero-photo-wrap::before,.site-page .hero::after{display:none}
 .site-page :is(.hero-card>img,.hero-photo,.hero-record-photo img){width:100%;height:auto;max-height:500px;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%;border-radius:18px;filter:none}
 .site-page :is(.hero-card .overlay,.hero-card-caption,.photo-caption){position:static;inset:auto;padding:16px 0 0;background:transparent;color:var(--text-dim);font-size:14px;line-height:1.6;border:0}
 .site-page :is(.overlay strong,.hero-card-caption strong,.photo-caption strong){display:block;color:var(--text);font-size:15px;font-weight:600;margin-bottom:4px}
@@ -60,6 +63,7 @@ body.site-page,body.site-home{margin:0;background:#101010;color:var(--text);font
 .site-page :is(.cta,.cta-section,.article-cta,.final-cta) p{font-size:17px;line-height:1.7;color:var(--text-dim)}
 .site-page :is(.featured-post,.case-card,.topic,.quote-block,.problem,.partner-callout,.callout,.proof){background-image:none;box-shadow:none;border-color:var(--border)}
 .site-page .featured-post{background:#1b1b1b;border-radius:16px}
+.site-page .song-card{background:#1b1b1b;border-color:var(--border);border-radius:16px}
 .site-page .command-top .dots{display:none}
 .site-page .hero .command-card{padding:28px}
 .site-page .terminal{background:transparent;border-color:var(--border);font-size:14px;color:var(--text-dim)}
