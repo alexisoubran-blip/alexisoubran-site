@@ -1,5 +1,7 @@
 Source: https://alexisoubran.com/work/sharkninja/
 
+[Skip to content](https://alexisoubran.com/work/sharkninja/#main)
+
 [Home](https://alexisoubran.com/) / [Work](https://alexisoubran.com/work/) / SharkNinja
 
 SharkNinja · Creator Commerce System
@@ -88,6 +90,6 @@ Useful for
 
 Campaigns end. Systems compound. Annoying for agencies. Useful for EBITDA.
 
-[Book diagnostic](https://calendly.com/alexis-soubran/contact) [hi@alexisoubran.com](mailto:hi@alexisoubran.com)
+[Book diagnostic](https://calendly.com/alexis-soubran/contact) [alexis@minimalist.mx](mailto:alexis@minimalist.mx)
 
-[Book diagnostic](https://calendly.com/alexis-soubran/contact)
+[WhatsApp](https://wa.me/525539013827)

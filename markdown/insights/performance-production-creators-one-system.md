@@ -1,5 +1,7 @@
 Source: https://alexisoubran.com/insights/performance-production-creators-one-system/
 
+[Skip to content](https://alexisoubran.com/insights/performance-production-creators-one-system/#main)
+
 Creator commerce
 
 # Performance, Production and Creators Should Be Planned as One System
@@ -67,3 +69,5 @@ When each discipline is measured independently, the organization gets local opti
 I work with CMOs, Country Managers and Growth Leads on market entry, performance, creator commerce, measurement and AI-enabled revenue systems in Mexico and LATAM.
 
 [Book a diagnostic](https://calendly.com/alexis-soubran/contact)[Speaking & teaching](https://alexisoubran.com/speaking-teaching/)
+
+[WhatsApp](https://wa.me/525539013827)

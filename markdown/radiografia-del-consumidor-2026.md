@@ -1,6 +1,6 @@
 Source: https://alexisoubran.com/radiografia-del-consumidor-2026
 
-[Ir al mapa](https://alexisoubran.com/radiografia-del-consumidor-2026#explorar)
+[Skip to content](https://alexisoubran.com/radiografia-del-consumidor-2026#main)
 
 Edición 2026 32 entidades · 18 indicadores
 
@@ -150,3 +150,5 @@ La digitalización no implica afiliación, patrocinio ni revisión editorial por
 Conversemos sobre tu estrategia de entrada o expansión.
 
 [Agendar una conversación ↗](https://calendly.com/alexis-soubran/contact)
+
+[WhatsApp](https://wa.me/525539013827)

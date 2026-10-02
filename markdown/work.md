@@ -1,5 +1,7 @@
 Source: https://alexisoubran.com/work/
 
+[Skip to content](https://alexisoubran.com/work/#main)
+
 [Home](https://alexisoubran.com/) / Selected Work
 
 Selected Work
@@ -212,6 +214,6 @@ SharkNinjaAMDBitsoEdenredSuzukiZeekrLynk & CoGeelyUber EatsAirbnbMieleNintendoMo
 
 Bring the dashboard, CRM export, media mix, agency reports, and whatever attribution model currently causes the most internal fighting. We’ll find the leak.
 
-[Book diagnostic](https://calendly.com/alexis-soubran/contact) [hi@alexisoubran.com](mailto:hi@alexisoubran.com)
+[Book diagnostic](https://calendly.com/alexis-soubran/contact) [alexis@minimalist.mx](mailto:alexis@minimalist.mx)
 
-[Book diagnostic](https://calendly.com/alexis-soubran/contact)
+[WhatsApp](https://wa.me/525539013827)

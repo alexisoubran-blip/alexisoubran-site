@@ -1,5 +1,7 @@
 Source: https://alexisoubran.com/insights/where-marketing-leaders-should-invest-first-in-ai/
 
+[Skip to content](https://alexisoubran.com/insights/where-marketing-leaders-should-invest-first-in-ai/#main)
+
 AI for marketing leaders
 
 # Where Marketing Leaders Should Invest First in AI
@@ -69,3 +71,5 @@ The AI budget should compete against every other use of capital. If a $30,000 im
 I work with CMOs, Country Managers and Growth Leads on market entry, performance, creator commerce, measurement and AI-enabled revenue systems in Mexico and LATAM.
 
 [Book a diagnostic](https://calendly.com/alexis-soubran/contact)[Speaking & teaching](https://alexisoubran.com/speaking-teaching/)
+
+[WhatsApp](https://wa.me/525539013827)

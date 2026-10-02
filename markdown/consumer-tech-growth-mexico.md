@@ -1,5 +1,7 @@
 Source: https://alexisoubran.com/consumer-tech-growth-mexico/
 
+[Skip to content](https://alexisoubran.com/consumer-tech-growth-mexico/#main)
+
 [Home](https://alexisoubran.com/) / Consumer Tech Growth Mexico
 
 Consumer Tech · Mexico + LATAM
@@ -86,4 +88,4 @@ Bring the product, channel mix, creator history, and sales constraints. I will h
 
 [Book a strategy call](https://calendly.com/alexis-soubran/contact)
 
-[ Book a call ](https://calendly.com/alexis-soubran/contact)
+[WhatsApp](https://wa.me/525539013827)

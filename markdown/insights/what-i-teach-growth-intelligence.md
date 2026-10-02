@@ -1,5 +1,7 @@
 Source: https://alexisoubran.com/insights/what-i-teach-growth-intelligence/
 
+[Skip to content](https://alexisoubran.com/insights/what-i-teach-growth-intelligence/#main)
+
 Teaching notes
 
 # What I Teach About Growth Intelligence After Running Real Marketing Budgets
@@ -55,3 +57,5 @@ That is also why I continue teaching. Converting operating experience into somet
 I work with CMOs, Country Managers and Growth Leads on market entry, performance, creator commerce, measurement and AI-enabled revenue systems in Mexico and LATAM.
 
 [Book a diagnostic](https://calendly.com/alexis-soubran/contact)[Speaking & teaching](https://alexisoubran.com/speaking-teaching/)
+
+[WhatsApp](https://wa.me/525539013827)

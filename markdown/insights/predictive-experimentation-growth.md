@@ -1,5 +1,7 @@
 Source: https://alexisoubran.com/insights/predictive-experimentation-growth/
 
+[Skip to content](https://alexisoubran.com/insights/predictive-experimentation-growth/#main)
+
 Experimentation
 
 # Predictive Experimentation: How to Turn Forecasts Into Better Growth Bets
@@ -55,3 +57,5 @@ A healthy growth program has a mix of proven optimizations, adjacent bets and a 
 I work with CMOs, Country Managers and Growth Leads on market entry, performance, creator commerce, measurement and AI-enabled revenue systems in Mexico and LATAM.
 
 [Book a diagnostic](https://calendly.com/alexis-soubran/contact)[Speaking & teaching](https://alexisoubran.com/speaking-teaching/)
+
+[WhatsApp](https://wa.me/525539013827)

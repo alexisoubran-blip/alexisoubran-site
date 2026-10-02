@@ -1,5 +1,7 @@
 Source: https://alexisoubran.com/perfluencer-marketing/
 
+[Skip to content](https://alexisoubran.com/perfluencer-marketing/#main)
+
 [Home](https://alexisoubran.com/) / Perfluencer Marketing
 
 Creator Commerce Framework
@@ -238,6 +240,6 @@ Start by auditing your creator spend, content library, paid amplification setup,
 
 For global brands entering or scaling in Mexico + LATAM that need creator content tied to revenue, not screenshot applause.
 
-[Book a Revenue Systems Diagnostic](https://calendly.com/alexis-soubran/contact) [hi@alexisoubran.com](mailto:hi@alexisoubran.com)
+[Book a Revenue Systems Diagnostic](https://calendly.com/alexis-soubran/contact) [alexis@minimalist.mx](mailto:alexis@minimalist.mx)
 
-[ Book diagnostic ](https://calendly.com/alexis-soubran/contact)
+[WhatsApp](https://wa.me/525539013827)

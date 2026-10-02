@@ -1,5 +1,7 @@
 Source: https://alexisoubran.com/automotive-growth-strategy-mexico/
 
+[Skip to content](https://alexisoubran.com/automotive-growth-strategy-mexico/#main)
+
 [Home](https://alexisoubran.com/) / Automotive Growth Strategy Mexico
 
 Automotive · Mexico + LATAM
@@ -86,4 +88,4 @@ Bring the product, launch timeline, market constraints, and current channel mix.
 
 [Book a strategy call](https://calendly.com/alexis-soubran/contact)
 
-[ Book a call ](https://calendly.com/alexis-soubran/contact)
+[WhatsApp](https://wa.me/525539013827)

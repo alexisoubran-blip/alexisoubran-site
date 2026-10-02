@@ -1,5 +1,7 @@
 Source: https://alexisoubran.com/insights/
 
+[Skip to content](https://alexisoubran.com/insights/#main)
+
 [Home](https://alexisoubran.com/) / Insights
 
 Revenue Systems Insights
@@ -197,6 +199,6 @@ How to build creator systems that connect content, whitelisting, paid amplificat
 
 Bring the dashboard, media mix, CRM report, creator plan or GTM mess. We’ll find the gap between activity and revenue.
 
-[Book diagnostic](https://calendly.com/alexis-soubran/contact) [hi@alexisoubran.com](mailto:hi@alexisoubran.com)
+[Book diagnostic](https://calendly.com/alexis-soubran/contact) [alexis@minimalist.mx](mailto:alexis@minimalist.mx)
 
-[ Book diagnostic ](https://calendly.com/alexis-soubran/contact)
+[WhatsApp](https://wa.me/525539013827)

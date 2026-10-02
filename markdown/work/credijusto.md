@@ -1,5 +1,7 @@
 Source: https://alexisoubran.com/work/credijusto/
 
+[Skip to content](https://alexisoubran.com/work/credijusto/#main)
+
 [Home](https://alexisoubran.com/) / [Work](https://alexisoubran.com/work/) / Credijusto
 
 Credijusto · Fintech Revenue Efficiency System
@@ -92,6 +94,6 @@ Businesses where leads must be qualified before revenue can be counted.
 
 We can audit where your acquisition model is optimizing for the wrong signal. Bring CAC, CPA, pipeline, revenue, and your most suspicious dashboard.
 
-[Book diagnostic](https://calendly.com/alexis-soubran/contact) [hi@alexisoubran.com](mailto:hi@alexisoubran.com)
+[Book diagnostic](https://calendly.com/alexis-soubran/contact) [alexis@minimalist.mx](mailto:alexis@minimalist.mx)
 
-[Book diagnostic](https://calendly.com/alexis-soubran/contact)
+[WhatsApp](https://wa.me/525539013827)

@@ -1,5 +1,7 @@
 Source: https://alexisoubran.com/insights/attribution-vs-money-in-the-bank/
 
+[Skip to content](https://alexisoubran.com/insights/attribution-vs-money-in-the-bank/#main)
+
 Measurement integrity
 
 # Attribution vs. Money in the Bank: The Data Integrity Test Every CMO Needs
@@ -59,3 +61,5 @@ Once those definitions are stable, dashboards become comparable across weeks and
 I work with CMOs, Country Managers and Growth Leads on market entry, performance, creator commerce, measurement and AI-enabled revenue systems in Mexico and LATAM.
 
 [Book a diagnostic](https://calendly.com/alexis-soubran/contact)[Speaking & teaching](https://alexisoubran.com/speaking-teaching/)
+
+[WhatsApp](https://wa.me/525539013827)

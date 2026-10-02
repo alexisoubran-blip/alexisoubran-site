@@ -1,5 +1,7 @@
 Source: https://alexisoubran.com/geo-aeo-consultant-mexico-latam/
 
+[Skip to content](https://alexisoubran.com/geo-aeo-consultant-mexico-latam/#main)
+
 [Home](https://alexisoubran.com/) / GEO Consultant Mexico + LATAM
 
 GEO · AEO · AI Search
@@ -126,4 +128,4 @@ Bring your website, target buyers, priority markets and proof assets. We will ma
 
 [Book a GEO audit](https://calendly.com/alexis-soubran/contact)
 
-[ Book a call ](https://calendly.com/alexis-soubran/contact)
+[WhatsApp](https://wa.me/525539013827)

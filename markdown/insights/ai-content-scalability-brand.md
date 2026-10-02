@@ -1,5 +1,7 @@
 Source: https://alexisoubran.com/insights/ai-content-scalability-brand/
 
+[Skip to content](https://alexisoubran.com/insights/ai-content-scalability-brand/#main)
+
 Generative AI
 
 # How to Scale Content With AI Without Diluting the Brand
@@ -55,3 +57,5 @@ The long-term advantage is not the prompt library. It is the dataset of which me
 I work with CMOs, Country Managers and Growth Leads on market entry, performance, creator commerce, measurement and AI-enabled revenue systems in Mexico and LATAM.
 
 [Book a diagnostic](https://calendly.com/alexis-soubran/contact)[Speaking & teaching](https://alexisoubran.com/speaking-teaching/)
+
+[WhatsApp](https://wa.me/525539013827)

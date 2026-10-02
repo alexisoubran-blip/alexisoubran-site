@@ -1,5 +1,7 @@
 Source: https://alexisoubran.com/mexico-market-entry-growth-strategy/
 
+[Skip to content](https://alexisoubran.com/mexico-market-entry-growth-strategy/#main)
+
 [Home](https://alexisoubran.com/) / Mexico Market Entry Strategy
 
 Go-to-Market · Mexico
@@ -132,4 +134,4 @@ Bring the product, commercial model, launch timeline and constraints. We will ma
 
 [Book a market-entry call](https://calendly.com/alexis-soubran/contact)
 
-[ Book a call ](https://calendly.com/alexis-soubran/contact)
+[WhatsApp](https://wa.me/525539013827)

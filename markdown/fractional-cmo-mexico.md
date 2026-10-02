@@ -1,5 +1,7 @@
 Source: https://alexisoubran.com/fractional-cmo-mexico/
 
+[Skip to content](https://alexisoubran.com/fractional-cmo-mexico/#main)
+
 [Home](https://alexisoubran.com/) / Fractional CMO Mexico
 
 Fractional CMO · Mexico + LATAM
@@ -132,4 +134,4 @@ Bring the funnel, team structure, channel economics and commercial targets. We w
 
 [Book a strategy call](https://calendly.com/alexis-soubran/contact)
 
-[ Book a call ](https://calendly.com/alexis-soubran/contact)
+[WhatsApp](https://wa.me/525539013827)

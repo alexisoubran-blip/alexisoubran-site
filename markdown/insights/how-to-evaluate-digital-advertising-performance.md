@@ -1,5 +1,7 @@
 Source: https://alexisoubran.com/insights/how-to-evaluate-digital-advertising-performance/
 
+[Skip to content](https://alexisoubran.com/insights/how-to-evaluate-digital-advertising-performance/#main)
+
 Performance measurement
 
 # How to Evaluate Digital Advertising Performance Without Lying to Yourself
@@ -81,3 +83,5 @@ The point of measurement is not to create a more sophisticated report. It is to 
 I work with CMOs, Country Managers and Growth Leads on market entry, performance, creator commerce, measurement and AI-enabled revenue systems in Mexico and LATAM.
 
 [Book a diagnostic](https://calendly.com/alexis-soubran/contact)[Speaking & teaching](https://alexisoubran.com/speaking-teaching/)
+
+[WhatsApp](https://wa.me/525539013827)

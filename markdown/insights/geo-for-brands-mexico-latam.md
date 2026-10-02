@@ -1,5 +1,7 @@
 Source: https://alexisoubran.com/insights/geo-for-brands-mexico-latam/
 
+[Skip to content](https://alexisoubran.com/insights/geo-for-brands-mexico-latam/#main)
+
 [Home](https://alexisoubran.com/) / [Insights](https://alexisoubran.com/insights/) / GEO for Brands
 
 GEO / AEO · Mexico + LATAM
@@ -208,4 +210,4 @@ Related
 
 - [Perfluencer Marketing](https://alexisoubran.com/perfluencer-marketing/)
 
-[ Book diagnostic ](https://calendly.com/alexis-soubran/contact)
+[WhatsApp](https://wa.me/525539013827)

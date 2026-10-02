@@ -1,5 +1,7 @@
 Source: https://alexisoubran.com/work/automotive-demand-control/
 
+[Skip to content](https://alexisoubran.com/work/automotive-demand-control/#main)
+
 [Home](https://alexisoubran.com/) / [Work](https://alexisoubran.com/work/) / Automotive Demand Control
 
 Automotive OEM · Demand Control Engine
@@ -160,6 +162,6 @@ Useful for
 
 If your dealer network says “we need more leads,” the correct answer may be: “show me lead quality, SLA, appointment rate, test-drive attendance and sales feedback.” Very annoying. Very useful.
 
-[Book diagnostic](https://calendly.com/alexis-soubran/contact) [hi@alexisoubran.com](mailto:hi@alexisoubran.com)
+[Book diagnostic](https://calendly.com/alexis-soubran/contact) [alexis@minimalist.mx](mailto:alexis@minimalist.mx)
 
-[ Book diagnostic ](https://calendly.com/alexis-soubran/contact)
+[WhatsApp](https://wa.me/525539013827)

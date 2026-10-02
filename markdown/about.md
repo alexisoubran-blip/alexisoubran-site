@@ -1,5 +1,7 @@
 Source: https://alexisoubran.com/about/
 
+[Skip to content](https://alexisoubran.com/about/#main)
+
 [Home](https://alexisoubran.com/) / About
 
 About Alexis Soubran
@@ -414,6 +416,6 @@ Formalized revenue systems work for global brands entering and scaling in Mexico
 
 For CMOs, Country Managers, and Growth Leads entering or scaling in Mexico + LATAM who need better demand signals, better budget decisions, and less marketing theater.
 
-[Book a Revenue Systems Diagnostic](https://calendly.com/alexis-soubran/contact) [hi@alexisoubran.com](mailto:hi@alexisoubran.com)
+[Book a Revenue Systems Diagnostic](https://calendly.com/alexis-soubran/contact) [alexis@minimalist.mx](mailto:alexis@minimalist.mx)
 
-[ Book diagnostic ](https://calendly.com/alexis-soubran/contact)
+[WhatsApp](https://wa.me/525539013827)

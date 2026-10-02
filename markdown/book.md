@@ -47,3 +47,5 @@ The book has listings on Amazon US and Amazon UK under ASIN B0F7GQM972. Check th
 Share the market, commercial target and measurement gaps you need to address.
 
 [Book a strategy call](https://calendly.com/alexis-soubran/contact)
+
+[WhatsApp](https://wa.me/525539013827)

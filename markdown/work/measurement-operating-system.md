@@ -1,5 +1,7 @@
 Source: https://alexisoubran.com/work/measurement-operating-system/
 
+[Skip to content](https://alexisoubran.com/work/measurement-operating-system/#main)
+
 [Home](https://alexisoubran.com/) / [Work](https://alexisoubran.com/work/) / Measurement Operating System
 
 DTC Supplements · Measurement Operating System
@@ -148,6 +150,6 @@ Useful for
 
 Scaling a noisy attribution system is just buying confusion at higher volume. Finance loves that. Kidding. Finance hates everyone.
 
-[Book diagnostic](https://calendly.com/alexis-soubran/contact) [hi@alexisoubran.com](mailto:hi@alexisoubran.com)
+[Book diagnostic](https://calendly.com/alexis-soubran/contact) [alexis@minimalist.mx](mailto:alexis@minimalist.mx)
 
-[ Book diagnostic ](https://calendly.com/alexis-soubran/contact)
+[WhatsApp](https://wa.me/525539013827)

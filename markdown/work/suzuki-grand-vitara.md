@@ -1,5 +1,7 @@
 Source: https://alexisoubran.com/work/suzuki-grand-vitara/
 
+[Skip to content](https://alexisoubran.com/work/suzuki-grand-vitara/#main)
+
 [Home](https://alexisoubran.com/) / [Work](https://alexisoubran.com/work/) / Suzuki Grand Vitara
 
 Suzuki Grand Vitara · Brand Experience Launch
@@ -130,6 +132,6 @@ Useful for
 
 Launches should not die the day after the event. They should become assets that feed PR, creators, search, paid media and buyer confidence.
 
-[Book diagnostic](https://calendly.com/alexis-soubran/contact) [hi@alexisoubran.com](mailto:hi@alexisoubran.com)
+[Book diagnostic](https://calendly.com/alexis-soubran/contact) [alexis@minimalist.mx](mailto:alexis@minimalist.mx)
 
-[ Book diagnostic ](https://calendly.com/alexis-soubran/contact)
+[WhatsApp](https://wa.me/525539013827)

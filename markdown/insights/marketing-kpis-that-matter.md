@@ -1,5 +1,7 @@
 Source: https://alexisoubran.com/insights/marketing-kpis-that-matter/
 
+[Skip to content](https://alexisoubran.com/insights/marketing-kpis-that-matter/#main)
+
 Growth intelligence
 
 # From Tactical Metrics to KPIs That Actually Change a Growth Decision
@@ -65,3 +67,5 @@ At the end of a weekly review, ask: what did the data make us do differently? If
 I work with CMOs, Country Managers and Growth Leads on market entry, performance, creator commerce, measurement and AI-enabled revenue systems in Mexico and LATAM.
 
 [Book a diagnostic](https://calendly.com/alexis-soubran/contact)[Speaking & teaching](https://alexisoubran.com/speaking-teaching/)
+
+[WhatsApp](https://wa.me/525539013827)

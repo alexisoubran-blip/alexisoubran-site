@@ -1,5 +1,7 @@
 Source: https://alexisoubran.com/speaking-teaching/
 
+[Skip to content](https://alexisoubran.com/speaking-teaching/#main)
+
 Speaking · Teaching · Jury
 
 # I teach the systems I use in the work.
@@ -106,4 +108,6 @@ A risk-adjusted capital allocation framework.
 
 Topics: marketing measurement, performance, creator commerce, AI adoption, growth intelligence and Mexico/LATAM go-to-market.
 
-[hi@alexisoubran.com](mailto:hi@alexisoubran.com)
+[alexis@minimalist.mx](mailto:alexis@minimalist.mx)
+
+[WhatsApp](https://wa.me/525539013827)

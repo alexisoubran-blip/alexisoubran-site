@@ -1,5 +1,7 @@
 Source: https://alexisoubran.com/privacy/
 
+[Skip to content](https://alexisoubran.com/privacy/#main)
+
 [Home](https://alexisoubran.com/) / Privacy Policy
 
 # Privacy Policy.
@@ -36,6 +38,8 @@ You may disable cookies in your browser settings or use privacy tools to limit t
 
 ## Contact
 
-For privacy-related questions, contact [hi@alexisoubran.com](mailto:hi@alexisoubran.com).
+For privacy-related questions, contact [alexis@minimalist.mx](mailto:alexis@minimalist.mx).
 
 Last updated: May 18, 2026.
+
+[WhatsApp](https://wa.me/525539013827)

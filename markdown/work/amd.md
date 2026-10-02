@@ -1,5 +1,7 @@
 Source: https://alexisoubran.com/work/amd/
 
+[Skip to content](https://alexisoubran.com/work/amd/#main)
+
 [Home](https://alexisoubran.com/) / [Work](https://alexisoubran.com/work/) / AMD
 
 AMD · Retail Intent Engine
@@ -92,6 +94,6 @@ Brands that sell through third-party retailers and need media to create measurab
 
 Useful when your conversion path includes retailers, marketplaces, distributors, dealers, or other wonderful places where attribution goes to die.
 
-[Book diagnostic](https://calendly.com/alexis-soubran/contact) [hi@alexisoubran.com](mailto:hi@alexisoubran.com)
+[Book diagnostic](https://calendly.com/alexis-soubran/contact) [alexis@minimalist.mx](mailto:alexis@minimalist.mx)
 
-[Book diagnostic](https://calendly.com/alexis-soubran/contact)
+[WhatsApp](https://wa.me/525539013827)

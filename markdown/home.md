@@ -380,8 +380,8 @@ Let's talk
 
 Bring your market, commercial target and current measurement gaps. We'll discuss where a diagnostic or engagement could help.
 
-[Book a diagnostic ↗](https://calendly.com/alexis-soubran/contact)[hi@alexisoubran.com](mailto:hi@alexisoubran.com)
+[Book a diagnostic ↗](https://calendly.com/alexis-soubran/contact)[WhatsApp · 55 3901 3827](https://wa.me/525539013827)[alexis@minimalist.mx](mailto:alexis@minimalist.mx)
 
 For CMOs, country managers and growth leads entering or scaling in Mexico + LATAM.
 
-[Book diagnostic ↗](https://calendly.com/alexis-soubran/contact)
+[WhatsApp](https://wa.me/525539013827)
