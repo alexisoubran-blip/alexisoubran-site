@@ -8,6 +8,8 @@ Professional record
 
 A book by Alexis Soubran on influencer marketing, buyer behavior and connecting creator storytelling with performance measurement.
 
+Cover of Oops, I Bought It: What’s Behind Influencer Marketing by Alexis Soubran
+
 ## About the book
 
 Oops, I Bought It: What's Behind Influencer Marketing is written by Alexis Soubran, CEO and partner at Minimalist Agency. It presents his perspective on how creator content influences buyer decisions and how brands can connect that content with performance marketing.

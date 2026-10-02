@@ -16,7 +16,7 @@ I build the operating layer between GTM, paid media, creators, production, CRM, 
 
 Based in Mexico City Languages English, Spanish, Italian Currently CEO & Partner, Minimalist Agency Trust [About Alexis](https://alexisoubran.com/about/) · [case studies](https://alexisoubran.com/work/)
 
-Alexis Soubran, Revenue Systems Operator for global brands entering and scaling in Mexico and LATAM
+Alexis Soubran, marketing executive and CEO of Minimalist Agency
 
 Command Layer
 
@@ -65,6 +65,10 @@ Weekly loop
 Revenue systems operated for
 
 SharkNinja AMD Bitso Edenred Zeekr Lynk & Co Nintendo OnePlus Televisa Miele Motorola Mixue Royal Canin Thermo Fisher Scientific GBM Concha y Toro SharkNinja AMD Bitso Edenred Zeekr Lynk & Co Nintendo OnePlus Televisa Miele Motorola Mixue Royal Canin Thermo Fisher Scientific GBM Concha y Toro
+
+## Speaking and media
+
+Alexis Soubran holding a microphone on a Merca2.0 panel Merca2.0 · [Speaking and teaching](https://alexisoubran.com/speaking-teaching/) Alexis Soubran in conversation at the MVS Noticias studio MVS Noticias · [Press and professional references](https://alexisoubran.com/press/)
 
 The Revenue Gap
 

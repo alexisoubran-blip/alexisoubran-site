@@ -12,7 +12,7 @@ I operate at the layer where GTM strategy, paid media, creators, production, CRM
 
 Based in Mexico City Languages English, Spanish, Italian Currently CEO & Partner, Minimalist Agency
 
-Alexis Soubran, revenue systems operator for global brands entering Mexico and LATAM
+Alexis Soubran, CEO and partner at Minimalist Agency
 
 Operator, not spectator. Strategy is useful only when it changes what gets built, measured, cut, or scaled.
 
@@ -25,6 +25,10 @@ Alexis Soubran is a Mexico City-based marketing executive, CEO and partner at Mi
 He teaches at Escuela de Mercadotecnia (EDEM) and has participated in the Merca2.0 National Digital Marketing Congress. His book, [Oops, I Bought It: What's Behind Influencer Marketing](https://alexisoubran.com/book/), describes his approach to connecting creator storytelling and performance measurement.
 
 [Read the press coverage and professional references](https://alexisoubran.com/press/) or [view his speaking and teaching record](https://alexisoubran.com/speaking-teaching/).
+
+## Portraits and event moments
+
+Black and white portrait of Alexis Soubran Alexis Soubran Alexis Soubran seated in a black shirt and glasses Alexis Soubran Alexis Soubran at an event with purple lighting At an industry event
 
 Short version
 
@@ -160,6 +164,8 @@ The framework is documented in my book [Oops, I Bought It: What's Behind Influen
 
 I also teach and speak on growth intelligence, attribution, social commerce, creator systems, AI and performance strategy at Escuela de Mercadotecnia (EDEM), Colectivo23 / Kätedra, and industry events including the Merca2.0 National Digital Marketing Congress. [See the documented speaking and teaching record →](https://alexisoubran.com/speaking-teaching/)
 
+Alexis Soubran speaking with a microphone on an outdoor discussion panel A conversation with fellow panelists
+
 Independent references
 
 ## External sources that document the work.
@@ -177,6 +183,8 @@ Beyond the agency
 I am also the vocalist, composer, and co-founder of [Cavane](https://cavane.mx), an indie rock band based in Mexico City.
 
 Cavane was formed in 2012 with Irving Soubran and Alejandro Escárcega, blending modern indie rock with influences from Zoé, Porcupine Tree, Pink Floyd, and Soda Stereo. The creative muscle is not separate from the agency work. It is the same system: attention, emotion, rhythm, signal, and repetition.
+
+Alexis Soubran singing and playing guitar with Cavane Cavane · live performance
 
 Timeline
 

@@ -6,7 +6,11 @@ Speaking · Teaching · Jury
 
 Selected public speaking and executive education across performance marketing, analytics, growth intelligence and AI. The emphasis is practical: metrics, capital allocation, experimentation and operating decisions.
 
+Alexis Soubran seated in front of the Merca2.0 congress backdrop Merca2.0
+
 ## Selected record
+
+Alexis Soubran on a Merca2.0 congress panel
 
 November 21, 2024
 
@@ -15,6 +19,8 @@ November 21, 2024
 Panel speaker in Mexico City on evaluating digital advertising performance, alongside leaders from Minimalist and SharkNinja. Merca2.0 later covered the integrated performance, production and creators discussion.
 
 [Public event coverage →](https://www.merca20.com/optimiza-tus-campanas-en-el-cnmd-2024-expertos-revelaran-como-medir-el-rendimiento-publicitario/)
+
+Kätedra Summit eCommerce and Marketing Digital speaker artwork naming Alexis Soubran, October 24 and 25, 2023 Kätedra · speaker artwork, 2023
 
 2023–2026
 

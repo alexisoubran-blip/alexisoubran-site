@@ -68,6 +68,10 @@ Entrepreneur profile describing his role at Minimalist Agency.
 
 Professional record: Documents his agency leadership and entrepreneurship.
 
+## Media appearances
+
+Alexis Soubran at the MVS Noticias interview table MVS Noticias · studio conversation
+
 ## Articles and methodology
 
 These works are authored by Alexis or published by his agency. They provide his own analysis and methodology.
