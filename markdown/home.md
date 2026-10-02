@@ -28,9 +28,9 @@ Selected brand & consulting experience
 
 Pause motion
 
-SharkNinjaAMDBitsoEdenredGeelyIronhackSupermercados MorelosCero FinanceZeekrLynk & CoTapniBushmillsNintendoOnePlusMieleMotorola
+SharkNinjaAMDBitsoEdenredGeelyIronhackSupermercados MorelosCero FinanceZeekrLynk & CoBushmillsNintendoOnePlusMieleMotorola
 
-SharkNinjaAMDBitsoEdenredGeelyIronhackSupermercados MorelosCero FinanceZeekrLynk & CoTapniBushmillsNintendoOnePlusMieleMotorola
+SharkNinjaAMDBitsoEdenredGeelyIronhackSupermercados MorelosCero FinanceZeekrLynk & CoBushmillsNintendoOnePlusMieleMotorola
 
 Co-founder, Tulum Innovation Fest.
 
@@ -104,15 +104,9 @@ Selected engagements across my career and Minimalist Agency. Scope and dates var
 
 - Hablo Coreano
 
-- Hausy
-
-- HayCash
-
 - hi:hab
 
 - HiPP Organic
-
-- ICE
 
 - IKI
 
@@ -179,8 +173,6 @@ Selected engagements across my career and Minimalist Agency. Scope and dates var
 - Stradia
 
 - Suzuki
-
-- Tapni
 
 - Tecnoweb
 

@@ -150,7 +150,7 @@ Minimalist Agency
 
 At Minimalist Agency, I lead the strategy and operating model behind integrated revenue systems for global brands. The agency connects performance, creators, production, social, SEO/GEO, TikTok Shop, measurement, and optimization into one decision loop.
 
-Brand and project experience includes SharkNinja, AMD, Bitso, Edenred, Geely, Zeekr, Lynk & Co, Ironhack, Cero Finance, Tapni, Bushmills, and other organizations across technology, fintech, automotive, consumer goods, B2B, education, retail, and entertainment.
+Brand and project experience includes SharkNinja, AMD, Bitso, Edenred, Geely, Zeekr, Lynk & Co, Ironhack, Cero Finance, Bushmills, and other organizations across technology, fintech, automotive, consumer goods, B2B, education, retail, and entertainment.
 
 Explore all brands and projects
 
@@ -222,15 +222,9 @@ Selected engagements across my career and Minimalist Agency. Scope and dates var
 
 - Hablo Coreano
 
-- Hausy
-
-- HayCash
-
 - hi:hab
 
 - HiPP Organic
-
-- ICE
 
 - IKI
 
@@ -297,8 +291,6 @@ Selected engagements across my career and Minimalist Agency. Scope and dates var
 - Stradia
 
 - Suzuki
-
-- Tapni
 
 - Tecnoweb
 
