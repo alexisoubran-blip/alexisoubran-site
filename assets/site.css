@@ -25,10 +25,10 @@ body.site-page,body.site-home{margin:0;background:#101010;color:var(--text);font
 .site-page :is(.btn.secondary,.btn-secondary,.button){background:transparent;color:var(--text);border-color:#555}
 .site-page .btn:hover{background:#ff725a;transform:translateY(-2px);opacity:1;text-decoration:none}
 .site-page :is(.btn.secondary,.btn-secondary,.button):hover{background:#242424;color:var(--text)}
-.site-page .hero-card{background:transparent;border:0;padding:0;box-shadow:none;overflow:visible;min-width:0;border-radius:0}
+.site-page .hero-card{background:transparent;border:0;padding:0;box-shadow:none;overflow:visible;min-width:0;min-height:0;border-radius:0}
 .site-page .hero-photo-wrap{background:transparent;border:0;border-radius:0;box-shadow:none;overflow:visible}
 .site-page .hero-photo-wrap::before,.site-page .hero::after{display:none}
-.site-page :is(.hero-card>img,.hero-photo,.hero-record-photo img){width:100%;height:auto;max-height:500px;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%;border-radius:18px;filter:none}
+.site-page :is(.hero-card>img,.hero-photo,.hero-record-photo img){width:100%;height:auto;min-height:0;max-height:500px;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%;border-radius:18px;filter:none}
 .site-page :is(.hero-card .overlay,.hero-card-caption,.photo-caption){position:static;inset:auto;padding:16px 0 0;background:transparent;color:var(--text-dim);font-size:14px;line-height:1.6;border:0}
 .site-page :is(.overlay strong,.hero-card-caption strong,.photo-caption strong){display:block;color:var(--text);font-size:15px;font-weight:600;margin-bottom:4px}
 .site-page .overlay span{display:block;font-size:14px;color:var(--text-dim)}
@@ -42,7 +42,7 @@ body.site-page,body.site-home{margin:0;background:#101010;color:var(--text);font
 .site-page :is(.card,.side-card,.callout,.fact-card,.panel,.pillar-card,.metric-card,.answer-box,.decision-box,.decision-card,.profile-card,.queue-card,.source-box){padding:28px}
 .site-page :is(.card,.case-card,.topic,.featured-post,.decision-card,.related a){transition:transform .2s,border-color .2s;box-shadow:none}
 .site-page :is(a.card,.topic,.featured-post,.related a):hover{transform:translateY(-3px);border-color:#666;box-shadow:none}
-.site-page :is(.card::before,.hero-card::before,.command-card::before,.featured-post::before,.hero::before){display:none}
+.site-page .card::before,.site-page .hero-card::before,.site-page .command-card::before,.site-page .featured-post::before,.site-page .hero::before{display:none}
 .site-page :is(.card .eyebrow,.card small,.post-type,.post-meta,.label,.meta-pill,.pill,.tag){color:var(--text-dim);font-size:12px;font-weight:500}
 .site-page :is(.card p,.side-card p,.card li,.callout p,.panel p){font-size:16px;color:var(--text-dim);line-height:1.65}
 .site-page :is(.pill,.tag,.meta-pill,.intent-chip,.brand-tag){background:transparent;border-color:#444;border-radius:999px;box-shadow:none}
@@ -68,9 +68,13 @@ body.site-page,body.site-home{margin:0;background:#101010;color:var(--text);font
 .site-page .hero .command-card{padding:28px}
 .site-page .terminal{background:transparent;border-color:var(--border);font-size:14px;color:var(--text-dim)}
 .site-page .bar{background:#333}.site-page .bar i{background:var(--accent);box-shadow:none}
-.site-page .sound-orbit{background:transparent;border:1px solid var(--border);box-shadow:none;border-radius:18px}
+.site-page .sound-orbit{width:100%;max-width:360px;background:transparent;border:1px solid var(--border);box-shadow:none;border-radius:50%}
 .site-page :is(.orbit,.orbit-core){box-shadow:none;border-color:#555;background:transparent}
-.site-page .orbit{animation:none}
+.site-page .orbit{animation:none;color:var(--accent)}
+.site-page .orbit::before,.site-page .orbit::after{width:6px;height:6px;box-shadow:none}
+.site-page .orbit-core{font-size:22px;font-weight:600;background:#1b1b1b}
+.site-page .hero:has(.sound-orbit){min-height:0}
+.site-page .hero:has(.sound-orbit) .hero-grid{padding-block:0}
 .site-page :is(.workspace,.toolbar,.data-table,.profile,.map-panel){border-color:var(--border)}
 .site-page .workspace{border-radius:16px}.site-page .map-panel,.site-page .profile{border-radius:0}
 .site-page .intro h1{color:var(--text);font-weight:650}.site-page .intro h1 span{color:var(--text)}
