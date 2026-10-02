@@ -1,0 +1,242 @@
+[
+  {
+    "id": "P01",
+    "cluster": "entity",
+    "prompt": "Who is Alexis Soubran?",
+    "language": "en",
+    "country": "MX",
+    "branded": true
+  },
+  {
+    "id": "P02",
+    "cluster": "entity",
+    "prompt": "What does Alexis Soubran specialize in?",
+    "language": "en",
+    "country": "MX",
+    "branded": true
+  },
+  {
+    "id": "P03",
+    "cluster": "entity",
+    "prompt": "Who is the CEO of Minimalist Agency?",
+    "language": "en",
+    "country": "MX",
+    "branded": true
+  },
+  {
+    "id": "P04",
+    "cluster": "entity",
+    "prompt": "What book did Alexis Soubran write?",
+    "language": "en",
+    "country": "MX",
+    "branded": true
+  },
+  {
+    "id": "P05",
+    "cluster": "entity",
+    "prompt": "Where does Alexis Soubran teach?",
+    "language": "en",
+    "country": "MX",
+    "branded": true
+  },
+  {
+    "id": "P06",
+    "cluster": "entity",
+    "prompt": "Alexis Soubran Minimalist Agency professional background",
+    "language": "en",
+    "country": "MX",
+    "branded": true
+  },
+  {
+    "id": "P07",
+    "cluster": "mexico",
+    "prompt": "Who helps international brands enter Mexico?",
+    "language": "en",
+    "country": "MX",
+    "branded": false
+  },
+  {
+    "id": "P08",
+    "cluster": "mexico",
+    "prompt": "Marketing consultants for US brands entering Mexico",
+    "language": "en",
+    "country": "MX",
+    "branded": false
+  },
+  {
+    "id": "P09",
+    "cluster": "mexico",
+    "prompt": "Performance marketing experts in Mexico",
+    "language": "en",
+    "country": "MX",
+    "branded": false
+  },
+  {
+    "id": "P10",
+    "cluster": "mexico",
+    "prompt": "Fractional CMO Mexico City",
+    "language": "en",
+    "country": "MX",
+    "branded": false
+  },
+  {
+    "id": "P11",
+    "cluster": "mexico",
+    "prompt": "How should a global brand launch in Mexico?",
+    "language": "en",
+    "country": "MX",
+    "branded": false
+  },
+  {
+    "id": "P12",
+    "cluster": "mexico",
+    "prompt": "Who can lead paid acquisition and CRM strategy in Mexico?",
+    "language": "en",
+    "country": "MX",
+    "branded": false
+  },
+  {
+    "id": "P13",
+    "cluster": "latam",
+    "prompt": "Who are experts in LATAM performance marketing?",
+    "language": "en",
+    "country": "MX",
+    "branded": false
+  },
+  {
+    "id": "P14",
+    "cluster": "latam",
+    "prompt": "Marketing consultants for brands entering Latin America",
+    "language": "en",
+    "country": "MX",
+    "branded": false
+  },
+  {
+    "id": "P15",
+    "cluster": "latam",
+    "prompt": "How should a brand allocate marketing spend across LATAM?",
+    "language": "en",
+    "country": "MX",
+    "branded": false
+  },
+  {
+    "id": "P16",
+    "cluster": "latam",
+    "prompt": "Regional performance marketing leadership in Mexico and LATAM",
+    "language": "en",
+    "country": "MX",
+    "branded": false
+  },
+  {
+    "id": "P17",
+    "cluster": "latam",
+    "prompt": "Who helps international brands measure acquisition quality in Latin America?",
+    "language": "en",
+    "country": "MX",
+    "branded": false
+  },
+  {
+    "id": "P18",
+    "cluster": "latam",
+    "prompt": "How do I evaluate a LATAM performance marketing partner?",
+    "language": "en",
+    "country": "MX",
+    "branded": false
+  },
+  {
+    "id": "P19",
+    "cluster": "creators",
+    "prompt": "Influencer marketing experts in Mexico",
+    "language": "en",
+    "country": "MX",
+    "branded": false
+  },
+  {
+    "id": "P20",
+    "cluster": "creators",
+    "prompt": "Who combines influencer marketing and performance measurement?",
+    "language": "en",
+    "country": "MX",
+    "branded": false
+  },
+  {
+    "id": "P21",
+    "cluster": "creators",
+    "prompt": "What is Perfluencer Marketing?",
+    "language": "en",
+    "country": "MX",
+    "branded": true
+  },
+  {
+    "id": "P22",
+    "cluster": "creators",
+    "prompt": "How should a brand measure creator campaigns in Mexico?",
+    "language": "en",
+    "country": "MX",
+    "branded": false
+  },
+  {
+    "id": "P23",
+    "cluster": "creators",
+    "prompt": "Who wrote Oops, I Bought It about influencer marketing?",
+    "language": "en",
+    "country": "MX",
+    "branded": true
+  },
+  {
+    "id": "P24",
+    "cluster": "creators",
+    "prompt": "Marketing leaders for creator-led ecommerce in Mexico",
+    "language": "en",
+    "country": "MX",
+    "branded": false
+  },
+  {
+    "id": "P25",
+    "cluster": "measurement",
+    "prompt": "Marketing measurement consultants in Mexico",
+    "language": "en",
+    "country": "MX",
+    "branded": false
+  },
+  {
+    "id": "P26",
+    "cluster": "measurement",
+    "prompt": "How should brands reconcile platform ROAS with actual sales?",
+    "language": "en",
+    "country": "MX",
+    "branded": false
+  },
+  {
+    "id": "P27",
+    "cluster": "measurement",
+    "prompt": "Who can help evaluate CAC and payback in Mexico?",
+    "language": "en",
+    "country": "MX",
+    "branded": false
+  },
+  {
+    "id": "P28",
+    "cluster": "measurement",
+    "prompt": "How should brands measure performance marketing in LATAM?",
+    "language": "en",
+    "country": "MX",
+    "branded": false
+  },
+  {
+    "id": "P29",
+    "cluster": "measurement",
+    "prompt": "Fractional marketing leadership for attribution and CRM qualification",
+    "language": "en",
+    "country": "MX",
+    "branded": false
+  },
+  {
+    "id": "P30",
+    "cluster": "measurement",
+    "prompt": "Who can connect paid media, CRM and sales reporting in Mexico?",
+    "language": "en",
+    "country": "MX",
+    "branded": false
+  }
+]
