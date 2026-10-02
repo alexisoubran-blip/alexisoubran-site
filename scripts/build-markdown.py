@@ -41,10 +41,19 @@ class Markdown(HTMLParser):
 ACCEPT=r'(?:.*,[ \t]*)?[Tt][Ee][Xx][Tt]/[Mm][Aa][Rr][Kk][Dd][Oo][Ww][Nn](?![ \t]*;[ \t]*[qQ]=0(?:\.0*)?[ \t]*(?:,|$))(?:[ \t]*;[^,]*)?[ \t]*(?:,.*)?'
 condition=[{'type':'header','key':'accept','value':ACCEPT}]
 config=json.loads((ROOT/'vercel.json').read_text())
-# Preserve unrelated rewrites and noindex rules. Regeneration is idempotent.
-config['rewrites']=[r for r in config.get('rewrites',[]) if not str(r.get('destination','')).startswith('/markdown/')]
-config['headers']=[r for r in config.get('headers',[]) if not (r.get('source','').startswith('/markdown/') or any(h['key'] in ('Vary','Vercel-CDN-Cache-Control') for h in r['headers']))]
-new_rewrites=[]; count=0
+# Advanced routes put negotiated representations before static filesystem lookup.
+# Convert existing header rules once; preserve unrelated routes on regeneration.
+if 'routes' in config:
+    preserved=[r for r in config['routes'] if r.get('handle')!='filesystem' and not str(r.get('dest','')).startswith('/markdown/') and not any(k in r.get('headers',{}) for k in ('Vary','Vercel-CDN-Cache-Control','Content-Type'))]
+else:
+    preserved=[]
+    for r in config.pop('headers',[]):
+        if r['source'].startswith('/markdown/') or any(h['key'] in ('Vary','Vercel-CDN-Cache-Control','Content-Type') for h in r['headers']): continue
+        preserved.append({'src':r['source'].replace('/:path*','/(.*)'), 'headers':{h['key']:h['value'] for h in r['headers']}, 'continue':True})
+    for r in config.pop('rewrites',[]):
+        if not str(r.get('destination','')).startswith('/markdown/'):
+            preserved.append({'src':r['source'],'dest':r['destination']})
+new_routes=[]; count=0
 for el in ET.parse(ROOT/'sitemap.xml').getroot():
     url=el.find('{*}loc').text
     route=url.removeprefix(ORIGIN)
@@ -57,13 +66,13 @@ for el in ET.parse(ROOT/'sitemap.xml').getroot():
     alternate='<link rel="alternate" type="text/markdown" href="/markdown/'+name+'.md" title="Markdown version of this page">'
     s=re.sub(r'<link[^>]*type="text/markdown"[^>]*>\s*','',s)
     s=s.replace('</head>',alternate+'\n</head>');source.write_text(s)
-    for path in dict.fromkeys([route,route.rstrip('/') or '/', '/index.html' if route=='/' else route+'index.html']):
-        new_rewrites.append({'source':path,'has':condition,'destination':'/markdown/'+name+'.md'})
-        config['headers'].append({'source':path,'headers':[{'key':'Vary','value':'Accept'},{'key':'Vercel-CDN-Cache-Control','value':'no-store'}]})
-        config['headers'].append({'source':path,'has':condition,'headers':[{'key':'Content-Type','value':'text/markdown; charset=utf-8'}]})
+    variants=list(dict.fromkeys([route,route.rstrip('/') or '/', '/index.html' if route=='/' else route+'index.html']))
+    pattern='(?:'+'|'.join(re.escape(x) for x in variants)+')'
+    new_routes.append({'src':pattern,'headers':{'Vary':'Accept','Vercel-CDN-Cache-Control':'no-store'},'continue':True})
+    new_routes.append({'src':pattern,'has':condition,'dest':'/markdown/'+name+'.md','headers':{'Content-Type':'text/markdown; charset=utf-8'}})
     count+=1
-config['headers'].append({'source':'/markdown/:path*','headers':[{'key':'Content-Type','value':'text/markdown; charset=utf-8'},{'key':'X-Robots-Tag','value':'noindex'},{'key':'Vary','value':'Accept'}]})
-config['headers'].append({'source':'/docs/:path*','headers':[{'key':'X-Robots-Tag','value':'noindex'},{'key':'Cache-Control','value':'no-store'}]}) if not any(x['source']=='/docs/:path*' for x in config['headers']) else None
-config['rewrites']=new_rewrites+config['rewrites']
+# Keep direct alternates out of search results; negotiated canonical URLs stay indexable.
+new_routes.append({'src':'/markdown/(.*)','headers':{'Content-Type':'text/markdown; charset=utf-8','X-Robots-Tag':'noindex','Vary':'Accept'},'continue':True})
+config['routes']=preserved+new_routes+[{'handle':'filesystem'}]
 (ROOT/'vercel.json').write_text(json.dumps(config,indent=2)+'\n')
-print('Generated',count,'public-page Markdown alternates and Accept routing rules.')
+print('Generated',count,'public-page Markdown alternates with negotiation before filesystem lookup.')
