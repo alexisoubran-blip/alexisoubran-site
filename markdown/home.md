@@ -24,13 +24,201 @@ Mexico + LATAMregional expertise
 
 Strategy to executionthrough Minimalist Agency
 
-Selected brand experience through Minimalist Agency
+Selected brand & consulting experience
 
 Pause motion
 
-SharkNinjaAMDBitsoEdenredZeekrLynk & CoNintendoOnePlusMieleMotorola
+SharkNinjaAMDBitsoEdenredGeelyIronhackSupermercados MorelosCero FinanceZeekrLynk & CoTapniBushmillsNintendoOnePlusMieleMotorola
 
-SharkNinjaAMDBitsoEdenredZeekrLynk & CoNintendoOnePlusMieleMotorola
+SharkNinjaAMDBitsoEdenredGeelyIronhackSupermercados MorelosCero FinanceZeekrLynk & CoTapniBushmillsNintendoOnePlusMieleMotorola
+
+Co-founder, Tulum Innovation Fest.
+
+Explore all brands and projects
+
+Selected engagements across my career and Minimalist Agency. Scope and dates vary by project.
+
+### Brands & client projects
+
+- Airbnb
+
+- AMD
+
+- Atelier Central
+
+- Bimbo
+
+- Bitso
+
+- BM Home
+
+- BrandQuo
+
+- Bright Domino
+
+- Broxel
+
+- Bushmills
+
+- Caltic Consultores
+
+- Casa Cuervo
+
+- Casillero del Diablo
+
+- Cero Finance
+
+- Charme
+
+- Club de Alta Relojería
+
+- Concha y Toro
+
+- Cooperativa DAD
+
+- Credijusto
+
+- Cuida Tu Vista
+
+- Easy Jobs App
+
+- Ecoce
+
+- Edenred
+
+- Educa Verde
+
+- Einteligent
+
+- Equipar
+
+- Estatus Seguro
+
+- Evolucione
+
+- GBM
+
+- Geely
+
+- Grupo Logisa
+
+- Hablo Coreano
+
+- Hausy
+
+- HayCash
+
+- hi:hab
+
+- HiPP Organic
+
+- ICE
+
+- IKI
+
+- Interjet
+
+- Ironhack
+
+- Joyeros Emblemáticos
+
+- Kilpatrick Executive
+
+- KiWi
+
+- Lifescozul
+
+- Lynk & Co
+
+- Mi Móvil
+
+- Miele
+
+- Mixue
+
+- Motorola
+
+- Net Copiadoras
+
+- Nintendo
+
+- Novagenic
+
+- OnePlus
+
+- Outset PR
+
+- Pagaloop
+
+- Panalia
+
+- Petco
+
+- Promuevo
+
+- Purificación
+
+- Reebok
+
+- Ridian
+
+- Rocket Closet
+
+- Royal Canin
+
+- Sabadell
+
+- SharkNinja
+
+- Simmple
+
+- Sofamex
+
+- Sofía Salud
+
+- Stradia
+
+- Suzuki
+
+- Tapni
+
+- Tecnoweb
+
+- Televisa
+
+- Temposatis
+
+- Thermo Fisher Scientific
+
+- Uber Eats
+
+- Vest
+
+- Z-Unordinary
+
+- Zeekr
+
+- Zumit
+
+### Independent consulting
+
+Supermercados Morelos
+Consulting project with We Do Marketing.
+
+### Partner campaigns
+
+H-E-B through Edenred.
+Edox through Temposatis / Club de Alta Relojería.
+
+### Venture
+
+Tulum Innovation Fest
+Co-founder.
+
+### Teaching
+
+Escuela de Mercadotecnia (EDEM)
+Colectivo23 / Kätedra
 
 Selected work
 

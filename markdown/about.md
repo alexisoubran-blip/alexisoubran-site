@@ -150,7 +150,193 @@ Minimalist Agency
 
 At Minimalist Agency, I lead the strategy and operating model behind integrated revenue systems for global brands. The agency connects performance, creators, production, social, SEO/GEO, TikTok Shop, measurement, and optimization into one decision loop.
 
-The agency has worked across technology, fintech, automotive, consumer goods, B2B, ecommerce, beauty, retail, and entertainment — including brands such as SharkNinja, AMD, Bitso, Edenred, Uber Eats, Airbnb, Zeekr, Lynk & Co, Geely, Miele, Nintendo, Motorola, Bimbo, Petco, Reebok, OnePlus, Suzuki, Royal Canin, Televisa, and others.
+Brand and project experience includes SharkNinja, AMD, Bitso, Edenred, Geely, Zeekr, Lynk & Co, Ironhack, Cero Finance, Tapni, Bushmills, and other organizations across technology, fintech, automotive, consumer goods, B2B, education, retail, and entertainment.
+
+Explore all brands and projects
+
+Selected engagements across my career and Minimalist Agency. Scope and dates vary by project.
+
+### Brands & client projects
+
+- Airbnb
+
+- AMD
+
+- Atelier Central
+
+- Bimbo
+
+- Bitso
+
+- BM Home
+
+- BrandQuo
+
+- Bright Domino
+
+- Broxel
+
+- Bushmills
+
+- Caltic Consultores
+
+- Casa Cuervo
+
+- Casillero del Diablo
+
+- Cero Finance
+
+- Charme
+
+- Club de Alta Relojería
+
+- Concha y Toro
+
+- Cooperativa DAD
+
+- Credijusto
+
+- Cuida Tu Vista
+
+- Easy Jobs App
+
+- Ecoce
+
+- Edenred
+
+- Educa Verde
+
+- Einteligent
+
+- Equipar
+
+- Estatus Seguro
+
+- Evolucione
+
+- GBM
+
+- Geely
+
+- Grupo Logisa
+
+- Hablo Coreano
+
+- Hausy
+
+- HayCash
+
+- hi:hab
+
+- HiPP Organic
+
+- ICE
+
+- IKI
+
+- Interjet
+
+- Ironhack
+
+- Joyeros Emblemáticos
+
+- Kilpatrick Executive
+
+- KiWi
+
+- Lifescozul
+
+- Lynk & Co
+
+- Mi Móvil
+
+- Miele
+
+- Mixue
+
+- Motorola
+
+- Net Copiadoras
+
+- Nintendo
+
+- Novagenic
+
+- OnePlus
+
+- Outset PR
+
+- Pagaloop
+
+- Panalia
+
+- Petco
+
+- Promuevo
+
+- Purificación
+
+- Reebok
+
+- Ridian
+
+- Rocket Closet
+
+- Royal Canin
+
+- Sabadell
+
+- SharkNinja
+
+- Simmple
+
+- Sofamex
+
+- Sofía Salud
+
+- Stradia
+
+- Suzuki
+
+- Tapni
+
+- Tecnoweb
+
+- Televisa
+
+- Temposatis
+
+- Thermo Fisher Scientific
+
+- Uber Eats
+
+- Vest
+
+- Z-Unordinary
+
+- Zeekr
+
+- Zumit
+
+### Independent consulting
+
+Supermercados Morelos
+Consulting project with We Do Marketing.
+
+### Partner campaigns
+
+H-E-B through Edenred.
+Edox through Temposatis / Club de Alta Relojería.
+
+### Venture
+
+Tulum Innovation Fest
+Co-founder.
+
+### Teaching
+
+Escuela de Mercadotecnia (EDEM)
+Colectivo23 / Kätedra
 
 The operating philosophy is simple: every action needs a hypothesis, every piece needs a signal, every week needs a decision, and anything that does not improve the system gets cut. Romantic? No. Effective? Usually. Annoyingly.
 

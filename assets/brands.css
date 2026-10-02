@@ -1,0 +1,18 @@
+.brand-venture-note{font-size:14px;color:var(--text-dim);margin-top:20px}
+.brand-venture-note strong{font-weight:500;color:var(--text)}
+.brand-directory{margin-top:22px;border-top:1px solid var(--border);padding-top:18px}
+.brand-directory summary{display:flex;align-items:center;justify-content:space-between;gap:20px;cursor:pointer;font-size:14px;font-weight:600;list-style:none;color:var(--text)}
+.brand-directory summary::-webkit-details-marker{display:none}
+.brand-directory summary::after{content:'+';font-size:22px;font-weight:400;color:var(--text-dim)}
+.brand-directory[open] summary::after{content:'−'}
+.brand-directory-content{padding-top:24px}
+.brand-directory .brand-directory-note{font-size:14px;line-height:1.6;color:var(--text-dim);margin:0 0 24px;max-width:680px}
+.brand-directory h3{font-size:15px;line-height:1.5;margin:0 0 16px;color:var(--text)}
+.brand-name-list{list-style:none!important;padding:0!important;margin:0!important;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px 24px}
+.brand-name-list li{font-size:14px;line-height:1.5;color:var(--text-dim);margin:0!important;padding:0!important;overflow-wrap:anywhere}
+#agency .brand-name-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+.brand-role-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 32px;margin-top:28px;padding-top:24px;border-top:1px solid var(--border)}
+.brand-role-grid p{font-size:14px;line-height:1.7;color:var(--text-dim);margin:0}
+.brand-role-grid strong{font-weight:500;color:var(--text)}
+@media(max-width:900px){.brand-name-list{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:600px){.brand-name-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 20px}.brand-role-grid{grid-template-columns:1fr;gap:24px}}
