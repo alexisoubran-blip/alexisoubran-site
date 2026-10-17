@@ -1,0 +1,12 @@
+{
+  "name": "wdm-website",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "WDM WeDoMarketing, sitio bilingüe de marketing fraccional",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs"
+  },
+  "engines": { "node": ">=20" }
+}
