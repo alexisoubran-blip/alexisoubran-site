@@ -1,0 +1,16 @@
+{
+  "name": "Alexis Soubran — Revenue Systems for Mexico + LATAM",
+  "short_name": "Alexis Soubran",
+  "description": "Revenue systems for global brands entering and scaling in Mexico and LATAM.",
+  "start_url": "/?source=app",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#050506",
+  "theme_color": "#050506",
+  "lang": "en",
+  "icons": [
+    { "src": "/assets/brand/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/brand/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/assets/brand/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

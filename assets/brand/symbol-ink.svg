@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Alexis Soubran — b-symbol ink"><title>Alexis Soubran — b-symbol ink</title>
+<clipPath id="sbp"><polygon points="-1355.77,2700.25 1461.06,-2597.43 4109.91,-1189.02 1293.08,4108.67"/></clipPath>
+<clipPath id="sbn"><polygon points="-1361.06,2697.43 1455.77,-2600.25 -1193.08,-4008.67 -4009.91,1289.02"/></clipPath>
+<g fill="#101010"><g transform="translate(-5.16,9.71)"><g clip-path="url(#sbp)"><path fill-rule="evenodd" d="M19,50 a31,31 0 1,0 62,0 a31,31 0 1,0 -62,0 Z M37,50 a13,13 0 1,0 26,0 a13,13 0 1,0 -26,0 Z"/></g></g>
+<g transform="translate(5.16,-9.71)"><g clip-path="url(#sbn)"><path fill-rule="evenodd" d="M19,50 a31,31 0 1,0 62,0 a31,31 0 1,0 -62,0 Z M37,50 a13,13 0 1,0 26,0 a13,13 0 1,0 -26,0 Z"/></g></g></g></svg>
