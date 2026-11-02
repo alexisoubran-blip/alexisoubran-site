@@ -134,6 +134,27 @@ body .site-contact-float:hover{color:var(--bone);background:radial-gradient(120%
   border:1px solid var(--glass-line);box-shadow:var(--glass-hi)}
 .site-home .contact-actions a[href^="mailto"]{color:var(--ash-2)}
 
+/* ---------- 3D glass objects (renders on black, blended with screen) ---------- */
+:is(.hero-glass,.hero-object,.engagement-object,.book-object,.contact-object){mix-blend-mode:screen;pointer-events:none;user-select:none;
+  -webkit-mask-image:radial-gradient(closest-side,#000 72%,transparent 100%);mask-image:radial-gradient(closest-side,#000 72%,transparent 100%)}
+.site-home .hero-glass{width:230px;max-width:none;left:auto;right:-86px;top:-92px;filter:none}
+.site-page .hero{position:relative}
+.site-page .hero>.container,.site-page .hero>.narrow{position:relative;z-index:1}
+.site-page .hero .hero-object{position:absolute;z-index:2;width:200px;height:auto;top:-40px;right:max(8px,calc((100% - 1160px)/2 - 70px));animation:glass-float 9s ease-in-out infinite}
+.site-home .engagement{position:relative;overflow:hidden}
+.site-home .engagement-object{display:block;width:150px;height:150px;margin:-18px 0 4px -14px}
+.site-home .book-photo{position:relative;isolation:isolate}
+.site-home .book-object{position:absolute;z-index:-1;width:120%;max-width:none;left:-62%;bottom:-18%;opacity:.95}
+.site-home .contact-grid{position:relative}
+.site-home .contact-object{position:absolute;z-index:0;width:220px;height:220px;right:12px;top:-28px;opacity:.9}
+.site-home .contact-grid>div{position:relative;z-index:1}
+
+/* ---------- Standalone tools (GEO calculator) ---------- */
+.site-tool .topbar .mark{font-size:0;color:transparent;background:url(/assets/brand/symbol-bone.svg) center/68% no-repeat,linear-gradient(135deg,rgba(255,255,255,.2),rgba(255,255,255,.05))}
+.site-tool .topbar .logo{font-family:var(--display);font-stretch:112%;font-weight:600;font-size:14px;letter-spacing:.09em;text-transform:uppercase}
+.site-tool .tool-object{position:absolute;z-index:0;width:200px;top:-26px;right:-22px;opacity:.95;animation:glass-float 9s ease-in-out infinite}
+.site-tool .hero-aside>*:not(.tool-object){position:relative;z-index:1}
+
 /* ==========================================================================
    Mobile: app shell
    ========================================================================== */
@@ -229,6 +250,13 @@ body .site-contact-float:hover{color:var(--bone);background:radial-gradient(120%
   .site-home .contact{padding:20px 0 40px}
   .site-home .contact>.container{padding:28px 22px;border-radius:30px}
   .site-home .contact-actions .btn{width:100%}
+  body.site-tool{padding-bottom:calc(var(--tabbar-h) + 28px + env(safe-area-inset-bottom))}
+  .site-tool .tool-object{width:120px;top:-14px;right:-10px}
+  .site-home .hero-glass{width:150px;left:auto;right:-26px;top:-62px}
+  .site-page .hero .hero-object{width:120px;top:-4px;right:-6px;z-index:0;opacity:.85}
+  .site-home .engagement-object{width:120px;height:120px;margin:-14px 0 0 -12px}
+  .site-home .book-object{width:110%;left:auto;right:-75%;bottom:-6%}
+  .site-home .contact-object{width:130px;height:130px;right:-26px;top:-46px}
 }
 
 /* ---------- Accessibility & fallbacks ---------- */
@@ -239,7 +267,7 @@ body .site-contact-float:hover{color:var(--bone);background:radial-gradient(120%
   body .site-header .site-shell,.app-tabbar,.app-sheet,.site-home .hero-photo-wrap figcaption{background:#16161a;-webkit-backdrop-filter:none;backdrop-filter:none}
 }
 @media (prefers-reduced-motion:reduce){
-  .site-home .hero-glass{animation:none}
+  .site-home .hero-glass,.site-page .hero .hero-object,.site-tool .tool-object{animation:none}
   .app-sheet,.app-sheet-backdrop{transition:none}
 }
 @media (prefers-contrast:more){
