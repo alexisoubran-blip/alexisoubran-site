@@ -110,6 +110,17 @@
   const backdrop = document.createElement('div');
   backdrop.className = 'app-sheet-backdrop';
   document.body.append(bar, sheet, backdrop);
+  const shell = document.querySelector('.site-header .site-shell');
+  if (shell && !shell.querySelector('.app-header-cta')) {
+    const cta = document.createElement('a');
+    cta.className = 'app-header-cta';
+    cta.href = 'https://calendly.com/alexis-soubran/contact';
+    cta.target = '_blank';
+    cta.rel = 'noopener';
+    cta.dataset.clickLocation = 'mobile_header_calendly';
+    cta.textContent = 'Book a call';
+    shell.append(cta);
+  }
 
   const moreBtn = bar.querySelector('button.app-tab');
   let lastFocus = null;
@@ -147,4 +158,25 @@
   sheet.addEventListener('touchstart', e => { if (sheet.scrollTop <= 0) y0 = e.touches[0].clientY; }, { passive: true });
   sheet.addEventListener('touchmove', e => { if (y0 !== null && e.touches[0].clientY - y0 > 70) { y0 = null; close(); } }, { passive: true });
   sheet.addEventListener('touchend', () => { y0 = null; });
+})();
+
+/* Keyboard access for horizontally scrollable areas (tables, swipe rails). */
+(() => {
+  const focusable = 'a[href],button,input,select,textarea,[tabindex]:not([tabindex="-1"])';
+  const label = el => {
+    const sec = el.closest('section');
+    const h = sec && sec.querySelector('h2');
+    return h ? h.textContent.trim() : 'Scrollable content';
+  };
+  const fix = () => document.querySelectorAll('.compare-wrap,.table-scroll,.profile-body,.site-home .hero-proof,.site-home .cases,.site-home .engagements,.site-home .photo-pair,.site-home .testimonials').forEach(el => {
+    const scrolls = el.scrollWidth > el.clientWidth + 1 || el.scrollHeight > el.clientHeight + 1;
+    if (scrolls && !el.querySelector(focusable) && !el.hasAttribute('tabindex')) {
+      el.setAttribute('tabindex', '0');
+      el.setAttribute('role', 'region');
+      el.setAttribute('aria-label', label(el));
+    }
+  });
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fix); else fix();
+  addEventListener('load', () => { fix(); setTimeout(fix, 800); });
+  addEventListener('resize', fix, { passive: true });
 })();
