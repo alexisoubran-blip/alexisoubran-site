@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sesión 3 · Automatización, distribución y ROI · EDEM Diplomado Marketing Digital | Alexis Soubran</title>
+<meta name="description" content="Módulo 3, Sesión 3 del Diplomado de Marketing Digital de EDEM: automatización del marketing de contenidos, estrategias de distribución y promoción, y medición del ROI. Imparte Alexis Soubran.">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#050506">
+<link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/edem/edem.css">
+<meta property="og:title" content="EDEM · Sesión 3 — Automatización, distribución y ROI">
+<meta property="og:description" content="Material de clase de Alexis Soubran para el Diplomado de Marketing Digital de EDEM.">
+<meta property="og:image" content="https://alexisoubran.com/alexis-soubran.jpg">
+<style>
+.calc{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:20px;width:100%;margin-top:32px}
+@media (max-width:900px){.calc{grid-template-columns:1fr}}
+.calc .results{display:grid;gap:12px;align-content:start}
+.calc .res{padding:18px 20px;border-radius:20px;background:rgba(0,0,0,.4);border:1px solid var(--line)}
+.calc .res span{display:block;font-size:13px;color:var(--ash);letter-spacing:.04em}
+.calc .res strong{font:650 clamp(30px,3vw,44px)/1.1 var(--display);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.calc .res.main{border-color:var(--line-hi);background:var(--glass-strong)}
+.calc .pos{color:#7ee2a8}.calc .neg{color:var(--signal)}
+.calc fieldset{border:1px solid var(--line);border-radius:20px;padding:14px 16px 16px;margin:0}
+.calc legend{font:600 12px/1 var(--text);letter-spacing:.12em;text-transform:uppercase;color:var(--signal);padding:0 6px}
+</style>
+</head>
+<body>
+<div class="progress"></div>
+<nav class="bar" aria-label="Navegación de la clase">
+  <a class="home" href="/edem/"><img src="/assets/brand/symbol-bone.svg" alt="" width="22" height="22">EDEM · Módulo 3</a>
+  <span class="crumb">Sesión 3 · Automatización, distribución y ROI</span>
+  <span class="count">1 / 1</span>
+  <button type="button" data-notes class="hide-sm" title="Notas (N)">Notas</button>
+  <button type="button" data-fs title="Pantalla completa (F)">Presentar</button>
+</nav>
+
+<main>
+
+<section class="slide" id="inicio">
+  <p class="eyebrow"><span class="dot"></span>Diplomado Marketing Digital · EDEM · Módulo 3 · Sesión 3</p>
+  <h1>Que llegue, que escale y que se <span class="grad">pague solo</span>.</h1>
+  <p class="lead">Distribución y promoción, automatización del marketing de contenidos y cómo medir y defender su ROI.</p>
+  <p class="lead small" style="margin-top:36px">Jueves 26 de noviembre de 2026 · 18:00 – 21:00 · Alexis Soubran</p>
+  <p class="small" style="margin-top:28px">Navega con ← → o la barra espaciadora · <b>F</b> pantalla completa</p>
+</section>
+
+<section class="slide" id="agenda">
+  <p class="eyebrow"><span class="dot"></span>Agenda de hoy</p>
+  <h2>Hoy se escala y se mide</h2>
+  <table class="agenda">
+    <tr><td>18:00 – 18:15</td><td>Repaso y resultados de los videos publicados</td></tr>
+    <tr><td>18:15 – 18:55</td><td><b>Bloque 1 ·</b> Estrategias de distribución y promoción</td></tr>
+    <tr><td>18:55 – 19:35</td><td><b>Bloque 2 ·</b> Automatización del marketing de contenidos</td></tr>
+    <tr class="brk"><td>19:35 – 19:45</td><td>Break</td></tr>
+    <tr><td>19:45 – 20:25</td><td><b>Bloque 3 ·</b> Medición del ROI <span class="tag live">calculadora</span></td></tr>
+    <tr><td>20:25 – 20:50</td><td><b>Taller final ·</b> Tu plan completo, de la idea al ROI <span class="tag live">taller</span></td></tr>
+    <tr><td>20:50 – 21:00</td><td>Cierre del módulo</td></tr>
+  </table>
+</section>
+
+<section class="slide" id="resultados">
+  <p class="eyebrow"><span class="dot"></span>Repaso · Resultados reales</p>
+  <h2>¿Quién publicó? ¿Qué pasó?</h2>
+  <div class="grid g4">
+    <div class="card"><span class="k">Retención</span><p>¿Cuánta gente pasó de los primeros 3 segundos?</p></div>
+    <div class="card"><span class="k">Guardados</span><p>¿Alguien lo quiso conservar?</p></div>
+    <div class="card"><span class="k">Compartidos</span><p>¿Alguien se lo mandó a otra persona?</p></div>
+    <div class="card"><span class="k">Comentarios</span><p>¿Hay preguntas? Son tu próximo video.</p></div>
+  </div>
+  <p class="lead">La pregunta no es "¿le fue bien?". Es <b>"¿qué aprendimos y qué hacemos con la siguiente pieza?"</b></p>
+  <p class="note">Proyecta 2–3 capturas de métricas de alumnos. Lee la retención en voz alta y relaciónala con el gancho que usaron. Es el puente perfecto a "esto es lo que se pauta y esto es lo que no".</p>
+</section>
+
+<!-- ============ DISTRIBUCIÓN ============ -->
+<section class="slide" id="b1">
+  <p class="eyebrow"><span class="dot"></span>Bloque 1 · Distribución <span class="time">18:15</span></p>
+  <p class="statement">El contenido sin distribución es un <em>diario personal</em>.</p>
+</section>
+
+<section class="slide" id="peso">
+  <p class="eyebrow"><span class="dot"></span>Bloque 1 · Modelo PESO</p>
+  <h2>Cuatro tipos de medio, una sola pieza</h2>
+  <p class="lead">Modelo de Gini Dietrich. La idea: cada pieza se diseña para moverse por los cuatro, no solo por tus redes.</p>
+  <div class="grid g4">
+    <div class="card"><span class="k">Paid · pagado</span><p>Pauta en Meta, TikTok, YouTube, Google, LinkedIn. Contenido de creadores amplificado.</p></div>
+    <div class="card"><span class="k">Earned · ganado</span><p>Prensa, menciones, reseñas, invitaciones a podcasts, recomendaciones.</p></div>
+    <div class="card"><span class="k">Shared · compartido</span><p>Redes sociales, comunidades, colaboraciones entre cuentas.</p></div>
+    <div class="card"><span class="k">Owned · propio</span><p>Sitio, blog, newsletter, WhatsApp, app, CRM. Sin algoritmo de por medio.</p></div>
+  </div>
+</section>
+
+<section class="slide" id="organico">
+  <p class="eyebrow"><span class="dot"></span>Bloque 1 · Orgánico</p>
+  <h2>Distribución orgánica que sí mueve la aguja</h2>
+  <div class="grid g3">
+    <div class="card"><span class="k">SEO social</span><p>Palabras clave en el texto del post, en lo que dices y en los subtítulos. TikTok e Instagram también son buscadores.</p></div>
+    <div class="card"><span class="k">Colaboraciones</span><p>Publicaciones en coautoría (Collabs) con otras cuentas, creadores o aliados: dos audiencias por el precio de una.</p></div>
+    <div class="card"><span class="k">Comentarios como contenido</span><p>Responde con video a las mejores preguntas. Cada respuesta es una pieza nueva.</p></div>
+    <div class="card"><span class="k">Primera hora</span><p>Estar presente para responder cuando publicas. La conversación temprana ayuda a que circule.</p></div>
+    <div class="card"><span class="k">Comunidades</span><p>Grupos, foros y canales donde ya está tu audiencia. Aporta antes de promocionar.</p></div>
+    <div class="card"><span class="k">Empleados y fundadores</span><p>Las personas llegan más lejos que la cuenta de la marca. Dales piezas listas para compartir.</p></div>
+  </div>
+</section>
+
+<section class="slide" id="pauta">
+  <p class="eyebrow"><span class="dot"></span>Bloque 1 · Promoción pagada</p>
+  <h2>El orgánico es el laboratorio. La pauta es la escala.</h2>
+  <ol class="steps">
+    <li><div><b>Publica en orgánico y observa</b><span>Retención, guardados, compartidos. Lo que funciona sin dinero tiene más probabilidad de funcionar con dinero.</span></div></li>
+    <li><div><b>Amplifica desde la publicación original</b><span>Spark Ads en TikTok, Partnership Ads en Meta: la pieza conserva la cuenta del creador o la marca y su prueba social.</span></div></li>
+    <li><div><b>Prueba ganchos, no campañas completas</b><span>Mismo cuerpo de video, tres a cinco inicios distintos. Gana el gancho, no tu opinión.</span></div></li>
+    <li><div><b>Presupuesto de prueba pequeño, decisiones rápidas</b><span>Unos días por variación. Lo que no despega se apaga; lo que despega recibe más.</span></div></li>
+    <li><div><b>Remarketing con contenido</b><span>A quien vio el video completo muéstrale la siguiente pieza: prueba, testimonio u oferta.</span></div></li>
+  </ol>
+</section>
+
+<section class="slide" id="creadores">
+  <p class="eyebrow"><span class="dot"></span>Bloque 1 · Creadores</p>
+  <h2>Creadores como canal de distribución, no como adorno</h2>
+  <p class="lead">Lo que aprendí construyendo <b>Perfluencer Marketing</b>: el marketing de influencia rinde cuando se trata como performance.</p>
+  <div class="grid g2">
+    <div class="card"><span class="k">Empieza por quien compra</span><p>Elige por la audiencia del creador y si se parece a tu cliente, no por cuánto te gusta su contenido ni por número de seguidores.</p></div>
+    <div class="card"><span class="k">Negocia antes de firmar</span><p>Derechos de uso, permiso para pautar desde su cuenta, entregables, exclusividad y acceso a métricas. Lo que no negocias, lo pagas después.</p></div>
+    <div class="card"><span class="k">El mismo video vale distinto según dónde viva</span><p>En la cuenta del creador, en la tuya o pautado: cada lugar da resultados distintos. Planea las tres vidas de cada pieza.</p></div>
+    <div class="card hl"><span class="k">Mide por pieza</span><p>Links, códigos y UTMs por creador y por video. Así sabes qué escalar y qué no repetir.</p></div>
+  </div>
+  <p class="note">Si preguntan por el libro: Oops, I Bought It desarrolla estos puntos en la parte III ("La colaboración se decide antes de firmar").</p>
+</section>
+
+<section class="slide" id="propios">
+  <p class="eyebrow"><span class="dot"></span>Bloque 1 · Canales propios y ganados</p>
+  <h2>Lo que nadie te puede quitar</h2>
+  <div class="split" style="margin-top:36px">
+    <div class="card hl"><span class="k">Owned · propio</span><ul><li><b>Newsletter:</b> formato fijo, día fijo, valor propio</li><li><b>WhatsApp:</b> canales y listas segmentadas, con permiso</li><li><b>Sitio:</b> el hogar de las piezas pilar, para búsqueda e IA</li><li><b>CRM:</b> contenido distinto según la etapa del cliente</li></ul></div>
+    <div class="card"><span class="k">Earned · ganado</span><ul><li><b>Prensa:</b> datos propios y opiniones con nombre</li><li><b>Podcasts como invitado:</b> audiencia prestada con confianza</li><li><b>Reseñas:</b> pídelas en el momento de mayor satisfacción</li><li><b>Por qué importa:</b> lo que otros dicen de ti es lo que la IA más toma en cuenta</li></ul></div>
+  </div>
+</section>
+
+<section class="slide" id="calendario-dist">
+  <p class="eyebrow"><span class="dot"></span>Bloque 1 · La vida de una pieza pilar</p>
+  <h2>Una pieza, ocho semanas de distribución</h2>
+  <div class="tblwrap"><table class="tbl">
+    <tr><th>Cuándo</th><th>Qué se publica</th><th>Dónde</th></tr>
+    <tr><td>Día 0</td><td>Pieza pilar completa + aviso a canales propios</td><td>Sitio / YouTube / podcast · newsletter · WhatsApp</td></tr>
+    <tr><td>Días 1 a 7</td><td>Primeros clips y carrusel con los aprendizajes</td><td>TikTok, Reels, Shorts, LinkedIn, Instagram</td></tr>
+    <tr><td>Semana 2</td><td>Pauta a los derivados con mejor desempeño orgánico</td><td>Spark Ads, Partnership Ads, remarketing</td></tr>
+    <tr><td>Semanas 2 a 4</td><td>Creadores o aliados reinterpretan la idea</td><td>Cuentas de terceros, colaboraciones</td></tr>
+    <tr><td>Semanas 4 a 8</td><td>Respuestas a comentarios, nuevos ángulos, prensa</td><td>Redes, medios, podcasts</td></tr>
+    <tr><td>Cada trimestre</td><td>Actualizar la pieza pilar con datos nuevos y volver a circularla</td><td>Sitio y todos los canales</td></tr>
+  </table></div>
+</section>
+
+<!-- ============ AUTOMATIZACIÓN ============ -->
+<section class="slide" id="b2">
+  <p class="eyebrow"><span class="dot"></span>Bloque 2 · Automatización <span class="time">18:55</span></p>
+  <p class="statement">Automatiza lo <em>repetible</em>. Nunca el criterio.</p>
+</section>
+
+<section class="slide" id="mapa-auto">
+  <p class="eyebrow"><span class="dot"></span>Bloque 2 · Dónde automatizar</p>
+  <h2>El flujo de contenido, paso por paso</h2>
+  <div class="tblwrap"><table class="tbl">
+    <tr><th>Etapa</th><th>Qué se automatiza</th><th>Herramientas de ejemplo</th></tr>
+    <tr><td>Investigación</td><td>Alertas de tendencias y menciones, agrupar comentarios por tema</td><td>Google Alerts, herramientas de social listening, asistentes de IA</td></tr>
+    <tr><td>Ideación</td><td>Lluvia de ganchos, variaciones, primeros borradores</td><td>ChatGPT, Claude, Gemini</td></tr>
+    <tr><td>Producción</td><td>Plantillas, subtítulos, clips desde video largo, redimensionar formatos</td><td>Canva, CapCut, Descript, Opus Clip</td></tr>
+    <tr><td>Publicación</td><td>Programación en todas las redes desde un solo lugar</td><td>Meta Business Suite, Metricool, Buffer, Later, Hootsuite</td></tr>
+    <tr><td>Distribución</td><td>Correos por comportamiento, respuestas automáticas a comentarios y DMs</td><td>Brevo, Mailchimp, HubSpot, ManyChat</td></tr>
+    <tr><td>Conexión</td><td>Que una herramienta le avise a la otra</td><td>Zapier, Make, n8n</td></tr>
+    <tr><td>Reporte</td><td>Tableros que se actualizan solos</td><td>Looker Studio, conectores nativos</td></tr>
+  </table></div>
+</section>
+
+<section class="slide" id="recetas">
+  <p class="eyebrow"><span class="dot"></span>Bloque 2 · Recetas</p>
+  <h2>Cinco automatizaciones que valen la pena desde el día uno</h2>
+  <div class="grid g3">
+    <div class="card"><span class="k">01 · Comentario → DM</span><p>Alguien comenta una palabra clave → recibe por DM la guía prometida → su contacto entra al CRM.</p></div>
+    <div class="card"><span class="k">02 · Pieza → newsletter</span><p>Publicas en el sitio → se arma el borrador de newsletter y los posts de aviso para revisión.</p></div>
+    <div class="card"><span class="k">03 · Largo → clips</span><p>Subes el video largo → la IA propone clips con subtítulos → una persona elige y programa.</p></div>
+    <div class="card"><span class="k">04 · Lead → secuencia</span><p>Alguien descarga un recurso → recibe una secuencia de 4–5 correos: bienvenida, valor, prueba, objeción, oferta.</p></div>
+    <div class="card"><span class="k">05 · Reporte semanal</span><p>Cada lunes llega un tablero con top y bottom piezas, listo para la junta de 30 minutos.</p></div>
+    <div class="card hl"><span class="k">La regla</span><p>Si lo haces más de tres veces a la semana igual, automatízalo. Si requiere criterio, déjale a la máquina el borrador y a una persona la decisión.</p></div>
+  </div>
+</section>
+
+<section class="slide" id="gobierno">
+  <p class="eyebrow"><span class="dot"></span>Bloque 2 · IA con reglas</p>
+  <h2>Antes de soltar la IA en tu flujo de contenido</h2>
+  <div class="grid g2">
+    <div class="card"><span class="k">Guía de voz</span><p>Un documento con tono, palabras sí y no, ejemplos buenos y malos. Es lo primero que le das a cualquier herramienta.</p></div>
+    <div class="card"><span class="k">Revisión humana</span><p>Nada sale publicado sin que una persona lo lea. Sobre todo datos, nombres y promesas.</p></div>
+    <div class="card"><span class="k">Seguridad y datos</span><p>No conectes cuentas ni subas datos de clientes a herramientas que tu empresa no haya aprobado. Exporta solo lo necesario.</p></div>
+    <div class="card"><span class="k">Transparencia</span><p>Si una imagen, voz o persona fue generada con IA, dilo. La confianza cuesta años y se pierde en un post.</p></div>
+  </div>
+</section>
+
+<section class="slide" id="stack">
+  <p class="eyebrow"><span class="dot"></span>Bloque 2 · Stack por tamaño</p>
+  <h2>No necesitas todo. Necesitas lo que vas a usar.</h2>
+  <div class="tblwrap"><table class="tbl">
+    <tr><th>Si eres…</th><th>Empieza con</th><th>Agrega cuando…</th></tr>
+    <tr><td>Marca personal o freelance</td><td>Canva + CapCut + un programador de posts + newsletter gratuita</td><td>…publiques constante 3 meses: clips con IA y comentario → DM</td></tr>
+    <tr><td>PyME</td><td>Lo anterior + CRM con email + WhatsApp Business + Looker Studio</td><td>…tengas leads: secuencias automáticas y Zapier o Make</td></tr>
+    <tr><td>Empresa grande</td><td>Plataforma de marketing automation + social listening + gestión de activos</td><td>…haya varios equipos: flujos de aprobación y gobierno de IA</td></tr>
+  </table></div>
+</section>
+
+<section class="slide" id="break">
+  <p class="eyebrow"><span class="dot"></span>Break <span class="time">19:35 – 19:45</span></p>
+  <p class="statement">10 minutos. Regresamos a hablar de <em>dinero</em>.</p>
+  <div class="row" style="margin-top:28px"><button class="btn primary" data-timer="10">Iniciar 10 min</button></div>
+</section>
+
+<!-- ============ ROI ============ -->
+<section class="slide" id="b3">
+  <p class="eyebrow"><span class="dot"></span>Bloque 3 · ROI <span class="time">19:45</span></p>
+  <p class="statement">Si no lo puedes defender frente a <em>finanzas</em>, todavía no es estrategia. Es gasto.</p>
+  <p class="note">Escena para abrir: la junta con el director de finanzas que pregunta "¿y esto cuánto vendió?". Pregunta quién ha vivido esa junta. Hoy salen con la respuesta.</p>
+</section>
+
+<section class="slide" id="formula">
+  <p class="eyebrow"><span class="dot"></span>Bloque 3 · La fórmula</p>
+  <h2>ROI = (valor generado − inversión total) ÷ inversión total</h2>
+  <div class="grid g2">
+    <div class="card"><span class="k">La inversión total incluye</span><ul><li>Producción (interna o externa)</li><li>Horas del equipo × costo por hora</li><li>Herramientas y licencias</li><li>Pauta</li><li>Creadores y talento</li></ul><p>El error más común: contar solo la pauta.</p></div>
+    <div class="card hl"><span class="k">El valor generado incluye</span><ul><li>Ventas atribuibles, <b>sobre margen</b>, no sobre ingreso</li><li>Leads × valor promedio de un lead</li><li>Ahorros: pauta que no tuviste que comprar, tickets de soporte evitados, producción reutilizada</li></ul><p>Sé conservador: un número creíble le gana a uno grande.</p></div>
+  </div>
+</section>
+
+<section class="slide" id="cadena">
+  <p class="eyebrow"><span class="dot"></span>Bloque 3 · Cadena de métricas</p>
+  <h2>De la actividad al valor, eslabón por eslabón</h2>
+  <div class="tblwrap"><table class="tbl">
+    <tr><th>Eslabón</th><th>Pregunta</th><th>Métricas</th></tr>
+    <tr><td>Actividad</td><td>¿Lo hicimos?</td><td>Piezas publicadas, frecuencia, cumplimiento del plan</td></tr>
+    <tr><td>Atención</td><td>¿Lo vieron?</td><td>Alcance en público nuevo, retención, visualizaciones completas</td></tr>
+    <tr><td>Interés</td><td>¿Les importó?</td><td>Guardados, compartidos, comentarios, búsquedas de marca</td></tr>
+    <tr><td>Acción</td><td>¿Hicieron algo?</td><td>Clics, visitas a producto, registros, leads</td></tr>
+    <tr><td>Valor</td><td>¿Le sirvió al negocio?</td><td>Ventas, margen, costo de adquisición, recompra, LTV</td></tr>
+  </table></div>
+  <p class="lead">Ante dirección se reporta <b>valor</b>. Las demás métricas sirven para explicar por qué se movió.</p>
+</section>
+
+<section class="slide" id="atribucion">
+  <p class="eyebrow"><span class="dot"></span>Bloque 3 · Atribución</p>
+  <h2>El contenido casi nunca es el último clic</h2>
+  <p class="lead">Si solo mides el último clic, el contenido siempre se ve caro. Combina varias señales.</p>
+  <div class="grid g3">
+    <div class="card"><span class="k">Rastreo directo</span><p>UTMs en cada link, códigos y links por creador o pieza, píxeles y eventos de conversión bien configurados.</p></div>
+    <div class="card"><span class="k">Señales indirectas</span><p>Búsquedas de marca, tráfico directo y menciones antes y después de una pieza o campaña.</p></div>
+    <div class="card"><span class="k">Pregúntale al cliente</span><p>"¿Cómo nos conociste?" en el registro o en la compra. Barato y sorprendentemente útil.</p></div>
+    <div class="card"><span class="k">Incrementalidad</span><p>Apagar o encender en una zona o periodo y comparar contra un grupo de control. La prueba más honesta.</p></div>
+    <div class="card"><span class="k">Modelos de atribución</span><p>Compara último clic, primer clic y basado en datos. La verdad suele estar en el rango.</p></div>
+    <div class="card hl"><span class="k">La regla</span><p>Decide cómo vas a medir <b>antes</b> de publicar. Medir después siempre sale peor.</p></div>
+  </div>
+</section>
+
+<section class="slide" id="calculadora">
+  <p class="eyebrow"><span class="dot"></span>Bloque 3 · Calculadora <span class="time">en vivo</span></p>
+  <h2>Calcula el ROI de tu plan de contenidos</h2>
+  <div class="calc" id="roi">
+    <div class="builder" style="margin-top:0">
+      <fieldset><legend>Inversión del periodo (MXN)</legend>
+        <div class="grid g2" style="margin-top:0">
+          <label>Producción <input type="number" min="0" step="any" name="prod" value="40000"></label>
+          <label>Horas del equipo <input type="number" min="0" step="any" name="horas" value="80"></label>
+          <label>Costo por hora <input type="number" min="0" step="any" name="hora" value="350"></label>
+          <label>Herramientas <input type="number" min="0" step="any" name="tools" value="5000"></label>
+          <label>Pauta <input type="number" min="0" step="any" name="pauta" value="60000"></label>
+          <label>Creadores <input type="number" min="0" step="any" name="creadores" value="45000"></label>
+        </div>
+      </fieldset>
+      <fieldset><legend>Valor generado</legend>
+        <div class="grid g2" style="margin-top:0">
+          <label>Ventas atribuidas (ingreso) <input type="number" min="0" step="any" name="ventas" value="420000"></label>
+          <label>Margen bruto % <input type="number" min="0" max="100" step="any" name="margen" value="45"></label>
+          <label>Leads generados <input type="number" min="0" step="any" name="leads" value="120"></label>
+          <label>Valor por lead <input type="number" min="0" step="any" name="vlead" value="150"></label>
+          <label>Ahorros (pauta evitada, soporte, reuso) <input type="number" min="0" step="any" name="ahorro" value="15000"></label>
+        </div>
+      </fieldset>
+      <p class="small">Cifras de ejemplo para la demo. Cámbialas por las de tu marca.</p>
+    </div>
+    <div class="results">
+      <div class="res main"><span>ROI sobre margen</span><strong id="r-roi">—</strong></div>
+      <div class="res"><span>Inversión total</span><strong id="r-inv">—</strong></div>
+      <div class="res"><span>Valor generado</span><strong id="r-val">—</strong></div>
+      <div class="res"><span>ROAS sobre ventas (ventas ÷ inversión total)</span><strong id="r-roas">—</strong></div>
+      <div class="res"><span>Costo por lead</span><strong id="r-cpl">—</strong></div>
+    </div>
+  </div>
+  <p class="note">Haz la demo en vivo: cambia el margen de 45 a 25 y muestra cómo un ROI "bonito" sobre ingreso se vuelve negativo sobre margen. Luego pide a un alumno sus números reales o estimados.</p>
+</section>
+
+<section class="slide" id="tablero">
+  <p class="eyebrow"><span class="dot"></span>Bloque 3 · Tablero mínimo</p>
+  <h2>Una página, cinco bloques</h2>
+  <ol class="steps">
+    <li><div><b>El KPI de negocio, arriba y grande</b><span>El que definimos en la sesión 1. Contra la meta y contra el periodo anterior.</span></div></li>
+    <li><div><b>Métricas por rol de contenido</b><span>Descubrimiento, consideración y conversión, cada una con su métrica.</span></div></li>
+    <li><div><b>Top 3 y bottom 3 piezas</b><span>Con la hipótesis de cada una y si se cumplió.</span></div></li>
+    <li><div><b>Inversión y ROI del periodo</b><span>Con la fórmula completa, no solo la pauta.</span></div></li>
+    <li><div><b>Aprendizajes y decisiones</b><span>Qué repetimos, qué pautamos, qué dejamos de hacer.</span></div></li>
+  </ol>
+</section>
+
+<section class="slide" id="direccion">
+  <p class="eyebrow"><span class="dot"></span>Bloque 3 · Presentarlo a dirección</p>
+  <p class="statement">Un número. Un aprendizaje. <em>Una decisión</em>.</p>
+  <div class="grid g3">
+    <div class="card"><span class="k">El número</span><p>"Por cada peso invertido en contenido este trimestre regresaron ___ pesos de margen."</p></div>
+    <div class="card"><span class="k">El aprendizaje</span><p>"Los tutoriales cortos generan la mayor parte de los leads; los videos de marca casi ninguno."</p></div>
+    <div class="card"><span class="k">La decisión</span><p>"Movemos presupuesto de producción grande a series de tutoriales y pautamos las tres mejores."</p></div>
+  </div>
+</section>
+
+<!-- ============ TALLER FINAL ============ -->
+<section class="slide" id="taller">
+  <p class="eyebrow"><span class="dot"></span>Taller final <span class="time">20:25 · 25 min</span></p>
+  <h2>Tu plan completo, de la idea al ROI</h2>
+  <div class="exercise">
+    <div class="head"><h3>Toma el plan de la sesión 1 y agrégale las tres capas de hoy.</h3><button class="btn primary" data-timer="25">Iniciar 25 min</button></div>
+    <div class="builder" id="plan-final" data-template="MARCA: {marca}
+KPI DE NEGOCIO: {kpi}
+PIEZA PILAR: {pilar}
+
+DISTRIBUCIÓN (PESO)
+· Pagado: {paid}
+· Ganado: {earned}
+· Compartido: {shared}
+· Propio: {owned}
+
+AUTOMATIZACIONES: {auto}
+
+MEDICIÓN
+· Cómo atribuimos: {atrib}
+· Inversión total estimada: {inv}
+· Meta de valor generado: {meta}
+· Decisión que tomaremos con los datos: {decision}">
+      <div class="grid g2" style="margin-top:0">
+        <label>Marca <input name="marca" data-ph="marca" placeholder="la de la sesión 1"></label>
+        <label>KPI de negocio <input name="kpi" data-ph="KPI" placeholder="ventas en línea, leads calificados…"></label>
+        <label>Pieza pilar <input name="pilar" data-ph="pieza pilar" placeholder="la del mes"></label>
+        <label>Pagado <input name="paid" data-ph="pagado" placeholder="Spark Ads a los 3 mejores clips…"></label>
+        <label>Ganado <input name="earned" data-ph="ganado" placeholder="prensa, podcasts, reseñas…"></label>
+        <label>Compartido <input name="shared" data-ph="compartido" placeholder="redes, collabs, creadores…"></label>
+        <label>Propio <input name="owned" data-ph="propio" placeholder="newsletter, WhatsApp, sitio…"></label>
+        <label>Automatizaciones (máx. 3) <input name="auto" data-ph="automatizaciones" placeholder="comentario → DM, reporte semanal…"></label>
+        <label>Cómo atribuimos <input name="atrib" data-ph="atribución" placeholder="UTMs, códigos por creador, encuesta…"></label>
+        <label>Inversión total estimada <input name="inv" data-ph="inversión" placeholder="$ producción + horas + herramientas + pauta + creadores"></label>
+        <label>Meta de valor generado <input name="meta" data-ph="meta" placeholder="$ margen, leads × valor, ahorros"></label>
+        <label>Decisión que tomaremos con los datos <input name="decision" data-ph="decisión" placeholder="si X, entonces escalamos Y"></label>
+      </div>
+      <div class="output" aria-live="polite"></div>
+      <div class="row"><button class="btn" type="button" data-copy>Copiar plan</button><span class="small">Este es tu entregable del módulo.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CIERRE ============ -->
+<section class="slide" id="cierre">
+  <p class="eyebrow"><span class="dot"></span>Cierre del módulo</p>
+  <h2>De la idea al ROI, en tres sesiones</h2>
+  <div class="grid g3">
+    <div class="card"><span class="k">Pensar</span><p>Contenido útil, consistente y rentable. Marca personal con posicionamiento, punto de vista, pruebas y presencia. Una estrategia que decide qué no publicar.</p></div>
+    <div class="card"><span class="k">Crear</span><p>El cliente es el héroe. Gancho, una idea, prueba y siguiente paso. Producción ligera, en lotes, con IA y con procedencia.</p></div>
+    <div class="card hl"><span class="k">Escalar y medir</span><p>Distribuye en los cuatro medios, automatiza lo repetible y defiende el ROI con un número, un aprendizaje y una decisión.</p></div>
+  </div>
+</section>
+
+<section class="slide" id="gracias">
+  <p class="eyebrow"><span class="dot"></span>Gracias</p>
+  <h1>Ahora a <span class="grad">publicar</span>.</h1>
+  <p class="lead">Todo el material del módulo se queda aquí: <a href="/edem/">alexisoubran.com/edem</a></p>
+  <p class="lead small">Alexis Soubran · <a href="/">alexisoubran.com</a> · <a href="/perfluencer-marketing/">Perfluencer Marketing</a></p>
+</section>
+
+</main>
+
+<div class="timer" role="timer" aria-live="off"><strong>00:00</strong><button class="btn" type="button">Cerrar</button></div>
+<script src="/edem/edem.js" defer></script>
+<script>
+(function(){
+  var box=document.getElementById('roi'); if(!box) return;
+  var mx=new Intl.NumberFormat('es-MX',{style:'currency',currency:'MXN',maximumFractionDigits:0});
+  function v(n){ var x=parseFloat(box.querySelector('[name='+n+']').value); return isNaN(x)?0:x; }
+  function set(id,txt,cls){ var el=document.getElementById(id); el.textContent=txt; el.className=cls||''; }
+  function calc(){
+    var inv=v('prod')+v('horas')*v('hora')+v('tools')+v('pauta')+v('creadores');
+    var val=v('ventas')*v('margen')/100+v('leads')*v('vlead')+v('ahorro');
+    set('r-inv',mx.format(inv)); set('r-val',mx.format(val));
+    if(inv>0){
+      var roi=(val-inv)/inv*100;
+      set('r-roi',(roi>0?'+':'')+roi.toFixed(0)+'%',roi>=0?'pos':'neg');
+      set('r-roas',(v('ventas')/inv).toFixed(2)+'x');
+    } else { set('r-roi','—'); set('r-roas','—'); }
+    set('r-cpl',v('leads')>0?mx.format(inv/v('leads')):'—');
+  }
+  box.querySelectorAll('input').forEach(function(i){ i.addEventListener('input',calc); });
+  calc();
+})();
+</script>
+</body>
+</html>
