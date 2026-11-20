@@ -9,6 +9,8 @@
 <meta name="theme-color" content="#050506">
 <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600&family=Playfair+Display:ital,wght@1,600&display=swap">
 <link rel="stylesheet" href="/edem/edem.css">
 <meta property="og:title" content="EDEM · Sesión 1 — Contenidos y branding personal">
 <meta property="og:description" content="Material de clase de Alexis Soubran para el Diplomado de Marketing Digital de EDEM.">
@@ -17,7 +19,7 @@
 <body>
 <div class="progress"></div>
 <nav class="bar" aria-label="Navegación de la clase">
-  <a class="home" href="/edem/"><img src="/assets/brand/symbol-bone.svg" alt="" width="22" height="22">EDEM · Módulo 3</a>
+  <a class="home" href="/edem/"><img src="/edem/img/edem-logo.png" alt="EDEM Escuela de Mercadotecnia" width="109" height="34"><span class="x">×</span><img class="mlogo" src="/edem/img/minimalist-logo-white.webp" alt="Minimalist" width="70" height="16"></a>
   <span class="crumb">Sesión 1 · Contenidos y branding personal</span>
   <span class="count">1 / 1</span>
   <button type="button" data-notes class="hide-sm" title="Notas (N)">Notas</button>
@@ -27,33 +29,54 @@
 <main>
 
 <!-- 01 COVER -->
-<section class="slide" id="inicio">
-  <p class="eyebrow"><span class="dot"></span>Diplomado Marketing Digital · EDEM · Módulo 3 · Sesión 1</p>
-  <h1>Contenido que se <span class="grad">encuentra</span>, se cree y se recuerda.</h1>
-  <p class="lead">Marketing de contenidos, branding personal y cómo planear una estrategia de contenidos que sí mueve el negocio.</p>
-  <p class="lead small" style="margin-top:36px">Jueves 19 de noviembre de 2026 · 18:00 – 21:00 · Alexis Soubran</p>
-  <p class="small" style="margin-top:28px">Navega con ← → o la barra espaciadora · <b>F</b> pantalla completa</p>
+<section class="slide dark" id="inicio">
+  <div class="cover-grid">
+    <div>
+      <div class="logos"><img class="edem" src="/edem/img/edem-logo.png" alt="EDEM Escuela de Mercadotecnia"><span class="sep"></span><img class="mini" src="/edem/img/minimalist-logo-white.webp" alt="Minimalist"></div>
+      <span class="pill">Diplomado Marketing Digital · Módulo 3 · Sesión 1</span>
+      <h1 style="margin-top:26px">Contenido que se <em>encuentra</em>, <span class="serif">se cree y</span> se recuerda.</h1>
+      <p class="lead">Marketing de contenidos, branding personal y cómo planear una estrategia de contenidos que sí mueve el negocio.</p>
+      <div class="chips"><span>Contenidos</span><span>Branding personal</span><span>Estrategia avanzada</span><span>Taller en equipos</span></div>
+    </div>
+    <div class="prof">
+      <div class="ph"><img src="/assets/photos/portrait-studio-640.webp" alt="Alexis Soubran" width="640" height="640"></div>
+      <strong>Alexis Soubran</strong>
+      <span>CEO &amp; Partner · Minimalist</span>
+      <small>Fractional CMO · Autor de <i>Oops, I Bought It</i></small>
+      <small style="margin-top:14px;color:#161616;font-weight:600">Jueves 19 nov 2026 · 18:00 – 21:00</small>
+    </div>
+  </div>
 </section>
 
 <!-- 02 QUIÉN SOY -->
-<section class="slide" id="quien">
-  <p class="eyebrow"><span class="dot"></span>Antes de empezar</p>
-  <h2>Quién les va a dar esta clase</h2>
-  <div class="grid g3">
-    <div class="card"><span class="k">Agencia</span><h3>CEO y socio de Minimalist</h3><p>Agencia de performance y social media en CDMX y Buenos Aires. Google Premier Partner, Meta Business Partner y TikTok Marketing Partner.</p></div>
-    <div class="card"><span class="k">Estrategia</span><h3>Fractional CMO</h3><p>Diseño sistemas de crecimiento para marcas en México y LATAM: performance, creadores, CRM, medición e IA.</p></div>
-    <div class="card"><span class="k">Autor</span><h3><i>Oops, I Bought It</i></h3><p>Un libro sobre cómo se compra (y se defiende) el marketing de influencia. De ahí sale mi marco <b>Perfluencer Marketing</b>.</p></div>
-    <div class="card"><span class="k">Docencia</span><h3>EDEM · Kätedra</h3><p>Enseño lo que hago todos los días con clientes reales. Nada de teoría que no haya probado.</p></div>
-    <div class="card"><span class="k">Fuera de horario</span><h3>Músico en Cavane</h3><p>Banda de indie / prog rock. Spoiler: esto también es parte de una marca personal.</p></div>
-    <div class="card hl"><span class="k">Hoy</span><h3>Este sitio es parte del caso</h3><p>Lo que ven aquí vive en mi propio sitio. Al final de la clase les explico por qué no es casualidad.</p></div>
+<section class="slide light" id="quien">
+  <p class="eyebrow">Antes de empezar</p>
+  <div class="split mid">
+    <div>
+      <h2>Quién les da <em>esta clase</em></h2>
+      <div class="grid g2" style="margin-top:28px">
+        <div class="card side"><span class="k">Agencia</span><h3>CEO &amp; Partner, Minimalist</h3><p>Performance y social media en CDMX y Buenos Aires. Google Premier Partner, Meta Business Partner, TikTok Marketing Partner.</p></div>
+        <div class="card side"><span class="k">Estrategia</span><h3>Fractional CMO</h3><p>Sistemas de crecimiento para marcas en México y LATAM.</p></div>
+        <div class="card side"><span class="k">Autor</span><h3><i>Oops, I Bought It</i></h3><p>Marketing de influencia que se puede defender. De ahí sale <b>Perfluencer Marketing</b>.</p></div>
+        <div class="card side"><span class="k">Escenarios</span><h3>EDEM · Kätedra · Merca2.0</h3><p>Docencia, congresos y paneles. Y fuera de horario, músico en Cavane.</p></div>
+      </div>
+    </div>
+    <div class="photos">
+      <figure><img src="/assets/photos/portrait-studio-1280.webp" alt="Alexis Soubran" loading="lazy"><figcaption>Alexis Soubran</figcaption></figure>
+      <figure><img src="/assets/photos/merca20-panel-640.webp" alt="Panel en Merca2.0" loading="lazy"><figcaption>Merca2.0</figcaption></figure>
+      <figure><img src="/assets/photos/oops-book-cover-640.webp" alt="Portada de Oops, I Bought It" loading="lazy"><figcaption>El libro</figcaption></figure>
+      <figure><img src="/assets/photos/katedra-summit-640.webp" alt="Summit Kätedra" loading="lazy"><figcaption>Kätedra</figcaption></figure>
+      <figure><img src="/assets/photos/event-portrait-640.webp" alt="Evento en Google" loading="lazy"><figcaption>Think with Google</figcaption></figure>
+    </div>
   </div>
   <p class="note">Presentación corta, 3 min máximo. Pide a 3–4 personas que digan nombre, dónde trabajan y qué esperan del módulo. Úsalo para calibrar nivel (¿agencia, marca, freelance, emprendedor?).</p>
 </section>
 
 <!-- 03 MAPA DEL MÓDULO -->
-<section class="slide" id="mapa">
-  <p class="eyebrow"><span class="dot"></span>Mapa del módulo 3</p>
-  <h2>Tres sesiones, un mismo hilo: de la idea al ROI.</h2>
+<section class="slide gray" id="mapa">
+  <p class="eyebrow">Mapa del módulo 3</p>
+  <h2>Tres sesiones, un hilo: <em>de la idea al ROI</em>.</h2>
+  <div class="chart" data-chart="modulo"></div>
   <div class="grid g3">
     <div class="card hl"><span class="k">Hoy · 19 nov</span><h3>Pensar</h3><ul><li>Marketing de contenidos y branding personal</li><li>Planeación de una estrategia de contenidos avanzada</li></ul></div>
     <div class="card"><span class="k">Martes 24 nov</span><h3>Crear</h3><ul><li>Contenido de alto impacto: video, infografías, podcasts</li><li>Storytelling y narrativa de marca</li></ul></div>
@@ -63,8 +86,8 @@
 </section>
 
 <!-- 04 AGENDA -->
-<section class="slide" id="agenda">
-  <p class="eyebrow"><span class="dot"></span>Agenda de hoy</p>
+<section class="slide dark" id="agenda">
+  <p class="eyebrow">Agenda de hoy</p>
   <h2>18:00 a 21:00</h2>
   <table class="agenda">
     <tr><td>18:00 – 18:15</td><td>Bienvenida y mapa del módulo</td></tr>
@@ -78,14 +101,14 @@
 </section>
 
 <!-- ============ BLOQUE 1 ============ -->
-<section class="slide" id="b1">
-  <p class="eyebrow"><span class="dot"></span>Bloque 1 · Marketing de contenidos <span class="time">18:15</span></p>
+<section class="slide red" id="b1">
+  <p class="eyebrow">Bloque 1 · Marketing de contenidos <span class="time">18:15</span></p>
   <p class="statement">Hoy publicar es fácil. Lo difícil es que te <em>encuentren</em>, te <em>crean</em> y te <em>recuerden</em>.</p>
   <p class="note">Pregunta abierta: "¿Cuántos publicaron algo esta semana? ¿Cuántos saben si sirvió para algo?". Deja que se rían; ese es el problema que vamos a resolver hoy.</p>
 </section>
 
-<section class="slide" id="definicion">
-  <p class="eyebrow"><span class="dot"></span>Bloque 1 · Definición de trabajo</p>
+<section class="slide light" id="definicion">
+  <p class="eyebrow">Bloque 1 · Definición de trabajo</p>
   <h2 class="wide">Marketing de contenidos es crear y distribuir contenido <span class="grad">útil, consistente y relevante</span> para atraer a una audiencia definida y llevarla a una acción rentable.</h2>
   <div class="grid g3">
     <div class="card"><span class="k">Útil</span><p>Resuelve algo para quien lo ve: una duda, un problema, un antojo, una decisión. Si solo le sirve a la marca, es un anuncio.</p></div>
@@ -94,8 +117,8 @@
   </div>
 </section>
 
-<section class="slide" id="que-cambio">
-  <p class="eyebrow"><span class="dot"></span>Bloque 1 · Qué cambió</p>
+<section class="slide gray" id="que-cambio">
+  <p class="eyebrow">Bloque 1 · Qué cambió</p>
   <h2>Cuatro cambios que reescribieron las reglas</h2>
   <div class="grid g2">
     <div class="card"><span class="k">01 · Algoritmos</span><h3>De quién te sigue a qué te interesa</h3><p>TikTok, Reels y Shorts reparten por tema e interés, no por número de seguidores. Una cuenta nueva puede ganarle a una marca enorme con una buena pieza.</p></div>
@@ -106,8 +129,8 @@
   <p class="note">Aquí conecta con el libro: "Con IA, lo escaso es la procedencia". Cuando todo se puede generar, lo valioso es lo que solo tú pudiste haber vivido, medido o probado.</p>
 </section>
 
-<section class="slide" id="activo">
-  <p class="eyebrow"><span class="dot"></span>Bloque 1 · Activo vs. gasto</p>
+<section class="slide gray" id="activo">
+  <p class="eyebrow">Bloque 1 · Activo vs. gasto</p>
   <h2>Una campaña renta atención. El contenido construye un activo.</h2>
   <div class="tblwrap"><table class="tbl">
     <tr><th></th><th>Campaña</th><th>Contenido</th></tr>
@@ -118,21 +141,22 @@
     <tr><td>Se combinan así</td><td colspan="2">El mejor contenido orgánico es la materia prima de la mejor pauta. No compiten: uno prueba, el otro escala.</td></tr>
   </table></div>
 </section>
+<section class="slide dark" id="activo-g">
+  <p class="eyebrow">Bloque 1 · Activo vs. gasto</p>
+  <h2>Así se ve <em>en el tiempo</em></h2>
+  <div class="chart" data-chart="asset"></div>
+</section>
 
-<section class="slide" id="3h">
-  <p class="eyebrow"><span class="dot"></span>Bloque 1 · Modelo Hero / Hub / Help</p>
+<section class="slide light" id="3h">
+  <p class="eyebrow">Bloque 1 · Modelo Hero / Hub / Help</p>
   <h2>No todo el contenido tiene el mismo trabajo</h2>
   <p class="lead">Modelo popularizado por Google y YouTube para repartir el esfuerzo. Sigue siendo la forma más rápida de ordenar un calendario.</p>
-  <div class="grid g3">
-    <div class="card"><span class="k">Help · siempre activo</span><h3>Responde lo que ya te preguntan</h3><p>Tutoriales, guías, comparativas, FAQs. Vive en búsqueda (Google, YouTube, TikTok, IA). Es la base y se acumula.</p></div>
-    <div class="card"><span class="k">Hub · recurrente</span><h3>Crea hábito</h3><p>Series con formato fijo: "Martes de…", un podcast, una newsletter. Hace que la gente regrese y te siga.</p></div>
-    <div class="card"><span class="k">Hero · momentos</span><h3>Hace ruido</h3><p>Lanzamientos, colaboraciones grandes, temporadas. Pocos al año, con presupuesto y pauta detrás.</p></div>
-  </div>
+  <div class="chart" data-chart="hhh"></div>
   <p class="note">Regla práctica para el grupo: la mayor parte del esfuerzo va a Help y Hub. El error típico es querer que todo sea Hero y luego no tener nada que sostenga la cuenta entre campañas.</p>
 </section>
 
-<section class="slide" id="stdc">
-  <p class="eyebrow"><span class="dot"></span>Bloque 1 · See · Think · Do · Care</p>
+<section class="slide light" id="stdc">
+  <p class="eyebrow">Bloque 1 · See · Think · Do · Care</p>
   <h2>Contenido según la intención, no según el canal</h2>
   <p class="lead">Marco de Avinash Kaushik: agrupa a tu audiencia por lo que tiene en la cabeza, no por edad o canal.</p>
   <div class="grid g4">
@@ -142,9 +166,14 @@
     <div class="card"><span class="k">Care</span><p><b>Ya es cliente.</b></p><p>Onboarding, uso avanzado, comunidad, recompra y recomendación.</p></div>
   </div>
 </section>
+<section class="slide dark" id="stdc-g">
+  <p class="eyebrow">Bloque 1 · See · Think · Do · Care</p>
+  <h2>Cuatro audiencias, <em>cuatro trabajos</em></h2>
+  <div class="chart" data-chart="stdc"></div>
+</section>
 
-<section class="slide" id="geo">
-  <p class="eyebrow"><span class="dot"></span>Bloque 1 · GEO</p>
+<section class="slide light" id="geo">
+  <p class="eyebrow">Bloque 1 · GEO</p>
   <h2>El nuevo objetivo: que la IA te cite</h2>
   <p class="lead"><b>GEO</b> (Generative Engine Optimization) es optimizar tu contenido para que los asistentes de IA lo usen y lo citen cuando alguien pregunta por tu categoría.</p>
   <div class="grid g3">
@@ -158,21 +187,21 @@
   <p class="note">Demo en vivo si hay tiempo: pregúntale a un asistente por "Fractional CMO en México" y muestra cómo cita alexisoubran.com. El sitio tiene llms.txt, versiones en markdown de cada página y schema; esa es la parte "invisible" del branding personal.</p>
 </section>
 
-<section class="slide" id="discusion-1">
-  <p class="eyebrow"><span class="dot"></span>Bloque 1 · Discusión <span class="time">5 min</span></p>
+<section class="slide dark" id="discusion-1">
+  <p class="eyebrow">Bloque 1 · Discusión <span class="time">5 min</span></p>
   <p class="statement">¿Qué marca en México hace <em>bien</em> contenido? ¿Qué trabajo hace ese contenido: Help, Hub o Hero?</p>
   <p class="note">Recoge 3–4 ejemplos y clasifícalos en voz alta con Hero/Hub/Help y See/Think/Do/Care. Si nadie arranca, propón una marca de la categoría de alguien del grupo.</p>
 </section>
 
 <!-- ============ BLOQUE 2 ============ -->
-<section class="slide" id="b2">
-  <p class="eyebrow"><span class="dot"></span>Bloque 2 · Branding personal <span class="time">18:50</span></p>
+<section class="slide red" id="b2">
+  <p class="eyebrow">Bloque 2 · Branding personal <span class="time">18:50</span></p>
   <p class="statement">Tu marca personal es lo que la gente dice de ti <em>cuando no estás</em> en el cuarto.</p>
   <p class="quote-src">Frase atribuida a Jeff Bezos. Hoy agregaríamos: …y lo que la IA responde cuando alguien pregunta por ti.</p>
 </section>
 
-<section class="slide" id="por-que">
-  <p class="eyebrow"><span class="dot"></span>Bloque 2 · Por qué importa ahora</p>
+<section class="slide gray" id="por-que">
+  <p class="eyebrow">Bloque 2 · Por qué importa ahora</p>
   <h2>Las personas son el canal con más confianza</h2>
   <div class="grid g2">
     <div class="card"><span class="k">Para tu carrera</span><p>Las oportunidades llegan a quien es fácil de encontrar y de recomendar. Un buen posicionamiento hace que te busquen para algo específico.</p></div>
@@ -182,8 +211,8 @@
   </div>
 </section>
 
-<section class="slide" id="4p">
-  <p class="eyebrow"><span class="dot"></span>Bloque 2 · Modelo de trabajo</p>
+<section class="slide light" id="4p">
+  <p class="eyebrow">Bloque 2 · Modelo de trabajo</p>
   <h2>Las cuatro piezas de una marca personal</h2>
   <ol class="steps">
     <li><div><b>Posicionamiento</b><span>Para quién eres útil y qué problema resuelves. Una frase, no una lista de habilidades.</span></div></li>
@@ -193,8 +222,8 @@
   </ol>
 </section>
 
-<section class="slide" id="caso-yo">
-  <p class="eyebrow"><span class="dot"></span>Bloque 2 · Caso en vivo</p>
+<section class="slide dark" id="caso-yo">
+  <p class="eyebrow">Bloque 2 · Caso en vivo</p>
   <h2>Las cuatro piezas, aplicadas a mí</h2>
   <div class="tblwrap"><table class="tbl">
     <tr><th>Pieza</th><th>Cómo se ve</th></tr>
@@ -206,8 +235,8 @@
   <p class="note">Abre <a href="/">alexisoubran.com</a> 30 segundos. Enseña /work y /perfluencer-marketing. Mensaje: el sitio no es un portafolio bonito, es la fuente que alimenta lo que Google y la IA dicen de mí.</p>
 </section>
 
-<section class="slide" id="errores">
-  <p class="eyebrow"><span class="dot"></span>Bloque 2 · Errores comunes</p>
+<section class="slide gray" id="errores">
+  <p class="eyebrow">Bloque 2 · Errores comunes</p>
   <h2>Cinco formas de desperdiciar una marca personal</h2>
   <div class="grid g3">
     <div class="card"><span class="k">01</span><h3>Hablar de todo</h3><p>Si eres experto en todo, nadie sabe para qué recomendarte.</p></div>
@@ -219,8 +248,8 @@
   </div>
 </section>
 
-<section class="slide" id="ejercicio-1">
-  <p class="eyebrow"><span class="dot"></span>Bloque 2 · Ejercicio individual <span class="time">15 min</span></p>
+<section class="slide gray" id="ejercicio-1">
+  <p class="eyebrow">Bloque 2 · Ejercicio individual <span class="time">15 min</span></p>
   <h2>Escribe tu posicionamiento</h2>
   <div class="exercise">
     <div class="head"><h3>Llena los campos y lee tu frase en voz alta. Si te da pena, todavía no es tuya.</h3><button class="btn primary" data-timer="15">Iniciar 15 min</button></div>
@@ -245,20 +274,20 @@ Voy a hablar de: {p1} · {p2} · {p3}.">
   <p class="note">A los 12 minutos pide 3 voluntarios. Feedback en una sola pregunta: "¿si te recomendara, para qué te recomendaría?". Si la respuesta no coincide con la frase, la frase está muy amplia.</p>
 </section>
 
-<section class="slide" id="break">
-  <p class="eyebrow"><span class="dot"></span>Break <span class="time">19:20 – 19:30</span></p>
+<section class="slide dark" id="break">
+  <p class="eyebrow">Break <span class="time">19:20 – 19:30</span></p>
   <p class="statement">10 minutos. Regresamos a <em>planear</em>.</p>
   <div class="row" style="margin-top:28px"><button class="btn primary" data-timer="10">Iniciar 10 min</button></div>
 </section>
 
 <!-- ============ BLOQUE 3 ============ -->
-<section class="slide" id="b3">
-  <p class="eyebrow"><span class="dot"></span>Bloque 3 · Estrategia avanzada <span class="time">19:30</span></p>
+<section class="slide red" id="b3">
+  <p class="eyebrow">Bloque 3 · Estrategia avanzada <span class="time">19:30</span></p>
   <p class="statement">Un calendario no es una estrategia. Una estrategia decide <em>qué no</em> vas a publicar.</p>
 </section>
 
-<section class="slide" id="sistema">
-  <p class="eyebrow"><span class="dot"></span>Bloque 3 · El sistema</p>
+<section class="slide light" id="sistema">
+  <p class="eyebrow">Bloque 3 · El sistema</p>
   <h2>Ocho decisiones, en este orden</h2>
   <ol class="steps">
     <li><div><b>Objetivo</b><span>Del objetivo de negocio al objetivo de contenido y a un KPI.</span></div></li>
@@ -272,8 +301,8 @@ Voy a hablar de: {p1} · {p2} · {p3}.">
   </ol>
 </section>
 
-<section class="slide" id="paso-1">
-  <p class="eyebrow"><span class="dot"></span>Paso 1 · Objetivo</p>
+<section class="slide gray" id="paso-1">
+  <p class="eyebrow">Paso 1 · Objetivo</p>
   <h2>Del negocio al KPI, sin saltos</h2>
   <div class="tblwrap"><table class="tbl">
     <tr><th>Si el negocio necesita…</th><th>El contenido debe…</th><th>Y lo mides con…</th></tr>
@@ -285,8 +314,8 @@ Voy a hablar de: {p1} · {p2} · {p3}.">
   <p class="note">Insiste: un solo objetivo principal por plan. "Awareness y ventas y comunidad" es no decidir.</p>
 </section>
 
-<section class="slide" id="paso-2">
-  <p class="eyebrow"><span class="dot"></span>Paso 2 · Audiencia</p>
+<section class="slide light" id="paso-2">
+  <p class="eyebrow">Paso 2 · Audiencia</p>
   <h2>Dónde encontrar las preguntas reales de tu audiencia</h2>
   <div class="grid g3">
     <div class="card"><span class="k">Búsqueda</span><ul><li>Google Trends</li><li>"Otras preguntas de los usuarios" en Google</li><li>Autocompletar de YouTube y TikTok</li></ul></div>
@@ -298,8 +327,8 @@ Voy a hablar de: {p1} · {p2} · {p3}.">
   </div>
 </section>
 
-<section class="slide" id="paso-3-4">
-  <p class="eyebrow"><span class="dot"></span>Pasos 3 y 4 · Territorio y pilares</p>
+<section class="slide gray" id="paso-3-4">
+  <p class="eyebrow">Pasos 3 y 4 · Territorio y pilares</p>
   <h2>Prioriza temas con tres preguntas</h2>
   <p class="lead">Califica cada tema del 1 al 5. Los pilares son los que suman más, no los que más te gustan.</p>
   <div class="tblwrap"><table class="tbl">
@@ -311,9 +340,14 @@ Voy a hablar de: {p1} · {p2} · {p3}.">
   </table></div>
   <p class="small" style="margin-top:14px">Calificaciones ilustrativas, solo para mostrar el método.</p>
 </section>
+<section class="slide dark" id="paso-3-4-g">
+  <p class="eyebrow">Pasos 3 y 4 · La matriz en gráfica</p>
+  <h2>Los pilares viven <em>arriba a la derecha</em></h2>
+  <div class="chart" data-chart="matrix"></div>
+</section>
 
-<section class="slide" id="paso-5">
-  <p class="eyebrow"><span class="dot"></span>Paso 5 · Formatos y plataformas</p>
+<section class="slide light" id="paso-5">
+  <p class="eyebrow">Paso 5 · Formatos y plataformas</p>
   <h2>Cada plataforma con un trabajo distinto</h2>
   <div class="tblwrap"><table class="tbl">
     <tr><th>Plataforma</th><th>Rol principal</th><th>Formato que mejor lo cumple</th></tr>
@@ -327,8 +361,8 @@ Voy a hablar de: {p1} · {p2} · {p3}.">
   </table></div>
 </section>
 
-<section class="slide" id="paso-6">
-  <p class="eyebrow"><span class="dot"></span>Paso 6 · Pieza pilar</p>
+<section class="slide gray" id="paso-6">
+  <p class="eyebrow">Paso 6 · Pieza pilar</p>
   <h2>Una pieza grande, veinte pequeñas</h2>
   <div class="split" style="margin-top:36px">
     <div class="card hl"><span class="k">Pieza pilar · 1 al mes</span><h3>Un video largo, un webinar, un estudio propio, un episodio de podcast o una guía completa.</h3><p>Es donde inviertes en investigación, producción y punto de vista.</p></div>
@@ -343,9 +377,14 @@ Voy a hablar de: {p1} · {p2} · {p3}.">
   </div>
   <p class="note">Aquí presenta la tarea de la sesión 2: cada quien trae una idea de pieza pilar y el martes la convertimos en video, infografía o podcast.</p>
 </section>
+<section class="slide dark" id="paso-6-g">
+  <p class="eyebrow">Paso 6 · Atomización</p>
+  <h2>Una pieza, <em>seis vidas</em></h2>
+  <div class="chart" data-chart="atom"></div>
+</section>
 
-<section class="slide" id="paso-7">
-  <p class="eyebrow"><span class="dot"></span>Paso 7 · Distribución</p>
+<section class="slide dark" id="paso-7">
+  <p class="eyebrow">Paso 7 · Distribución</p>
   <p class="statement">Crea menos. <em>Distribuye</em> más.</p>
   <div class="grid g4">
     <div class="card"><span class="k">Orgánico</span><p>Publicación nativa, horarios, colaboraciones entre cuentas.</p></div>
@@ -356,8 +395,8 @@ Voy a hablar de: {p1} · {p2} · {p3}.">
   <p class="small" style="margin-top:20px">Lo vemos a fondo en la sesión 3.</p>
 </section>
 
-<section class="slide" id="paso-8">
-  <p class="eyebrow"><span class="dot"></span>Paso 8 · Medición</p>
+<section class="slide light" id="paso-8">
+  <p class="eyebrow">Paso 8 · Medición</p>
   <h2>Cada pieza con una hipótesis</h2>
   <div class="split" style="margin-top:36px">
     <div>
@@ -373,8 +412,8 @@ Voy a hablar de: {p1} · {p2} · {p3}.">
   <p class="small" style="margin-top:20px">El ROI completo lo construimos en la sesión 3.</p>
 </section>
 
-<section class="slide" id="brief">
-  <p class="eyebrow"><span class="dot"></span>Herramienta · Brief de contenido</p>
+<section class="slide gray" id="brief">
+  <p class="eyebrow">Herramienta · Brief de contenido</p>
   <h2>Una hoja antes de producir cualquier pieza</h2>
   <div class="grid g3">
     <div class="card"><span class="k">01 · Objetivo</span><p>¿Qué trabajo hace esta pieza? (See / Think / Do / Care)</p></div>
@@ -389,8 +428,8 @@ Voy a hablar de: {p1} · {p2} · {p3}.">
   </div>
 </section>
 
-<section class="slide" id="ritmo">
-  <p class="eyebrow"><span class="dot"></span>Herramienta · Ritmo operativo</p>
+<section class="slide light" id="ritmo">
+  <p class="eyebrow">Herramienta · Ritmo operativo</p>
   <h2>La estrategia vive en las juntas, no en el PDF</h2>
   <div class="grid g3">
     <div class="card"><span class="k">Semanal · 30 min</span><h3>Qué funcionó</h3><p>Top 3 y bottom 3 piezas. Qué se repite, qué se pauta, qué se mata.</p></div>
@@ -400,8 +439,8 @@ Voy a hablar de: {p1} · {p2} · {p3}.">
 </section>
 
 <!-- ============ TALLER ============ -->
-<section class="slide" id="taller">
-  <p class="eyebrow"><span class="dot"></span>Taller en equipos <span class="time">20:15 · 30 min + presentaciones</span></p>
+<section class="slide gray" id="taller">
+  <p class="eyebrow">Taller en equipos <span class="time">20:15 · 30 min + presentaciones</span></p>
   <h2>Su plan de contenidos en una hoja</h2>
   <div class="exercise">
     <div class="head"><h3>Equipos de 3 o 4. Elijan una marca real (de alguno de ustedes o una que admiren) y llenen el canvas.</h3><button class="btn primary" data-timer="30">Iniciar 30 min</button></div>
@@ -433,8 +472,8 @@ HIPÓTESIS: {hipotesis}">
   </div>
 </section>
 
-<section class="slide" id="presentaciones">
-  <p class="eyebrow"><span class="dot"></span>Presentaciones <span class="time">3 min por equipo</span></p>
+<section class="slide gray" id="presentaciones">
+  <p class="eyebrow">Presentaciones <span class="time">3 min por equipo</span></p>
   <h2>Cómo vamos a dar feedback</h2>
   <div class="grid g4">
     <div class="card"><span class="k">¿Decidieron?</span><p>Un objetivo, no tres. Pilares que dejan cosas fuera.</p></div>
@@ -446,8 +485,8 @@ HIPÓTESIS: {hipotesis}">
 </section>
 
 <!-- ============ CIERRE ============ -->
-<section class="slide" id="cierre">
-  <p class="eyebrow"><span class="dot"></span>Cierre <span class="time">20:50</span></p>
+<section class="slide light" id="cierre">
+  <p class="eyebrow">Cierre <span class="time">20:50</span></p>
   <h2>Tres ideas para llevarse</h2>
   <ol class="steps">
     <li><div><b>El contenido es un activo, no una tarea.</b><span>Se planea con objetivo, se distribuye con intención y se mide con hipótesis.</span></div></li>
@@ -456,8 +495,8 @@ HIPÓTESIS: {hipotesis}">
   </ol>
 </section>
 
-<section class="slide" id="tarea">
-  <p class="eyebrow"><span class="dot"></span>Para el martes 24 de noviembre</p>
+<section class="slide gray" id="tarea">
+  <p class="eyebrow">Para el martes 24 de noviembre</p>
   <h2>Tarea</h2>
   <div class="grid g3">
     <div class="card"><span class="k">01</span><h3>Tu posicionamiento final</h3><p>La frase del ejercicio, ajustada. Pruébala con dos personas que te conozcan.</p></div>
@@ -466,8 +505,9 @@ HIPÓTESIS: {hipotesis}">
   </div>
 </section>
 
-<section class="slide" id="gracias">
-  <p class="eyebrow"><span class="dot"></span>Gracias</p>
+<section class="slide red" id="gracias">
+  <div class="logos"><img class="edem" src="/edem/img/edem-logo.png" alt="EDEM"><span class="sep"></span><img class="mini" src="/edem/img/minimalist-logo-white.webp" alt="Minimalist"></div>
+  <p class="eyebrow">Gracias</p>
   <h1>Nos vemos el <span class="grad">martes</span>.</h1>
   <p class="lead">Todo el material del módulo vive aquí: <a href="/edem/">alexisoubran.com/edem</a></p>
   <p class="lead small">Alexis Soubran · <a href="/">alexisoubran.com</a></p>
@@ -477,5 +517,6 @@ HIPÓTESIS: {hipotesis}">
 
 <div class="timer" role="timer" aria-live="off"><strong>00:00</strong><button class="btn" type="button">Cerrar</button></div>
 <script src="/edem/edem.js" defer></script>
+<script src="/edem/edem-charts.js" defer></script>
 </body>
 </html>
