@@ -348,7 +348,7 @@ body ::selection{background:rgba(22,180,236,.35);color:#fff}
 
 @media (max-width:760px){
   .site-home .hero.hero--aurora{display:block;min-height:0;margin-top:calc(-62px - env(safe-area-inset-top));padding:0 0 26px}
-  .hero--aurora .hero-media{position:relative;inset:auto;z-index:-2;aspect-ratio:941/1672;max-height:88svh;overflow:hidden}
+  .hero--aurora .hero-media{position:relative;inset:auto;z-index:-2;width:100%;aspect-ratio:941/1672;overflow:hidden}
   .hero--aurora .hero-media img{object-position:50% 20%}
   .hero--aurora::before{background:linear-gradient(180deg,rgba(1,8,15,.35) 0%,rgba(1,8,15,0) 14%,rgba(1,8,15,0) 46%,rgba(1,8,15,.55) 62%,rgba(1,8,15,.92) 76%,var(--void) 86%)}
   .hero--aurora>.container{width:calc(100% - 32px);margin-top:calc(-1 * min(70vw,320px))}
