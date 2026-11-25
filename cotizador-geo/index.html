@@ -261,13 +261,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   $('technical').addEventListener('change',e=>{state.technical=e.target.checked;render()});
   document.body.addEventListener('change',e=>{if(e.target.dataset.addon){state.addons[e.target.dataset.addon]=e.target.checked;render()}});
   document.body.addEventListener('click',e=>{const b=e.target.closest('[data-count]');if(!b||b.disabled)return;const k=b.dataset.count;state.quantities[k]=Math.min(counterInfo[k].max,Math.max(0,state.quantities[k]+Number(b.dataset.step)));render()});
-  $('printBtn').addEventListener('click',()=>{render();window.print()});
+  $('printBtn').addEventListener('click',()=>{window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'geo_quote_export',export_type:'print',quote_package:state.package});render();window.print()});
   $('whatsappBtn').addEventListener('click',()=>{
+    try{const q=currentQuote;window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'geo_quote_whatsapp',click_location:'geo_calculator',quote_package:state.package,value:q.first||0,currency:'MXN'})}catch(e){}
     const message='Hola Alexis, me interesa una propuesta GEO. Esta es mi estimación inicial:\n\n'+quoteText();
     const link='https://wa.me/525539013827?text='+encodeURIComponent(message);
     window.open(link,'_blank','noopener,noreferrer');
   });
-  $('copyBtn').addEventListener('click',async()=>{const txt=quoteText();try{await navigator.clipboard.writeText(txt);toast('Resumen copiado al portapapeles')}catch(e){const a=document.createElement('textarea');a.value=txt;a.style.position='fixed';a.style.left='-10000px';document.body.append(a);a.select();try{document.execCommand('copy');toast('Resumen copiado')}catch(err){toast('No se pudo copiar automáticamente')}a.remove()}});
+  $('copyBtn').addEventListener('click',async()=>{window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'geo_quote_export',export_type:'copy',quote_package:state.package});const txt=quoteText();try{await navigator.clipboard.writeText(txt);toast('Resumen copiado al portapapeles')}catch(e){const a=document.createElement('textarea');a.value=txt;a.style.position='fixed';a.style.left='-10000px';document.body.append(a);a.select();try{document.execCommand('copy');toast('Resumen copiado')}catch(err){toast('No se pudo copiar automáticamente')}a.remove()}});
   $('resetBtn').addEventListener('click',()=>{if(!confirm('¿Restablecer la cotización y limpiar los datos del cliente?'))return;state.package='sprint';state.cms='elementor';state.size='small';state.rebuild=false;state.rebuildLevel='corporate';state.technical=false;state.industry='b2b';state.market='mx';Object.keys(state.addons).forEach(k=>state.addons[k]=false);Object.keys(state.quantities).forEach(k=>state.quantities[k]=0);['company','contact'].forEach(k=>$(k).value='');['cms','size','industry','market','rebuildLevel'].forEach(k=>$(k).value=state[k]);$('technical').checked=false;render();toast('Cotización restablecida')});
   render();
   </script>
