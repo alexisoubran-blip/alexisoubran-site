@@ -1,0 +1,34 @@
+/* Blog — alexisoubran.com/blog/ (loaded after editorial, site and glass layers) */
+.site-page .blog-toc{margin:8px 0 40px;padding:22px 24px;border:1px solid var(--glass-line,rgba(255,255,255,.13));border-radius:20px;background:rgba(255,255,255,.025)}
+.site-page .blog-toc strong{display:block;color:var(--signal,#16b4ec);font-size:12px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:10px}
+.site-page .blog-toc ol{margin:0 0 0 20px}.site-page .blog-toc li{font-size:15px;margin-bottom:6px}
+.site-page .blog-toc a{color:#d7d7d2;text-decoration:none}.site-page .blog-toc a:hover{color:#fff;text-decoration:underline}
+.site-page .blog-table{width:100%;max-width:100%;overflow-x:auto;margin:22px 0 14px;border:1px solid var(--glass-line,rgba(255,255,255,.13));border-radius:18px}
+.site-page .blog-table table{width:100%;border-collapse:collapse;font-size:15px;min-width:520px}
+.site-page .blog-table th,.site-page .blog-table td{padding:13px 16px;text-align:left;border-bottom:1px solid rgba(255,255,255,.08);color:#d7d7d2;vertical-align:top}
+.site-page .blog-table th{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--ash,#a9b8c4);background:rgba(255,255,255,.035)}
+.site-page .blog-table td.num,.site-page .blog-table th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.site-page .blog-table tr:last-child td{border-bottom:0}
+.site-page .blog-table tr.total td{color:#fff;font-weight:700;background:rgba(22,180,236,.08)}
+.site-page .blog-note{font-size:14px!important;color:var(--ash,#a9b8c4)!important}
+.site-page .phase{margin:30px 0;padding:24px 26px;border:1px solid var(--glass-line,rgba(255,255,255,.13));border-radius:22px;background:var(--glass,rgba(255,255,255,.03))}
+.site-page .phase h3{margin-top:0}.site-page .phase .phase-days{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--signal,#16b4ec);margin-bottom:6px}
+.site-page .phase ul{margin-bottom:12px}
+.site-page .blog-video{display:grid;grid-template-columns:minmax(0,320px) 1fr;gap:32px;align-items:center;margin:40px 0}
+.site-page .blog-video-frame{position:relative;width:100%;aspect-ratio:9/16;border-radius:22px;overflow:hidden;border:1px solid var(--glass-line,rgba(255,255,255,.13));background:#000}
+.site-page .blog-video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.site-page .blog-video p{font-size:17px}
+.site-page .faq-list details{border-bottom:1px solid rgba(255,255,255,.1);padding:16px 0}
+.site-page .faq-list summary{cursor:pointer;font-size:19px;font-weight:650;color:#fff;list-style-position:outside}
+.site-page .faq-list details p{margin:12px 0 0}
+.site-page .author-box{display:flex;gap:20px;align-items:center;margin-top:48px;padding:22px;border:1px solid var(--glass-line,rgba(255,255,255,.13));border-radius:20px;background:rgba(255,255,255,.025)}
+.site-page .author-box img{width:72px;height:72px;border-radius:50%;object-fit:cover;flex:none}
+.site-page .author-box p{font-size:15px;margin:0}
+.site-page .blog-list{display:grid;gap:18px;padding:12px 0 90px}
+.site-page .blog-card{display:block;padding:28px;border:1px solid var(--glass-line,rgba(255,255,255,.13));border-radius:24px;background:var(--glass,rgba(255,255,255,.03));text-decoration:none;transition:transform .2s,border-color .2s}
+.site-page .blog-card:hover{transform:translateY(-3px);border-color:var(--glass-line-hi,rgba(255,255,255,.26))}
+.site-page .blog-card small{display:block;color:var(--signal,#16b4ec);font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:800;margin-bottom:10px}
+.site-page .blog-card h2{font-size:clamp(24px,3vw,32px);line-height:1.15;letter-spacing:-.03em;margin:0 0 10px}
+.site-page .blog-card p{color:var(--ash,#a9b8c4);font-size:16px;margin:0 0 14px}
+.site-page .blog-card .meta{margin-top:0}
+@media(max-width:700px){.site-page .blog-video{grid-template-columns:1fr;gap:20px}.site-page .blog-video-frame{max-width:300px;justify-self:center}.site-page .phase{padding:20px}.site-page .author-box{flex-direction:column;align-items:flex-start}}

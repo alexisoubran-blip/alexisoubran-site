@@ -1017,6 +1017,50 @@
       }
     },
     {
+      "src": "(?:/blog/|/blog|/blog/index\\.html)",
+      "headers": {
+        "Vary": "Accept",
+        "Vercel-CDN-Cache-Control": "no-store"
+      },
+      "continue": true
+    },
+    {
+      "src": "(?:/blog/|/blog|/blog/index\\.html)",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": "(?:.*,[ \\t]*)?[Tt][Ee][Xx][Tt]/[Mm][Aa][Rr][Kk][Dd][Oo][Ww][Nn](?![ \\t]*;[ \\t]*[qQ]=0(?:\\.0*)?[ \\t]*(?:,|$))(?:[ \\t]*;[^,]*)?[ \\t]*(?:,.*)?"
+        }
+      ],
+      "dest": "/markdown/blog.md",
+      "headers": {
+        "Content-Type": "text/markdown; charset=utf-8"
+      }
+    },
+    {
+      "src": "(?:/blog/mexico\\-market\\-entry\\-strategy\\-90\\-day\\-guide/|/blog/mexico\\-market\\-entry\\-strategy\\-90\\-day\\-guide|/blog/mexico\\-market\\-entry\\-strategy\\-90\\-day\\-guide/index\\.html)",
+      "headers": {
+        "Vary": "Accept",
+        "Vercel-CDN-Cache-Control": "no-store"
+      },
+      "continue": true
+    },
+    {
+      "src": "(?:/blog/mexico\\-market\\-entry\\-strategy\\-90\\-day\\-guide/|/blog/mexico\\-market\\-entry\\-strategy\\-90\\-day\\-guide|/blog/mexico\\-market\\-entry\\-strategy\\-90\\-day\\-guide/index\\.html)",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": "(?:.*,[ \\t]*)?[Tt][Ee][Xx][Tt]/[Mm][Aa][Rr][Kk][Dd][Oo][Ww][Nn](?![ \\t]*;[ \\t]*[qQ]=0(?:\\.0*)?[ \\t]*(?:,|$))(?:[ \\t]*;[^,]*)?[ \\t]*(?:,.*)?"
+        }
+      ],
+      "dest": "/markdown/blog/mexico-market-entry-strategy-90-day-guide.md",
+      "headers": {
+        "Content-Type": "text/markdown; charset=utf-8"
+      }
+    },
+    {
       "src": "/markdown/(.*)",
       "headers": {
         "Content-Type": "text/markdown; charset=utf-8",

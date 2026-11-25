@@ -93,7 +93,7 @@
   }).join('');
 
   const groups = [
-    ['Explore', [['Engagements', '/#what'], ['Selected work', '/work/'], ['Insights', '/insights/'], ['GEO calculator', '/cotizador-geo/']]],
+    ['Explore', [['Engagements', '/#what'], ['Selected work', '/work/'], ['Insights', '/insights/'], ['Blog', '/blog/'], ['GEO calculator', '/cotizador-geo/']]],
     ['Alexis', [['About', '/about/'], ['Speaking & teaching', '/speaking-teaching/'], ['Press & references', '/press/'], ['Book · Oops, I Bought It', '/book/'], ['Perfluencer Marketing', '/perfluencer-marketing/']]]
   ];
   const sheet = document.createElement('div');
