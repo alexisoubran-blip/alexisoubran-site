@@ -643,6 +643,28 @@
       }
     },
     {
+      "src": "(?:/curso\\-geo/|/curso\\-geo|/curso\\-geo/index\\.html)",
+      "headers": {
+        "Vary": "Accept",
+        "Vercel-CDN-Cache-Control": "no-store"
+      },
+      "continue": true
+    },
+    {
+      "src": "(?:/curso\\-geo/|/curso\\-geo|/curso\\-geo/index\\.html)",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": "(?:.*,[ \\t]*)?[Tt][Ee][Xx][Tt]/[Mm][Aa][Rr][Kk][Dd][Oo][Ww][Nn](?![ \\t]*;[ \\t]*[qQ]=0(?:\\.0*)?[ \\t]*(?:,|$))(?:[ \\t]*;[^,]*)?[ \\t]*(?:,.*)?"
+        }
+      ],
+      "dest": "/markdown/curso-geo.md",
+      "headers": {
+        "Content-Type": "text/markdown; charset=utf-8"
+      }
+    },
+    {
       "src": "(?:/geo\\-aeo\\-consultant\\-mexico\\-latam/|/geo\\-aeo\\-consultant\\-mexico\\-latam|/geo\\-aeo\\-consultant\\-mexico\\-latam/index\\.html)",
       "headers": {
         "Vary": "Accept",
@@ -1012,6 +1034,28 @@
         }
       ],
       "dest": "/markdown/marketing-measurement.md",
+      "headers": {
+        "Content-Type": "text/markdown; charset=utf-8"
+      }
+    },
+    {
+      "src": "(?:/cotizador\\-geo/|/cotizador\\-geo|/cotizador\\-geo/index\\.html)",
+      "headers": {
+        "Vary": "Accept",
+        "Vercel-CDN-Cache-Control": "no-store"
+      },
+      "continue": true
+    },
+    {
+      "src": "(?:/cotizador\\-geo/|/cotizador\\-geo|/cotizador\\-geo/index\\.html)",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": "(?:.*,[ \\t]*)?[Tt][Ee][Xx][Tt]/[Mm][Aa][Rr][Kk][Dd][Oo][Ww][Nn](?![ \\t]*;[ \\t]*[qQ]=0(?:\\.0*)?[ \\t]*(?:,|$))(?:[ \\t]*;[^,]*)?[ \\t]*(?:,.*)?"
+        }
+      ],
+      "dest": "/markdown/cotizador-geo.md",
       "headers": {
         "Content-Type": "text/markdown; charset=utf-8"
       }

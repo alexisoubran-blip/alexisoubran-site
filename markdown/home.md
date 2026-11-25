@@ -1,6 +1,6 @@
 Source: https://alexisoubran.com/
 
-[Skip to content](https://alexisoubran.com/#main)
+[Skip to content](https://alexisoubran.com/#main)         Alexis Soubran, marketing executive and CEO of Minimalist Agency
 
 Alexis Soubran · Strategy & growth leadership
 
@@ -11,8 +11,6 @@ I help global brands enter and scale in the region, connecting market strategy, 
 [Book a diagnostic ↗](https://calendly.com/alexis-soubran/contact)[Explore the work](https://alexisoubran.com/#systems)
 
 Mexico City · English, Spanish & Italian
-
-Alexis Soubran, marketing executive and CEO of Minimalist Agency
 
 Alexis SoubranCEO & Partner, Minimalist Agency
 

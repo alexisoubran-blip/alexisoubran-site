@@ -10,7 +10,7 @@ GEO · AEO · AI Search
 
 Generative Engine Optimization for Mexico and LATAM: entity clarity, answer architecture, citable evidence, technical crawlability and measurement tied to commercial discovery.
 
-[Book a GEO audit](https://calendly.com/alexis-soubran/contact) [Read the GEO guide](https://alexisoubran.com/insights/geo-for-brands-mexico-latam/)
+[Book a GEO audit](https://calendly.com/alexis-soubran/contact) [Estimate GEO investment ↗](https://alexisoubran.com/cotizador-geo/)
 
 Definition
 
@@ -118,6 +118,8 @@ Related resources
 
 [GEO for brands in Mexico + LATAM](https://alexisoubran.com/insights/geo-for-brands-mexico-latam/) — the strategic guide to entity clarity, answer architecture and AI visibility.
 
+[Curso de GEO (español)](https://alexisoubran.com/curso-geo/) — live cohort teaching the GEO method for B2B service companies in Mexico + LATAM.
+
 [Perfluencer Marketing](https://alexisoubran.com/perfluencer-marketing/) — a defined framework connecting creator influence with performance measurement.
 
 [Selected work](https://alexisoubran.com/work/) — case studies across consumer tech, fintech, automotive, B2B and creator commerce.
@@ -126,6 +128,6 @@ Related resources
 
 Bring your website, target buyers, priority markets and proof assets. We will map the entity gaps, citation gaps, technical blockers and the highest-value pages to improve first.
 
-[Book a GEO audit](https://calendly.com/alexis-soubran/contact)
+[Book a GEO audit](https://calendly.com/alexis-soubran/contact) [Build a GEO estimate ↗](https://alexisoubran.com/cotizador-geo/)
 
 [WhatsApp](https://wa.me/525539013827)

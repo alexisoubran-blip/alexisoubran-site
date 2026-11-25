@@ -128,6 +128,8 @@ Related expertise
 
 [GEO + AI Search](https://alexisoubran.com/geo-aeo-consultant-mexico-latam/) — build local entity clarity and citable authority for answer-led discovery.
 
+Related reading: [Mexico Market Entry Strategy: A 90-Day Guide for Global Brands](https://alexisoubran.com/blog/mexico-market-entry-strategy-90-day-guide/)
+
 ## Entering Mexico with a global brand?
 
 Bring the product, commercial model, launch timeline and constraints. We will map the first 90 days around the cheapest credible path to validated demand and revenue learning.

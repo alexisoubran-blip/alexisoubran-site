@@ -198,8 +198,6 @@ Market entry success should be evaluated through qualified demand, customer acqu
 
 ## Planning your expansion into Mexico and Latin America?
 
-Video: [Your Growth Partner in Mexico & LATAM](https://www.youtube.com/shorts/WUgdXqNKIl4)
-
 I work with international companies to design market entry strategies, establish revenue systems and coordinate local growth operations.
 
 My approach integrates commercial strategy, customer acquisition, marketing technology and financial performance to help leadership teams make informed expansion decisions.
