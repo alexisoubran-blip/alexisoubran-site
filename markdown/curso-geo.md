@@ -4,27 +4,37 @@ Source: https://alexisoubran.com/curso-geo/
 
 [Inicio](https://alexisoubran.com/) / Curso de GEO
 
-Curso en vivo · Cohorte fundadores · 10 lugares
+Curso en vivo · Cohorte fundadores · Solo 10 lugares
 
-# Que la IA te recomiende.
+# Que ChatGPT te recomiende cuando tus clientes preguntan por tu categoría.
 
-Curso de GEO para empresas de servicios B2B en México y LATAM. En 4 semanas sales con tus prompts, tu mapa de fuentes, tu plan de reputación con presupuesto y tu motor de contenido funcionando. No es teoría: es el método que usamos en Minimalist Agency.
+Curso de GEO para empresas de servicios B2B en México y LATAM. 4 semanas en vivo para implementar el método con el que Minimalist Agency pasó a ser la marca #1 en respuestas de IA frente a su competencia.
 
-[Apartar mi lugar · 7,500 MXN](https://wa.me/525539013827?text=Hola%20Alexis%2C%20quiero%20apartar%20mi%20lugar%20en%20la%20cohorte%20fundadores%20del%20curso%20de%20GEO.) [Ver temario ↓](https://alexisoubran.com/curso-geo/#temario)
+[Apartar mi lugar por WhatsApp](https://wa.me/525539013827?text=Hola%20Alexis%2C%20quiero%20apartar%20mi%20lugar%20en%20la%20cohorte%20fundadores%20del%20curso%20de%20GEO.) [Ver el temario](https://alexisoubran.com/curso-geo/#temario)
 
-La idea central
+7,500 MXN precio fundadores (regular 9,900) · Apartar no tiene costo: pagas hasta que confirmamos fechas.
 
-## GEO no es escribir el mejor blog. Es reputación de marca.
+#2 → #1marca en respuestas de IA vs. competencia
 
-Cada vez menos gente lee blogs, pero cada vez más gente le pregunta a ChatGPT, Gemini o Copilot "¿cuál es la mejor agencia, despacho o proveedor de X?". La respuesta no sale solo de tu sitio: sale de los rankings, directorios, medios y reseñas que la IA consulta.
+2.2×visibilidad en Microsoft Copilot
 
-Si varios dominios confiables dicen lo mismo que tú dices de ti, la IA te recomienda. Si solo lo dices tú, no. Este curso te enseña a construir esa reputación de forma ordenada, medible y con presupuesto real.
++7 ptsshare of voice en IA
+
+30 promptsmedidos a diario
+
+El problema
+
+## Tus clientes ya no buscan en Google. Le preguntan a la IA quién es el mejor.
+
+Un director de compras o un CMO ya no revisa diez blogs. Le pregunta a ChatGPT, Gemini o Copilot "¿cuál es la mejor agencia, despacho o consultora de X en México?" y la IA le da tres o cuatro nombres.
+
+Si tu empresa no está en esa respuesta, no existe para ese cliente. Y la IA no te recomienda por lo que dice tu sitio: te recomienda por lo que dicen de ti los rankings, directorios, medios y reseñas que consulta. GEO no es escribir el mejor blog. Es reputación de marca.
 
 El caso · Minimalist Agency
 
-## De #2 a #1 en visibilidad en IA frente a nuestra competencia.
+## De #2 a #1 en respuestas de IA frente a nuestra competencia.
 
-Datos de Temso, 30 prompts monitoreados a diario en ChatGPT, Microsoft Copilot y Google AI Overviews. Comparativo jul–sep 2026 vs. los últimos 90 días.
+Datos de Temso: 30 prompts monitoreados a diario en ChatGPT, Microsoft Copilot y Google AI Overviews. Comparativo jul–sep 2026 vs. los últimos 90 días.
 
 #2 → #1Ranking de marca frente a agencias de nuestro rango
 
@@ -34,7 +44,7 @@ Datos de Temso, 30 prompts monitoreados a diario en ChatGPT, Microsoft Copilot y
 
 55% → 62%Visibilidad en ChatGPT
 
-Lo que movió los números no fue un artículo: fue estar en las fuentes que la IA cita (rankings, directorios de partners, listicles del sector) y que nuestro propio sitio se volviera una de las fuentes más citadas de la categoría. En el curso ves exactamente cómo, cuánto costó y qué haría distinto.
+Pruébalo tú. Cuando alguien pregunta: ¿Qué agencias son TikTok Marketing Partners en México? Minimalist aparece en 93% de las respuestas. En el curso ves exactamente qué hicimos para lograrlo, cuánto costó y qué haría distinto.
 
 Temario · 6 módulos · 4 semanas
 
@@ -70,6 +80,10 @@ Entregable: prompt maestro y calendario del primer mes.
 Search Console, GA4 con eventos bien configurados, Clarity y tu herramienta de visibilidad en IA. Percepción de marca frente a la competencia y un reporte semanal conectado al chat.
 Entregable: dashboard y roadmap de 90 días.
 
+[Quiero mi lugar · 7,500 MXN](https://alexisoubran.com/curso-geo/#precio)
+
+Terminas con 6 entregables listos para operar, no con apuntes.
+
 Para quién es
 
 ## Hecho para empresas que venden servicios.
@@ -84,7 +98,7 @@ Formato
 
 ### En vivo, aplicado, grabado
 
-4 semanas, 2 sesiones de 90 minutos por semana. Cada sesión deja una tarea que se revisa en la siguiente. Acceso a las grabaciones y a todos los templates.
+4 semanas, 2 sesiones de 90 minutos por semana. Cada sesión deja una tarea que se revisa en la siguiente. Si no puedes asistir a alguna, queda grabada.
 
 No es para ti
 
@@ -92,39 +106,51 @@ No es para ti
 
 Nadie puede garantizar que una IA te recomiende. Lo que sí se puede es mejorar, de forma medible, la información y la reputación que la IA encuentra de ti.
 
-Incluye
-
-## Todo lo que necesitas para implementarlo al terminar.
-
-✓ Templates de cada entregable: prompts por ICP, mapa de fuentes, plan de reputación con presupuesto, template de artículo y prompt maestro de contenido.
-
-✓ Lista curada de rankings, directorios y medios en México y LATAM, con costos de referencia.
-
-✓ El caso Minimalist completo, con datos reales de visibilidad en IA.
-
-✓ Revisión en vivo de 2 o 3 sitios de alumnos por cohorte.
-
 Inversión
 
-## Cohorte fundadores.
+## Cohorte fundadores: 10 lugares.
 
-Fundadores · 10 lugares
+Precio fundadores
 
-### 7,500 MXN
+7,500 MXN 9,900
 
-Precio de la primera cohorte. La fecha de inicio se confirma con el grupo en cuanto se llenen los 10 lugares.
+Ahorras 2,400 MXN · solo primera cohorte
 
-Precio regular
+- 8 sesiones en vivo de 90 min (4 semanas)
 
-### 9,900 MXN
+- Grabaciones y todos los templates
 
-A partir de la segunda cohorte.
+- Lista curada de rankings, directorios y medios con costos
+
+- El caso Minimalist completo con datos reales
+
+- Revisión de tareas en cada sesión
+
+- Posibilidad de revisión de tu sitio en vivo (2–3 por cohorte)
+
+[Apartar mi lugar por WhatsApp](https://wa.me/525539013827?text=Hola%20Alexis%2C%20quiero%20apartar%20mi%20lugar%20en%20la%20cohorte%20fundadores%20del%20curso%20de%20GEO.)
+
+Apartar no tiene costo. Pagas hasta que confirmamos fechas con el grupo.
 
 Para equipos
 
-### Curso + workshop
+### Curso + workshop de implementación
 
-Para empresas que quieren llevar a su equipo e implementar el método en su propio sitio. Cotización a la medida.
+Para empresas que quieren llevar a su equipo de marketing y aplicar el método directamente en su sitio, sus fuentes y sus prompts.
+
+- Lugares para tu equipo en la cohorte
+
+- Workshop privado sobre tu marca
+
+- Plan de reputación hecho con ustedes
+
+[Cotizar para mi equipo](https://wa.me/525539013827?text=Hola%20Alexis%2C%20me%20interesa%20el%20curso%20de%20GEO%20para%20mi%20equipo.)
+
+PASO 1Escríbeme por WhatsApp y aparto tu lugar.
+
+PASO 2Al llenarse los 10 lugares, confirmamos fechas con el grupo.
+
+PASO 3Pagas y recibes el acceso y el material previo.
 
 Quién lo imparte
 
@@ -132,28 +158,44 @@ Quién lo imparte
 
 CEO y Partner de [Minimalist Agency](https://minimalist.mx/) (Google Premier Partner, Meta Business Partner y TikTok Marketing Partner). Profesor en Escuela de Mercadotecnia (EDEM), autor de [Oops, I Bought It](https://alexisoubran.com/book/) y creador del framework [Perfluencer Marketing](https://alexisoubran.com/perfluencer-marketing/).
 
-Opera GEO para su propia agencia y para marcas en México y LATAM. Más sobre su enfoque en [GEO / AEO para México + LATAM](https://alexisoubran.com/geo-aeo-consultant-mexico-latam/).
+No enseña teoría de GEO: lo opera para su propia agencia y para marcas en México y LATAM. Más sobre su enfoque en [GEO / AEO para México + LATAM](https://alexisoubran.com/geo-aeo-consultant-mexico-latam/).
 
 Preguntas frecuentes
 
 ## Antes de apartar tu lugar.
 
-### ¿Qué es GEO?
+¿Qué es GEO?
 
-Generative Engine Optimization: hacer que tu marca sea fácil de entender, verificar y citar para los motores de IA como ChatGPT, Gemini, Copilot y Google AI Overviews. No reemplaza al SEO; lo complementa.
+Generative Engine Optimization: hacer que tu marca sea fácil de entender, verificar y citar para motores de IA como ChatGPT, Gemini, Copilot y Google AI Overviews. No reemplaza al SEO; lo complementa.
 
-### ¿Necesito saber programar?
+¿Cuándo empieza?
 
-No. El curso es para líderes de marketing y dueños. Lo técnico se ve en forma de checklist que puedes aplicar tú o pasarle a quien administra tu sitio.
+En cuanto se llenen los 10 lugares de la cohorte fundadores. Las fechas se confirman con el grupo para que todos puedan asistir en vivo.
 
-### ¿Tengo que pagar herramientas o rankings?
+¿Y si no puedo asistir a alguna sesión?
 
-No es obligatorio. Se enseña primero el método manual y gratuito. Las herramientas y los rankings pagados se ven con costos reales para que decidas qué te conviene.
+Todas las sesiones quedan grabadas y los templates están disponibles desde el inicio. Las tareas se pueden entregar de forma asíncrona.
 
-## Aparta tu lugar en la cohorte fundadores.
+¿Necesito saber programar?
 
-Son 10 lugares a 7,500 MXN. Escríbeme por WhatsApp y te comparto los detalles de pago y las fechas propuestas.
+No. Lo técnico se ve en forma de checklist que puedes aplicar tú o pasarle a quien administra tu sitio.
 
-[Apartar mi lugar por WhatsApp](https://wa.me/525539013827?text=Hola%20Alexis%2C%20quiero%20apartar%20mi%20lugar%20en%20la%20cohorte%20fundadores%20del%20curso%20de%20GEO.) [Escribir por correo](mailto:alexis@minimalist.mx?subject=Curso%20de%20GEO%20%C2%B7%20Cohorte%20fundadores)
+¿Tengo que pagar herramientas o rankings?
+
+No es obligatorio. Primero se enseña el método manual y gratuito. Las herramientas y los rankings pagados se ven con costos reales para que decidas qué te conviene.
+
+¿Funciona para mi industria?
+
+El método está pensado para empresas de servicios y B2B: agencias, despachos, consultoras, reclutamiento, software y servicios profesionales. Si vendes producto de consumo, escríbeme antes y te digo honestamente si te sirve.
+
+¿Cómo pago?
+
+Apartar es gratis. Cuando confirmamos fechas, te comparto los datos de pago por WhatsApp.
+
+## Que la IA te recomiende a ti, no a tu competencia.
+
+10 lugares a precio fundadores (7,500 MXN). Apartar no tiene costo y te responde Alexis directamente.
+
+[Apartar mi lugar por WhatsApp](https://wa.me/525539013827?text=Hola%20Alexis%2C%20quiero%20apartar%20mi%20lugar%20en%20la%20cohorte%20fundadores%20del%20curso%20de%20GEO.) [Prefiero escribir por correo](mailto:alexis@minimalist.mx?subject=Curso%20de%20GEO%20%C2%B7%20Cohorte%20fundadores)
 
 [WhatsApp](https://wa.me/525539013827)
