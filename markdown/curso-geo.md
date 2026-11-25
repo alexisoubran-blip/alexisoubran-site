@@ -10,7 +10,7 @@ Curso en vivo · Cohorte fundadores · Solo 10 lugares
 
 Curso de GEO para empresas de servicios B2B en México y LATAM. 4 semanas en vivo para implementar el método con el que Minimalist Agency pasó a ser la marca #1 en respuestas de IA frente a su competencia.
 
-[Apartar mi lugar por WhatsApp](https://wa.me/525539013827?text=Hola%20Alexis%2C%20quiero%20apartar%20mi%20lugar%20en%20la%20cohorte%20fundadores%20del%20curso%20de%20GEO.) [Ver el temario](https://alexisoubran.com/curso-geo/#temario)
+[Apartar mi lugar por WhatsApp](https://wa.me/525539013827?text=Hola%20Alexis%2C%20quiero%20apartar%20mi%20lugar%20en%20la%20cohorte%20fundadores%20del%20curso%20de%20GEO.) [Ver la sesión gratis primero](https://alexisoubran.com/curso-geo/#sesion-gratis)
 
 7,500 MXN precio fundadores (regular 9,900) · Apartar no tiene costo: pagas hasta que confirmamos fechas.
 
@@ -45,6 +45,46 @@ Datos de Temso: 30 prompts monitoreados a diario en ChatGPT, Microsoft Copilot y
 55% → 62%Visibilidad en ChatGPT
 
 Pruébalo tú. Cuando alguien pregunta: ¿Qué agencias son TikTok Marketing Partners en México? Minimalist aparece en 93% de las respuestas. En el curso ves exactamente qué hicimos para lograrlo, cuánto costó y qué haría distinto.
+
+Por qué este curso
+
+## Hay cursos gratis que explican qué es GEO. Este es para implementarlo.
+
+Cursos gratis o grabados
+
+### Teoría y técnica del sitio
+
+- Qué es GEO y en qué se diferencia del SEO
+
+- Ajustes técnicos a tu web
+
+- Sin caso medido ni presupuesto real
+
+- Lo ves solo, a tu ritmo
+
+Programas de escuela de negocios
+
+### Académico y largo
+
+- Varios meses de duración
+
+- Enfoque conceptual y certificado de la institución
+
+- Inversión de miles de euros
+
+- Pocas cifras de casos reales
+
+Que la IA te recomiende
+
+### Implementación con datos reales
+
+- Reputación fuera de tu sitio: rankings, directorios, guest posts y reseñas con costos reales
+
+- Caso medido frente a competencia (#2 → #1)
+
+- En vivo, 4 semanas, con tareas revisadas
+
+- Pensado para servicios B2B en México y LATAM
 
 Temario · 6 módulos · 4 semanas
 
@@ -126,6 +166,8 @@ Ahorras 2,400 MXN · solo primera cohorte
 
 - Revisión de tareas en cada sesión
 
+- Constancia de participación al completar los entregables
+
 - Posibilidad de revisión de tu sitio en vivo (2–3 por cohorte)
 
 [Apartar mi lugar por WhatsApp](https://wa.me/525539013827?text=Hola%20Alexis%2C%20quiero%20apartar%20mi%20lugar%20en%20la%20cohorte%20fundadores%20del%20curso%20de%20GEO.)
@@ -188,9 +230,23 @@ No es obligatorio. Primero se enseña el método manual y gratuito. Las herramie
 
 El método está pensado para empresas de servicios y B2B: agencias, despachos, consultoras, reclutamiento, software y servicios profesionales. Si vendes producto de consumo, escríbeme antes y te digo honestamente si te sirve.
 
+¿Hay constancia o certificado?
+
+Sí. Al completar los entregables recibes una constancia de participación emitida por Alexis Soubran. No es un título oficial; lo que te llevas de valor es la implementación.
+
 ¿Cómo pago?
 
 Apartar es gratis. Cuando confirmamos fechas, te comparto los datos de pago por WhatsApp.
+
+Sesión abierta y gratuita · 45 min
+
+## Cómo pasamos de #2 a #1 en las respuestas de ChatGPT.
+
+Antes de apartar tu lugar, ve el método en acción. Una sesión en vivo con el caso Minimalist: qué fuentes moví, cuánto costó y qué haría distinto. Al final te cuento los detalles de la cohorte fundadores.
+
+[Avísame de la sesión gratis](https://wa.me/525539013827?text=Hola%20Alexis%2C%20quiero%20que%20me%20avises%20de%20la%20sesi%C3%B3n%20gratuita%20del%20curso%20de%20GEO.)
+
+Te mando fecha y link por WhatsApp. Sin costo y sin compromiso.
 
 ## Que la IA te recomiende a ti, no a tu competencia.
 
