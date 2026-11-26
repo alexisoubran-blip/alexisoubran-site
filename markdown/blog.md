@@ -8,7 +8,15 @@ Blog
 
 Practical guides for leadership teams entering or scaling in Mexico and Latin America: commercial validation, customer acquisition, measurement and growth leadership.
 
-[Market entry
+[GEO · Caso real
+
+## Cómo aparecer en ChatGPT: cómo pasamos de #2 a #1 en las respuestas de IA
+
+Caso real con datos de Temso: qué medimos, qué descubrimos sobre las fuentes que cita la IA, cuánto invertimos y qué haría distinto.
+
+25 de noviembre de 20267 minEn español
+
+](https://alexisoubran.com/blog/como-aparecer-en-chatgpt-caso-minimalist/) [Market entry
 
 ## Mexico Market Entry Strategy: A 90-Day Guide for Global Brands
 

@@ -72,7 +72,7 @@ Visibilidad por modelo: ChatGPT 62%, Microsoft Copilot 35%, Google AI Overview 1
 
 Visibilidad por modelo de IA. Capturas reales de Temso.
 
-Pruébalo tú. Cuando alguien pregunta: ¿Qué agencias son TikTok Marketing Partners en México? Minimalist aparece en 93% de las respuestas. En el curso ves exactamente qué hicimos para lograrlo, cuánto costó y qué haría distinto.
+Pruébalo tú. Cuando alguien pregunta: ¿Qué agencias son TikTok Marketing Partners en México? Minimalist aparece en 93% de las respuestas. En el curso ves exactamente qué hicimos para lograrlo, cuánto costó y qué haría distinto. [Lee el caso completo](https://alexisoubran.com/blog/como-aparecer-en-chatgpt-caso-minimalist/).
 
 Por qué este curso
 
