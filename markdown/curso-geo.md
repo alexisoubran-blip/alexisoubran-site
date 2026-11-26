@@ -24,9 +24,9 @@ Alexis Soubran Imparte Alexis Soubran · CEO de Minimalist Agency
 
 30 promptsmedidos a diario
 
-Alexis Soubran, instructor del curso de GEO  Alexis SoubranCEO de Minimalist Agency · Profesor EDEM
+Alexis Soubran, instructor del curso de GEO  Alexis SoubranCEO de Minimalist Agency · Profesor en EDEM y Colectivo 23
 
-Google Premier Partner Meta Business Partner TikTok Marketing Partner  EDEM Escuela de Mercadotecnia  Profesor  Minimalist Agency  CEO
+Google Premier Partner Meta Business Partner TikTok Marketing Partner  EDEM Escuela de Mercadotecnia  Profesor Profesor en Colectivo 23  Minimalist Agency  CEO
 
 Marcas con las que ha trabajado Alexis Soubran
 
@@ -242,7 +242,7 @@ Quién lo imparte
 
 ## Alexis Soubran
 
-CEO y Partner de [Minimalist Agency](https://minimalist.mx/) (Google Premier Partner, Meta Business Partner y TikTok Marketing Partner). Profesor en Escuela de Mercadotecnia (EDEM), autor de [Oops, I Bought It](https://alexisoubran.com/book/) y creador del framework [Perfluencer Marketing](https://alexisoubran.com/perfluencer-marketing/).
+CEO y Partner de [Minimalist Agency](https://minimalist.mx/) (Google Premier Partner, Meta Business Partner y TikTok Marketing Partner). Profesor en Escuela de Mercadotecnia (EDEM) y Colectivo 23, autor de [Oops, I Bought It](https://alexisoubran.com/book/) y creador del framework [Perfluencer Marketing](https://alexisoubran.com/perfluencer-marketing/).
 
 No enseña teoría de GEO: lo opera para su propia agencia y para marcas en México y LATAM. Más sobre su enfoque en [GEO / AEO para México + LATAM](https://alexisoubran.com/geo-aeo-consultant-mexico-latam/).
 
