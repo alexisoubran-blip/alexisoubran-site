@@ -242,10 +242,45 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .cg-free{display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:center;padding:34px;border-radius:24px;border:1px solid rgba(22,180,236,.4);background:radial-gradient(circle at top right,rgba(22,180,236,.16),transparent 50%),rgba(255,255,255,.035)}
 .cg-free h2{margin-top:6px}
 @media(max-width:760px){.cg-compare,.cg-free{grid-template-columns:1fr}.cg-free{padding:24px}}
+.cg-hero-grid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,.75fr);gap:48px;align-items:center}
+.cg-portrait{position:relative;border-radius:28px;overflow:hidden;border:1px solid rgba(255,255,255,.12);box-shadow:0 30px 80px rgba(0,0,0,.5),0 0 60px rgba(22,180,236,.15)}
+.cg-portrait img{display:block;width:100%;height:auto;aspect-ratio:640/860;object-fit:cover;object-position:center 20%}
+.cg-portrait figcaption{position:absolute;left:14px;right:14px;bottom:14px;padding:10px 14px;border-radius:14px;background:rgba(3,10,16,.62);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font-size:13px;color:#dfe6ea;border:1px solid rgba(255,255,255,.12)}
+.cg-portrait figcaption b{display:block;color:#fff;font-size:15px}
+.cg-host{display:none;align-items:center;gap:12px;margin-top:18px;font-size:14px;color:#cfd8dd}
+.cg-host img{width:48px;height:48px;border-radius:50%;object-fit:cover;object-position:center 18%;border:1px solid rgba(255,255,255,.2)}
+.cg-auth{border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08);padding:22px 0;background:rgba(255,255,255,.02)}
+.cg-auth .container{display:flex;flex-wrap:wrap;gap:10px 12px;align-items:center;justify-content:center}
+.cg-auth span{font-size:13px;color:#cfd8dd;padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03);white-space:nowrap}
+.cg-auth span b{color:#fff;font-weight:600}
+.cg-shots{display:grid;grid-template-columns:1.1fr 1fr;gap:20px;margin-top:28px;align-items:start}
+.cg-shot{margin:0;border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.14);background:#f6f7f9;box-shadow:0 24px 60px rgba(0,0,0,.45)}
+.cg-shot img{display:block;width:100%;height:auto}
+.cg-shotcap{font-size:13px;color:var(--text-dim,#a0a0a0);margin-top:10px}
+.cg-now{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.cg-now div{padding:24px;border-radius:20px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.03)}
+.cg-now strong{display:block;font-size:30px;color:#16b4ec;letter-spacing:-.03em;margin-bottom:8px}
+.cg-mods details{border:1px solid rgba(255,255,255,.1);border-radius:18px;background:rgba(255,255,255,.03);margin-top:12px;padding:0 22px;transition:border-color .2s}
+.cg-mods details[open]{border-color:rgba(22,180,236,.45);background:rgba(22,180,236,.05)}
+.cg-mods summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:44px 1fr auto;gap:14px;align-items:center;padding:20px 0}
+.cg-mods summary::-webkit-details-marker{display:none}
+.cg-mods .n{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:rgba(22,180,236,.14);color:#16b4ec;font-weight:700}
+.cg-mods h3{margin:0;font-size:19px}
+.cg-mods .ent{display:block;font-size:13px;color:#8ee4ff;margin-top:4px;font-weight:400}
+.cg-mods summary::after{content:"+";color:#16b4ec;font-size:24px}
+.cg-mods details[open] summary::after{content:"–"}
+.cg-mods details p{margin:0 0 20px 58px;color:#cfd8dd}
+.cg-gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px}
+.cg-gallery figure{margin:0}
+.cg-gallery img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:16px;border:1px solid rgba(255,255,255,.1);display:block}
+.cg-gallery figcaption{font-size:12px;color:var(--text-dim,#a0a0a0);margin-top:8px}
+@media(max-width:760px){.cg-auth .container{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}.cg-auth .container::-webkit-scrollbar{display:none}}
+@media(max-width:900px){.cg-hero-grid{grid-template-columns:1fr}.cg-portrait{display:none}.cg-host{display:flex}.cg-shots,.cg-now{grid-template-columns:1fr}.cg-gallery{grid-template-columns:1fr 1fr}.cg-mods details p{margin-left:0}.cg-mods summary{grid-template-columns:40px 1fr auto}}
 </style>
 
 <header class="hero">
-  <div class="container">
+  <div class="container cg-hero-grid">
+    <div>
     <div class="breadcrumb"><a href="/">Inicio</a> &nbsp;/&nbsp; Curso de GEO</div>
     <span class="kicker">Curso en vivo · Cohorte fundadores · Solo 10 lugares</span>
     <h1>Que ChatGPT te recomiende cuando tus clientes preguntan por tu categoría.</h1>
@@ -255,6 +290,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <a class="btn btn-secondary" href="#sesion-gratis">Ver la sesión gratis primero</a>
     </div>
     <p class="cg-micro"><b>7,500 MXN</b> precio fundadores (regular 9,900) · Apartar no tiene costo: pagas hasta que confirmamos fechas.</p>
+    <div class="cg-host"><img src="/assets/hero/hero-portrait-tall-640.webp" alt="Alexis Soubran" width="48" height="48"><span>Imparte <b style="color:#fff">Alexis Soubran</b> · CEO de Minimalist Agency</span></div>
     <div class="cg-proof" aria-label="Resultados del caso Minimalist">
       <div><strong>#2 → #1</strong>marca en respuestas de IA vs. competencia</div>
       <div><strong>2.2×</strong>visibilidad en Microsoft Copilot</div>
@@ -262,7 +298,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div><strong>30 prompts</strong>medidos a diario</div>
     </div>
   </div>
+    <figure class="cg-portrait">
+      <img src="/assets/hero/hero-portrait-tall-640.webp" srcset="/assets/hero/hero-portrait-tall-640.webp 640w, /assets/hero/hero-portrait-tall-941.webp 941w" sizes="(max-width: 900px) 0px, 380px" width="640" height="860" alt="Alexis Soubran, instructor del curso de GEO" fetchpriority="high">
+      <figcaption><b>Alexis Soubran</b>CEO de Minimalist Agency · Profesor EDEM</figcaption>
+    </figure>
+  </div>
 </header>
+
+<div class="cg-auth" aria-label="Credenciales">
+  <div class="container">
+    <span><b>Google</b> Premier Partner</span>
+    <span><b>Meta</b> Business Partner</span>
+    <span><b>TikTok</b> Marketing Partner</span>
+    <span>Profesor en <b>EDEM</b></span>
+    <span>Autor de <b>Oops, I Bought It</b></span>
+    <span>Speaker en <b>Merca2.0</b> y <b>Kätedra</b></span>
+  </div>
+</div>
 
 <section class="section">
   <div class="container grid-2">
@@ -277,6 +329,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
 </section>
 
+<section class="section">
+  <div class="container">
+    <span class="kicker">Por qué ahora</span>
+    <h2>La mayoría de las empresas todavía no está haciendo esto. Esa es la ventana.</h2>
+    <div class="cg-now">
+      <div><strong>Hoy</strong>Las fuentes que cita la IA en tu categoría todavía tienen espacio. Quien entra primero a los rankings, directorios y medios se vuelve la referencia.</div>
+      <div><strong>Mañana</strong>Cuando tu competencia despierte, esos lugares van a costar más y la IA ya va a tener nombres favoritos. Mover una percepción cuesta más que construirla.</div>
+      <div><strong>Siempre</strong>La reputación se acumula: cada mención, reseña y artículo suma a la siguiente respuesta. Empezar antes es la ventaja que no se compra después.</div>
+    </div>
+  </div>
+</section>
+
 <section class="section section-dark">
   <div class="container">
     <span class="kicker">El caso · Minimalist Agency</span>
@@ -287,6 +351,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="stat"><strong>16% → 23%</strong><span>Share of voice en respuestas de IA</span></div>
       <div class="stat"><strong>16% → 35%</strong><span>Visibilidad en Microsoft Copilot</span></div>
       <div class="stat"><strong>55% → 62%</strong><span>Visibilidad en ChatGPT</span></div>
+    </div>
+    <div class="cg-shots">
+      <div><figure class="cg-shot"><img src="/assets/photos/temso-ranking.webp" width="1099" height="708" alt="Ranking de marcas en respuestas de IA: Minimalist Agency #1 con 23% de share of voice y 38% de visibilidad" loading="lazy"></figure>
+      <p class="cg-shotcap">Ranking de marca en respuestas de IA, últimos 90 días. Nombres de la competencia difuminados.</p></div>
+      <div><figure class="cg-shot"><img src="/assets/photos/temso-modelos.webp" width="1096" height="287" alt="Visibilidad por modelo: ChatGPT 62%, Microsoft Copilot 35%, Google AI Overview 16%" loading="lazy"></figure>
+      <p class="cg-shotcap">Visibilidad por modelo de IA. Capturas reales de Temso.</p></div>
     </div>
     <div class="cg-prompt">
       <span>Pruébalo tú. Cuando alguien pregunta:</span>
@@ -320,35 +390,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
 </section>
 
+<section class="section" id="sesion-gratis">
+  <div class="container">
+    <div class="cg-free">
+      <div>
+        <span class="kicker">Sesión abierta y gratuita · 45 min</span>
+        <h2>Cómo pasamos de #2 a #1 en las respuestas de ChatGPT.</h2>
+        <p>Antes de apartar tu lugar, ve el método en acción. Una sesión en vivo con el caso Minimalist: qué fuentes moví, cuánto costó y qué haría distinto. Al final te cuento los detalles de la cohorte fundadores.</p>
+      </div>
+      <div>
+        <a class="btn btn-primary" href="https://wa.me/525539013827?text=Hola%20Alexis%2C%20quiero%20que%20me%20avises%20de%20la%20sesi%C3%B3n%20gratuita%20del%20curso%20de%20GEO." target="_blank" rel="noopener" data-click-location="curso_geo_sesion_gratis" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'curso_geo_sesion_gratis_click',click_location:'sesion_gratis'});">Avísame de la sesión gratis</a>
+        <p class="cg-micro">Te mando fecha y link por WhatsApp. Sin costo y sin compromiso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section" id="temario">
   <div class="container">
     <span class="kicker">Temario · 6 módulos · 4 semanas</span>
     <h2>Cada módulo termina con un entregable aplicado a tu empresa.</h2>
-    <div class="process">
-      <div class="process-item"><div>
-        <h3>1. Qué le preguntan a la IA tus clientes</h3>
-        <p>Cómo cambió la búsqueda y de dónde se alimenta cada modelo. Tus 3 ICPs, entrevistas a clientes y la sesión de "peloteo" grabada que se convierte en prompts por persona, servicio y ciudad.<br><strong>Entregable:</strong> 20–30 prompts priorizados.</p>
-      </div></div>
-      <div class="process-item"><div>
-        <h3>2. Quién está respondiendo y por qué</h3>
-        <p>Auditoría manual en incógnito por mercado y luego con herramientas de visibilidad en IA: share of voice, posición, competidores y fuentes. Qué dice la IA de tu marca hoy.<br><strong>Entregable:</strong> mapa de fuentes y brechas frente a tu competencia.</p>
-      </div></div>
-      <div class="process-item"><div>
-        <h3>3. Estar donde la IA consulta · el corazón del curso</h3>
-        <p>Rankings y listicles: cómo entrar, cuánto cuesta y cómo diversificar. Directorios (Sortlist, Clutch, partners de plataforma, directorios de industria), guest posts, prensa e intercambios, y una rutina mensual de Google Reviews. Con costos reales y transparencia sobre qué funciona y qué es riesgo.<br><strong>Entregable:</strong> plan de reputación con lista, presupuesto y calendario.</p>
-      </div></div>
-      <div class="process-item"><div>
-        <h3>4. Un sitio que la IA entiende</h3>
-        <p>Meta title y description, URLs, schema, autores reales con perfil y LinkedIn, página de equipo, landings por ciudad y servicio, idiomas base contra espejo, y Bing como puerta a Copilot.<br><strong>Entregable:</strong> checklist técnico aplicado y template de artículo.</p>
-      </div></div>
-      <div class="process-item"><div>
-        <h3>5. Motor de contenido sin escribir</h3>
-        <p>Del evento al contenido: un audio y unas fotos se vuelven blog, post de Instagram y post de LinkedIn. Frecuencia mínima, frescura y la edición humana que hace que suene a tu empresa.<br><strong>Entregable:</strong> prompt maestro y calendario del primer mes.</p>
-      </div></div>
-      <div class="process-item"><div>
-        <h3>6. Medir, leer y mantener</h3>
-        <p>Search Console, GA4 con eventos bien configurados, Clarity y tu herramienta de visibilidad en IA. Percepción de marca frente a la competencia y un reporte semanal conectado al chat.<br><strong>Entregable:</strong> dashboard y roadmap de 90 días.</p>
-      </div></div>
+    <div class="cg-mods">
+      <details><summary><span class="n">1</span><h3>Qué le preguntan a la IA tus clientes<span class="ent">Entregable: 20–30 prompts priorizados.</span></h3></summary><p>Cómo cambió la búsqueda y de dónde se alimenta cada modelo. Tus 3 ICPs, entrevistas a clientes y la sesión de "peloteo" grabada que se convierte en prompts por persona, servicio y ciudad.</p></details>
+      <details><summary><span class="n">2</span><h3>Quién está respondiendo y por qué<span class="ent">Entregable: mapa de fuentes y brechas frente a tu competencia.</span></h3></summary><p>Auditoría manual en incógnito por mercado y luego con herramientas de visibilidad en IA: share of voice, posición, competidores y fuentes. Qué dice la IA de tu marca hoy.</p></details>
+      <details open><summary><span class="n">3</span><h3>Estar donde la IA consulta · el corazón del curso<span class="ent">Entregable: plan de reputación con lista, presupuesto y calendario.</span></h3></summary><p>Rankings y listicles: cómo entrar, cuánto cuesta y cómo diversificar. Directorios (Sortlist, Clutch, partners de plataforma, directorios de industria), guest posts, prensa e intercambios, y una rutina mensual de Google Reviews. Con costos reales y transparencia sobre qué funciona y qué es riesgo.</p></details>
+      <details><summary><span class="n">4</span><h3>Un sitio que la IA entiende<span class="ent">Entregable: checklist técnico aplicado y template de artículo.</span></h3></summary><p>Meta title y description, URLs, schema, autores reales con perfil y LinkedIn, página de equipo, landings por ciudad y servicio, idiomas base contra espejo, y Bing como puerta a Copilot.</p></details>
+      <details><summary><span class="n">5</span><h3>Motor de contenido sin escribir<span class="ent">Entregable: prompt maestro y calendario del primer mes.</span></h3></summary><p>Del evento al contenido: un audio y unas fotos se vuelven blog, post de Instagram y post de LinkedIn. Frecuencia mínima, frescura y la edición humana que hace que suene a tu empresa.</p></details>
+      <details><summary><span class="n">6</span><h3>Medir, leer y mantener<span class="ent">Entregable: dashboard y roadmap de 90 días.</span></h3></summary><p>Search Console, GA4 con eventos bien configurados, Clarity y tu herramienta de visibilidad en IA. Percepción de marca frente a la competencia y un reporte semanal conectado al chat.</p></details>
     </div>
     <div class="cg-midcta">
       <a class="btn btn-primary" href="#precio" data-click-location="curso_geo_temario" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'curso_geo_cta_click',click_location:'temario'});">Quiero mi lugar · 7,500 MXN</a>
@@ -433,6 +501,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <p>No enseña teoría de GEO: lo opera para su propia agencia y para marcas en México y LATAM. Más sobre su enfoque en <a href="/geo-aeo-consultant-mexico-latam/">GEO / AEO para México + LATAM</a>.</p>
     </div>
   </div>
+  <div class="container">
+    <div class="cg-gallery">
+      <figure><img src="/assets/photos/merca20-panel-640.webp" alt="Alexis Soubran en un panel de Merca2.0" loading="lazy"><figcaption>Panel en Merca2.0</figcaption></figure>
+      <figure><img src="/assets/photos/mvs-interview-640.webp" alt="Alexis Soubran en entrevista en MVS Noticias" loading="lazy"><figcaption>Entrevista en MVS Noticias</figcaption></figure>
+      <figure><img src="/assets/photos/event-portrait-640.webp" alt="Alexis Soubran en evento en Google" loading="lazy"><figcaption>Evento en Google</figcaption></figure>
+      <figure><img src="/assets/photos/oops-book-cover-1280.webp" alt="Portada de Oops, I Bought It" loading="lazy" style="object-fit:cover;object-position:top"><figcaption>Su libro, Oops, I Bought It</figcaption></figure>
+    </div>
+  </div>
 </section>
 
 <section class="section">
@@ -454,21 +530,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
 </section>
 
-<section class="section" id="sesion-gratis">
-  <div class="container">
-    <div class="cg-free">
-      <div>
-        <span class="kicker">Sesión abierta y gratuita · 45 min</span>
-        <h2>Cómo pasamos de #2 a #1 en las respuestas de ChatGPT.</h2>
-        <p>Antes de apartar tu lugar, ve el método en acción. Una sesión en vivo con el caso Minimalist: qué fuentes moví, cuánto costó y qué haría distinto. Al final te cuento los detalles de la cohorte fundadores.</p>
-      </div>
-      <div>
-        <a class="btn btn-primary" href="https://wa.me/525539013827?text=Hola%20Alexis%2C%20quiero%20que%20me%20avises%20de%20la%20sesi%C3%B3n%20gratuita%20del%20curso%20de%20GEO." target="_blank" rel="noopener" data-click-location="curso_geo_sesion_gratis" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'curso_geo_sesion_gratis_click',click_location:'sesion_gratis'});">Avísame de la sesión gratis</a>
-        <p class="cg-micro">Te mando fecha y link por WhatsApp. Sin costo y sin compromiso.</p>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <section class="cta">
   <div class="container">

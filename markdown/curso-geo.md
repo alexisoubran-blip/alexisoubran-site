@@ -14,6 +14,8 @@ Curso de GEO para empresas de servicios B2B en México y LATAM. 4 semanas en viv
 
 7,500 MXN precio fundadores (regular 9,900) · Apartar no tiene costo: pagas hasta que confirmamos fechas.
 
+Alexis Soubran Imparte Alexis Soubran · CEO de Minimalist Agency
+
 #2 → #1marca en respuestas de IA vs. competencia
 
 2.2×visibilidad en Microsoft Copilot
@@ -22,6 +24,10 @@ Curso de GEO para empresas de servicios B2B en México y LATAM. 4 semanas en viv
 
 30 promptsmedidos a diario
 
+Alexis Soubran, instructor del curso de GEO  Alexis SoubranCEO de Minimalist Agency · Profesor EDEM
+
+Google Premier Partner Meta Business Partner TikTok Marketing Partner Profesor en EDEM Autor de Oops, I Bought It Speaker en Merca2.0 y Kätedra
+
 El problema
 
 ## Tus clientes ya no buscan en Google. Le preguntan a la IA quién es el mejor.
@@ -29,6 +35,16 @@ El problema
 Un director de compras o un CMO ya no revisa diez blogs. Le pregunta a ChatGPT, Gemini o Copilot "¿cuál es la mejor agencia, despacho o consultora de X en México?" y la IA le da tres o cuatro nombres.
 
 Si tu empresa no está en esa respuesta, no existe para ese cliente. Y la IA no te recomienda por lo que dice tu sitio: te recomienda por lo que dicen de ti los rankings, directorios, medios y reseñas que consulta. GEO no es escribir el mejor blog. Es reputación de marca.
+
+Por qué ahora
+
+## La mayoría de las empresas todavía no está haciendo esto. Esa es la ventana.
+
+HoyLas fuentes que cita la IA en tu categoría todavía tienen espacio. Quien entra primero a los rankings, directorios y medios se vuelve la referencia.
+
+MañanaCuando tu competencia despierte, esos lugares van a costar más y la IA ya va a tener nombres favoritos. Mover una percepción cuesta más que construirla.
+
+SiempreLa reputación se acumula: cada mención, reseña y artículo suma a la siguiente respuesta. Empezar antes es la ventaja que no se compra después.
 
 El caso · Minimalist Agency
 
@@ -43,6 +59,14 @@ Datos de Temso: 30 prompts monitoreados a diario en ChatGPT, Microsoft Copilot y
 16% → 35%Visibilidad en Microsoft Copilot
 
 55% → 62%Visibilidad en ChatGPT
+
+Ranking de marcas en respuestas de IA: Minimalist Agency #1 con 23% de share of voice y 38% de visibilidad
+
+Ranking de marca en respuestas de IA, últimos 90 días. Nombres de la competencia difuminados.
+
+Visibilidad por modelo: ChatGPT 62%, Microsoft Copilot 35%, Google AI Overview 16%
+
+Visibilidad por modelo de IA. Capturas reales de Temso.
 
 Pruébalo tú. Cuando alguien pregunta: ¿Qué agencias son TikTok Marketing Partners en México? Minimalist aparece en 93% de las respuestas. En el curso ves exactamente qué hicimos para lograrlo, cuánto costó y qué haría distinto.
 
@@ -86,39 +110,55 @@ Que la IA te recomiende
 
 - Pensado para servicios B2B en México y LATAM
 
+Sesión abierta y gratuita · 45 min
+
+## Cómo pasamos de #2 a #1 en las respuestas de ChatGPT.
+
+Antes de apartar tu lugar, ve el método en acción. Una sesión en vivo con el caso Minimalist: qué fuentes moví, cuánto costó y qué haría distinto. Al final te cuento los detalles de la cohorte fundadores.
+
+[Avísame de la sesión gratis](https://wa.me/525539013827?text=Hola%20Alexis%2C%20quiero%20que%20me%20avises%20de%20la%20sesi%C3%B3n%20gratuita%20del%20curso%20de%20GEO.)
+
+Te mando fecha y link por WhatsApp. Sin costo y sin compromiso.
+
 Temario · 6 módulos · 4 semanas
 
 ## Cada módulo termina con un entregable aplicado a tu empresa.
 
-### 1. Qué le preguntan a la IA tus clientes
+1
+
+### Qué le preguntan a la IA tus clientesEntregable: 20–30 prompts priorizados.
 
 Cómo cambió la búsqueda y de dónde se alimenta cada modelo. Tus 3 ICPs, entrevistas a clientes y la sesión de "peloteo" grabada que se convierte en prompts por persona, servicio y ciudad.
-Entregable: 20–30 prompts priorizados.
 
-### 2. Quién está respondiendo y por qué
+2
+
+### Quién está respondiendo y por quéEntregable: mapa de fuentes y brechas frente a tu competencia.
 
 Auditoría manual en incógnito por mercado y luego con herramientas de visibilidad en IA: share of voice, posición, competidores y fuentes. Qué dice la IA de tu marca hoy.
-Entregable: mapa de fuentes y brechas frente a tu competencia.
 
-### 3. Estar donde la IA consulta · el corazón del curso
+3
+
+### Estar donde la IA consulta · el corazón del cursoEntregable: plan de reputación con lista, presupuesto y calendario.
 
 Rankings y listicles: cómo entrar, cuánto cuesta y cómo diversificar. Directorios (Sortlist, Clutch, partners de plataforma, directorios de industria), guest posts, prensa e intercambios, y una rutina mensual de Google Reviews. Con costos reales y transparencia sobre qué funciona y qué es riesgo.
-Entregable: plan de reputación con lista, presupuesto y calendario.
 
-### 4. Un sitio que la IA entiende
+4
+
+### Un sitio que la IA entiendeEntregable: checklist técnico aplicado y template de artículo.
 
 Meta title y description, URLs, schema, autores reales con perfil y LinkedIn, página de equipo, landings por ciudad y servicio, idiomas base contra espejo, y Bing como puerta a Copilot.
-Entregable: checklist técnico aplicado y template de artículo.
 
-### 5. Motor de contenido sin escribir
+5
+
+### Motor de contenido sin escribirEntregable: prompt maestro y calendario del primer mes.
 
 Del evento al contenido: un audio y unas fotos se vuelven blog, post de Instagram y post de LinkedIn. Frecuencia mínima, frescura y la edición humana que hace que suene a tu empresa.
-Entregable: prompt maestro y calendario del primer mes.
 
-### 6. Medir, leer y mantener
+6
+
+### Medir, leer y mantenerEntregable: dashboard y roadmap de 90 días.
 
 Search Console, GA4 con eventos bien configurados, Clarity y tu herramienta de visibilidad en IA. Percepción de marca frente a la competencia y un reporte semanal conectado al chat.
-Entregable: dashboard y roadmap de 90 días.
 
 [Quiero mi lugar · 7,500 MXN](https://alexisoubran.com/curso-geo/#precio)
 
@@ -202,6 +242,8 @@ CEO y Partner de [Minimalist Agency](https://minimalist.mx/) (Google Premier Par
 
 No enseña teoría de GEO: lo opera para su propia agencia y para marcas en México y LATAM. Más sobre su enfoque en [GEO / AEO para México + LATAM](https://alexisoubran.com/geo-aeo-consultant-mexico-latam/).
 
+Alexis Soubran en un panel de Merca2.0 Panel en Merca2.0  Alexis Soubran en entrevista en MVS Noticias Entrevista en MVS Noticias  Alexis Soubran en evento en Google Evento en Google  Portada de Oops, I Bought It Su libro, Oops, I Bought It
+
 Preguntas frecuentes
 
 ## Antes de apartar tu lugar.
@@ -237,16 +279,6 @@ Sí. Al completar los entregables recibes una constancia de participación emiti
 ¿Cómo pago?
 
 Apartar es gratis. Cuando confirmamos fechas, te comparto los datos de pago por WhatsApp.
-
-Sesión abierta y gratuita · 45 min
-
-## Cómo pasamos de #2 a #1 en las respuestas de ChatGPT.
-
-Antes de apartar tu lugar, ve el método en acción. Una sesión en vivo con el caso Minimalist: qué fuentes moví, cuánto costó y qué haría distinto. Al final te cuento los detalles de la cohorte fundadores.
-
-[Avísame de la sesión gratis](https://wa.me/525539013827?text=Hola%20Alexis%2C%20quiero%20que%20me%20avises%20de%20la%20sesi%C3%B3n%20gratuita%20del%20curso%20de%20GEO.)
-
-Te mando fecha y link por WhatsApp. Sin costo y sin compromiso.
 
 ## Que la IA te recomiende a ti, no a tu competencia.
 
