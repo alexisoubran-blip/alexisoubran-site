@@ -230,3 +230,26 @@ body.notes .note{display:block}
 body.present{font-size:clamp(18px,1.3vw,24px)}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.chart .draw,.chart .grow,.chart .growy,.chart .pop{transition:none}}
 @media print{.bar,.progress,.timer{display:none}.slide{min-height:auto;page-break-after:always}}
+
+/* ---------- Sesión 3 v2: código, flujos y Demo Day ---------- */
+.codebox{width:100%;margin-top:24px;background:#0b0b0c;border:1px solid #2f2f31;border-top:4px solid var(--red);border-radius:2px;position:relative}
+.codebox .cb-head{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;border-bottom:1px solid #2a2a2c;font:600 12px/1 var(--text);letter-spacing:.12em;text-transform:uppercase;color:#9a9a9a}
+.codebox .cb-head .btn{color:#fff;padding:8px 12px}
+.codebox pre{margin:0;padding:18px 20px;overflow-x:auto;font:400 clamp(13px,1vw,15px)/1.55 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:#e9e9e9;white-space:pre}
+.codebox .c{color:#7d7d7d}.codebox .s{color:#ff8a96}.codebox .k{color:#fff;font-weight:600}
+.flow{display:grid;grid-template-columns:repeat(var(--n,4),minmax(0,1fr));gap:0;width:100%;margin-top:36px}
+.flow > div{position:relative;padding:22px 20px;background:var(--card);border:1px solid var(--line);margin-right:28px}
+.flow > div:not(:last-child)::after{content:"→";position:absolute;right:-26px;top:50%;transform:translateY(-50%);font:600 22px/1 var(--text);color:var(--red)}
+.flow > div:last-child{margin-right:0;background:var(--red);border-color:var(--red);--fg:#fff;--fg-2:rgba(255,255,255,.86);--accent:#fff}
+.flow .k{display:block;font:600 13px/1 var(--text);letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.flow h3{margin-bottom:6px}.flow p{color:var(--fg-2);font-size:.92em}
+@media (max-width:900px){.flow{grid-template-columns:1fr}.flow > div{margin:0 0 26px}.flow > div:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-26px;transform:translateX(-50%)}}
+.scorer{display:grid;gap:12px;margin-top:8px}
+.scorer .crit{display:grid;grid-template-columns:minmax(0,1fr) 220px 44px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid #2f2f31}
+.scorer .crit b{display:block;font:600 17px/1.2 var(--cond);text-transform:uppercase;color:#fff}
+.scorer .crit span{font-size:14px;color:#a9a9a9}
+.scorer input[type=range]{width:100%;accent-color:#c8001a}
+.scorer output{font:400 30px/1 var(--head);color:#fff;text-align:right}
+.scorer .total{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-top:8px;flex-wrap:wrap}
+.scorer .total strong{font:400 clamp(56px,6vw,88px)/1 var(--head);color:var(--red)}
+@media (max-width:700px){.scorer .crit{grid-template-columns:1fr 60px}.scorer .crit input{grid-column:1/-1}}

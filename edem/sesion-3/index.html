@@ -71,30 +71,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </section>
 
 <section class="slide dark" id="agenda">
-  <p class="eyebrow">Agenda de hoy</p>
-  <h2>Hoy se escala y se mide</h2>
+  <p class="eyebrow">Agenda de hoy · última sesión</p>
+  <h2>Hoy su sitio <em>trabaja solo</em></h2>
   <table class="agenda">
-    <tr><td>18:00 – 18:15</td><td>Repaso y resultados de los videos publicados</td></tr>
-    <tr><td>18:15 – 18:55</td><td><b>Bloque 1 ·</b> Estrategias de distribución y promoción</td></tr>
-    <tr><td>18:55 – 19:35</td><td><b>Bloque 2 ·</b> Automatización del marketing de contenidos</td></tr>
+    <tr><td>18:00 – 18:15</td><td>Repaso y sus sitios en pantalla</td></tr>
+    <tr><td>18:15 – 18:45</td><td><b>Bloque 1 ·</b> Distribución y promoción: su sitio como hogar <span class="tag live">UTMs</span></td></tr>
+    <tr><td>18:45 – 19:35</td><td><b>Bloque 2 ·</b> Automatización sobre su sitio: deploy, formularios, personalización, GTM y GEO <span class="tag live">manos al código</span></td></tr>
     <tr class="brk"><td>19:35 – 19:45</td><td>Break</td></tr>
-    <tr><td>19:45 – 20:25</td><td><b>Bloque 3 ·</b> Medición del ROI <span class="tag live">calculadora</span></td></tr>
-    <tr><td>20:25 – 20:50</td><td><b>Taller final ·</b> Tu plan completo, de la idea al ROI <span class="tag live">taller</span></td></tr>
+    <tr><td>19:45 – 20:15</td><td><b>Bloque 3 ·</b> Medición del ROI <span class="tag live">calculadora</span></td></tr>
+    <tr><td>20:15 – 20:50</td><td><b>Demo Day ·</b> Cada quien presenta su sitio y su plan <span class="tag live">show</span></td></tr>
     <tr><td>20:50 – 21:00</td><td>Cierre del módulo</td></tr>
   </table>
 </section>
 
 <section class="slide light" id="resultados">
-  <p class="eyebrow">Repaso · Resultados reales</p>
-  <h2>¿Quién publicó? ¿Qué pasó?</h2>
+  <p class="eyebrow">Repaso · Lo que ya construyeron</p>
+  <h2>Ya tienen un sitio <em>en producción.</em></h2>
   <div class="grid g4">
-    <div class="card"><span class="k">Retención</span><p>¿Cuánta gente pasó de los primeros 3 segundos?</p></div>
-    <div class="card"><span class="k">Guardados</span><p>¿Alguien lo quiso conservar?</p></div>
-    <div class="card"><span class="k">Compartidos</span><p>¿Alguien se lo mandó a otra persona?</p></div>
-    <div class="card"><span class="k">Comentarios</span><p>¿Hay preguntas? Son tu próximo video.</p></div>
+    <div class="card num-card"><span class="k">01</span><h3>Posicionamiento</h3><p>Su frase, sus pilares y su historia en siete líneas.</p></div>
+    <div class="card num-card"><span class="k">02</span><h3>Sitio en Vercel</h3><p>Código en GitHub, publicado con su propia URL.</p></div>
+    <div class="card num-card"><span class="k">03</span><h3>Medición</h3><p>Tag Manager, eventos y la base para saber qué funciona.</p></div>
+    <div class="card num-card"><span class="k">04</span><h3>GEO y personalización</h3><p>Contenido que la IA puede leer y que cambia según quién llega.</p></div>
   </div>
-  <p class="lead">La pregunta no es "¿le fue bien?". Es <b>"¿qué aprendimos y qué hacemos con la siguiente pieza?"</b></p>
-  <p class="note">Proyecta 2–3 capturas de métricas de alumnos. Lee la retención en voz alta y relaciónala con el gancho que usaron. Es el puente perfecto a "esto es lo que se pauta y esto es lo que no".</p>
+  <p class="lead">Hoy le ponemos las tres capas que faltan: <b>que llegue gente</b>, <b>que trabaje solo</b> y <b>que se pueda defender con números</b>.</p>
+  <div class="exercise"><div class="head"><h3>Ronda rápida: 3 sitios en pantalla. ¿Qué entiendo en 5 segundos? ¿Qué haría después?</h3><button class="btn primary" data-timer="10">Iniciar 10 min</button></div></div>
+  <p class="note">Pide los links de todos en el chat del grupo desde ya: los vas a necesitar para el Demo Day.</p>
 </section>
 
 <!-- ============ DISTRIBUCIÓN ============ -->
@@ -166,6 +167,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="card"><span class="k">Earned · ganado</span><ul><li><b>Prensa:</b> datos propios y opiniones con nombre</li><li><b>Podcasts como invitado:</b> audiencia prestada con confianza</li><li><b>Reseñas:</b> pídelas en el momento de mayor satisfacción</li><li><b>Por qué importa:</b> lo que otros dicen de ti es lo que la IA más toma en cuenta</li></ul></div>
   </div>
 </section>
+<section class="slide gray" id="utms">
+  <p class="eyebrow">Bloque 1 · El puente entre distribución y medición</p>
+  <h2>Cada link que compartan, <em>con UTM</em></h2>
+  <p class="lead">Sin UTMs, todo lo que distribuyan llega a GA4 como "directo" o "referido" y no van a saber qué canal funcionó. Convención: todo en minúsculas y con guiones.</p>
+  <div class="exercise">
+    <div class="head"><h3>Arma los links de tu sitio para cada canal donde lo vas a mover.</h3><button class="btn primary" data-timer="5">Iniciar 5 min</button></div>
+    <div class="builder" id="utm" data-template="{url}?utm_source={src}&amp;utm_medium={med}&amp;utm_campaign={camp}&amp;utm_content={cont}">
+      <div class="grid g2" style="margin-top:0">
+        <label>URL de tu sitio <input name="url" data-ph="https://tusitio.vercel.app" placeholder="https://tusitio.vercel.app"></label>
+        <label>utm_source · ¿de dónde? <input name="src" data-ph="source" placeholder="instagram, linkedin, newsletter, whatsapp"></label>
+        <label>utm_medium · ¿qué tipo? <input name="med" data-ph="medium" placeholder="social, email, paid-social, referral"></label>
+        <label>utm_campaign · ¿qué campaña? <input name="camp" data-ph="campaign" placeholder="lanzamiento-sitio-nov26"></label>
+        <label>utm_content · ¿qué pieza? <input name="cont" data-ph="content" placeholder="video-gancho-error"></label>
+      </div>
+      <div class="output" aria-live="polite"></div>
+      <div class="row"><button class="btn" type="button" data-copy>Copiar link</button><span class="small">El utm_campaign es el que vamos a usar para personalizar en el bloque 2.</span></div>
+    </div>
+  </div>
+</section>
 
 <section class="slide gray" id="calendario-dist">
   <p class="eyebrow">Bloque 1 · La vida de una pieza pilar</p>
@@ -188,8 +208,126 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- ============ AUTOMATIZACIÓN ============ -->
 <section class="slide red" id="b2">
-  <p class="eyebrow">Bloque 2 · Automatización <span class="time">18:55</span></p>
+  <p class="eyebrow">Bloque 2 · Automatización <span class="time">18:45</span></p>
   <p class="statement">Automatiza lo <em>repetible</em>. Nunca el criterio.</p>
+</section>
+<section class="slide light" id="deploy">
+  <p class="eyebrow">Bloque 2 · Ya automatizaron algo sin darse cuenta</p>
+  <h2>Cada <em>git push</em> es una publicación</h2>
+  <div class="flow" style="--n:4">
+    <div><span class="k">01 · Editas</span><h3>Cambias un archivo</h3><p>En tu compu, en GitHub o pidiéndoselo a una IA.</p></div>
+    <div><span class="k">02 · Commit</span><h3>GitHub guarda la versión</h3><p>Historial completo: si algo se rompe, regresas.</p></div>
+    <div><span class="k">03 · Build</span><h3>Vercel lo detecta</h3><p>Construye el sitio solo. Cada rama tiene su vista previa.</p></div>
+    <div><span class="k">04 · En vivo</span><h3>Producción en segundos</h3><p>Sin FTP, sin servidores, sin pedirle a nadie.</p></div>
+  </div>
+  <p class="lead">Eso es automatización: <b>quitar pasos manuales entre la idea y el resultado.</b> Hoy le agregamos cuatro más a su sitio.</p>
+  <p class="note">Demuéstralo en vivo: cambia una palabra de esta misma página en GitHub y recarga en un minuto. Este sitio se publica igual que el de ellos.</p>
+</section>
+
+<section class="slide gray" id="form-auto">
+  <p class="eyebrow">Bloque 2 · Automatización 1</p>
+  <h2>Del formulario al <em>seguimiento</em>, sin servidor</h2>
+  <div class="flow" style="--n:4">
+    <div><span class="k">Captura</span><h3>Formulario</h3><p>Tally, Formspree o Google Forms embebido en tu sitio.</p></div>
+    <div><span class="k">Conecta</span><h3>Make o Zapier</h3><p>"Cuando llegue una respuesta…"</p></div>
+    <div><span class="k">Guarda</span><h3>Sheet o CRM</h3><p>Una fila por lead, con su UTM de origen.</p></div>
+    <div><span class="k">Responde</span><h3>Correo de bienvenida</h3><p>Al instante, con el recurso prometido y el siguiente paso.</p></div>
+  </div>
+  <div class="grid g3">
+    <div class="card"><span class="k">Tip 1</span><p>Agrega campos ocultos con utm_source y utm_campaign: así sabes qué canal trajo cada lead.</p></div>
+    <div class="card"><span class="k">Tip 2</span><p>El primer correo sale solo; el segundo lo escribe una persona. Automatiza el saludo, no la relación.</p></div>
+    <div class="card"><span class="k">Tip 3</span><p>Pide solo lo que vas a usar. Cada campo de más baja las respuestas.</p></div>
+  </div>
+</section>
+
+<section class="slide dark" id="personalizacion">
+  <p class="eyebrow">Bloque 2 · Automatización 2 · Personalización</p>
+  <h2>Un titular distinto <em>para cada campaña</em></h2>
+  <p class="lead">Pega esto antes de cerrar el <b>&lt;/body&gt;</b> de tu sitio. Si alguien llega con el utm_campaign que definiste, ve el titular escrito para él, y GTM se entera.</p>
+<div class="codebox"><div class="cb-head"><span>index.html · personalización por UTM</span><button class="btn" type="button" data-copy-code>Copiar</button></div><pre><span class="k">&lt;script&gt;</span>
+<span class="c">// Personalización por UTM: cambia el H1 según la campaña de origen</span>
+(function () {
+  var params = new URLSearchParams(location.search);
+  var campana = (params.get(<span class="s">'utm_campaign'</span>) || <span class="s">''</span>).toLowerCase();
+  var titulares = {
+    <span class="s">'lanzamiento-sitio-nov26'</span>: <span class="s">'Bienvenido: esto es lo que hago y cómo te ayudo'</span>,
+    <span class="s">'linkedin-empresas'</span>:     <span class="s">'Marketing medible para tu empresa'</span>
+  };
+  var h1 = document.querySelector(<span class="s">'h1'</span>);
+  <span class="k">if</span> (h1 &amp;&amp; titulares[campana]) h1.textContent = titulares[campana];
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: <span class="s">'personalizacion'</span>, campana: campana || <span class="s">'sin_campana'</span> });
+})();
+<span class="k">&lt;/script&gt;</span></pre></div>
+  <p class="small" style="margin-top:14px">Pruébalo: abre tu sitio con ?utm_campaign=lanzamiento-sitio-nov26 al final de la URL.</p>
+</section>
+
+<section class="slide dark" id="gtm-lead">
+  <p class="eyebrow">Bloque 2 · Automatización 3 · Medición</p>
+  <h2>Cada formulario enviado, <em>un evento clave</em></h2>
+  <div class="split" style="margin-top:8px">
+    <div>
+<div class="codebox"><div class="cb-head"><span>index.html · evento para GTM</span><button class="btn" type="button" data-copy-code>Copiar</button></div><pre><span class="k">&lt;script&gt;</span>
+document.querySelectorAll(<span class="s">'form'</span>).forEach(function (f) {
+  f.addEventListener(<span class="s">'submit'</span>, function () {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: <span class="s">'generate_lead'</span>,
+      form_id: f.id || <span class="s">'contacto'</span>
+    });
+  });
+});
+<span class="k">&lt;/script&gt;</span></pre></div>
+    </div>
+    <ol class="steps" style="margin-top:24px">
+      <li><div><b>Activador en GTM</b><span>Evento personalizado: generate_lead.</span></div></li>
+      <li><div><b>Etiqueta GA4</b><span>Evento de GA4 con nombre generate_lead y el parámetro form_id.</span></div></li>
+      <li><div><b>Vista previa</b><span>Prueba con Tag Assistant antes de publicar el contenedor.</span></div></li>
+      <li><div><b>Evento clave</b><span>En GA4, márcalo como evento clave. Ese es el número que entra a la calculadora de ROI.</span></div></li>
+    </ol>
+  </div>
+  <p class="note">Si un formulario de terceros (Tally, Google Forms) vive en un iframe, el submit no se ve desde la página: usa la página de gracias como conversión o el webhook del formulario.</p>
+</section>
+
+<section class="slide gray" id="geo-kit">
+  <p class="eyebrow">Bloque 2 · Automatización 4 · GEO</p>
+  <h2>El kit para que la IA <em>entienda tu sitio</em></h2>
+  <div class="exercise">
+    <div class="head"><h3>Llena tus datos y copia el resultado. El bloque JSON-LD va en el &lt;head&gt;; el texto de abajo es tu archivo llms.txt en la raíz del repo.</h3><button class="btn primary" data-timer="10">Iniciar 10 min</button></div>
+    <div class="builder" id="geo" data-template="&lt;script type=&quot;application/ld+json&quot;&gt;
+{
+  &quot;@context&quot;: &quot;https://schema.org&quot;,
+  &quot;@type&quot;: &quot;Person&quot;,
+  &quot;name&quot;: &quot;{nombre}&quot;,
+  &quot;jobTitle&quot;: &quot;{rol}&quot;,
+  &quot;url&quot;: &quot;{url}&quot;,
+  &quot;address&quot;: { &quot;@type&quot;: &quot;PostalAddress&quot;, &quot;addressLocality&quot;: &quot;{ciudad}&quot; },
+  &quot;knowsAbout&quot;: [{temas}],
+  &quot;sameAs&quot;: [&quot;{linkedin}&quot;]
+}
+&lt;/script&gt;
+
+# {nombre}
+&gt; {posicionamiento}
+
+## Temas
+{temas}
+
+## Páginas
+- Inicio: {url}">
+      <div class="grid g2" style="margin-top:0">
+        <label>Nombre <input name="nombre" data-ph="nombre" placeholder="Tu nombre o tu marca"></label>
+        <label>Rol <input name="rol" data-ph="rol" placeholder="Consultora de marketing digital"></label>
+        <label>URL <input name="url" data-ph="url" placeholder="https://tusitio.vercel.app"></label>
+        <label>Ciudad <input name="ciudad" data-ph="ciudad" placeholder="Ciudad de México"></label>
+        <label>Temas (entre comillas y separados por coma) <input name="temas" data-ph="temas" placeholder="&quot;contenido&quot;, &quot;branding personal&quot;, &quot;GEO&quot;"></label>
+        <label>LinkedIn <input name="linkedin" data-ph="linkedin" placeholder="https://www.linkedin.com/in/..."></label>
+        <label>Posicionamiento (tu frase de la sesión 1) <textarea name="posicionamiento" data-ph="posicionamiento" placeholder="Ayudo a … a … a través de …"></textarea></label>
+      </div>
+      <div class="output" aria-live="polite" style="font:400 14px/1.5 ui-monospace,Menlo,Consolas,monospace"></div>
+      <div class="row"><button class="btn" type="button" data-copy>Copiar</button><span class="small">Después: pregúntale a ChatGPT o Perplexity por tu nombre en unas semanas y compara.</span></div>
+    </div>
+  </div>
 </section>
 
 <section class="slide light" id="mapa-auto">
@@ -359,11 +497,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- ============ TALLER FINAL ============ -->
 <section class="slide gray" id="taller">
-  <p class="eyebrow">Taller final <span class="time">20:25 · 25 min</span></p>
-  <h2>Tu plan completo, de la idea al ROI</h2>
+  <p class="eyebrow">Preparación del Demo Day <span class="time">20:15 · 8 min</span></p>
+  <h2>Su plan completo, <em>en una hoja</em></h2>
   <div class="exercise">
-    <div class="head"><h3>Toma el plan de la sesión 1 y agrégale las tres capas de hoy.</h3><button class="btn primary" data-timer="25">Iniciar 25 min</button></div>
-    <div class="builder" id="plan-final" data-template="MARCA: {marca}
+    <div class="head"><h3>Llénenlo con su sitio. Es el guion de sus 3 minutos en el Demo Day.</h3><button class="btn primary" data-timer="8">Iniciar 8 min</button></div>
+    <div class="builder" id="plan-final" data-template="SITIO: {sitio}
+POSICIONAMIENTO: {pos}
 KPI DE NEGOCIO: {kpi}
 PIEZA PILAR: {pilar}
 
@@ -374,40 +513,78 @@ DISTRIBUCIÓN (PESO)
 · Propio: {owned}
 
 AUTOMATIZACIONES: {auto}
-
-MEDICIÓN
-· Cómo atribuimos: {atrib}
-· Inversión total estimada: {inv}
-· Meta de valor generado: {meta}
-· Decisión que tomaremos con los datos: {decision}">
+EVENTO CLAVE EN GA4: {evento}
+INVERSIÓN TOTAL ESTIMADA: {inv}
+META DE VALOR GENERADO: {meta}
+DECISIÓN QUE TOMARÉ CON LOS DATOS: {decision}">
       <div class="grid g2" style="margin-top:0">
-        <label>Marca <input name="marca" data-ph="marca" placeholder="la de la sesión 1"></label>
-        <label>KPI de negocio <input name="kpi" data-ph="KPI" placeholder="ventas en línea, leads calificados…"></label>
-        <label>Pieza pilar <input name="pilar" data-ph="pieza pilar" placeholder="la del mes"></label>
+        <label>URL de tu sitio <input name="sitio" data-ph="sitio" placeholder="https://tusitio.vercel.app"></label>
+        <label>Posicionamiento <input name="pos" data-ph="posicionamiento" placeholder="Ayudo a … a … a través de …"></label>
+        <label>KPI de negocio <input name="kpi" data-ph="KPI" placeholder="leads calificados al mes"></label>
+        <label>Pieza pilar <input name="pilar" data-ph="pieza pilar" placeholder="la de la sesión 2"></label>
         <label>Pagado <input name="paid" data-ph="pagado" placeholder="Spark Ads a los 3 mejores clips…"></label>
-        <label>Ganado <input name="earned" data-ph="ganado" placeholder="prensa, podcasts, reseñas…"></label>
-        <label>Compartido <input name="shared" data-ph="compartido" placeholder="redes, collabs, creadores…"></label>
-        <label>Propio <input name="owned" data-ph="propio" placeholder="newsletter, WhatsApp, sitio…"></label>
-        <label>Automatizaciones (máx. 3) <input name="auto" data-ph="automatizaciones" placeholder="comentario → DM, reporte semanal…"></label>
-        <label>Cómo atribuimos <input name="atrib" data-ph="atribución" placeholder="UTMs, códigos por creador, encuesta…"></label>
-        <label>Inversión total estimada <input name="inv" data-ph="inversión" placeholder="$ producción + horas + herramientas + pauta + creadores"></label>
+        <label>Ganado <input name="earned" data-ph="ganado" placeholder="podcasts, prensa, reseñas…"></label>
+        <label>Compartido <input name="shared" data-ph="compartido" placeholder="LinkedIn, Instagram, collabs…"></label>
+        <label>Propio <input name="owned" data-ph="propio" placeholder="sitio, newsletter, WhatsApp…"></label>
+        <label>Automatizaciones <input name="auto" data-ph="automatizaciones" placeholder="formulario → sheet → correo; personalización por UTM"></label>
+        <label>Evento clave en GA4 <input name="evento" data-ph="evento clave" placeholder="generate_lead"></label>
+        <label>Inversión total estimada <input name="inv" data-ph="inversión" placeholder="$ producción + horas + herramientas + pauta"></label>
         <label>Meta de valor generado <input name="meta" data-ph="meta" placeholder="$ margen, leads × valor, ahorros"></label>
-        <label>Decisión que tomaremos con los datos <input name="decision" data-ph="decisión" placeholder="si X, entonces escalamos Y"></label>
+        <label>Decisión que tomaré con los datos <input name="decision" data-ph="decisión" placeholder="si X, entonces escalo Y"></label>
       </div>
       <div class="output" aria-live="polite"></div>
-      <div class="row"><button class="btn" type="button" data-copy>Copiar plan</button><span class="small">Este es tu entregable del módulo.</span></div>
+      <div class="row"><button class="btn" type="button" data-copy>Copiar plan</button><span class="small">Este es su entregable final del módulo.</span></div>
     </div>
   </div>
+</section>
+
+<section class="slide red" id="demo-day">
+  <p class="eyebrow">Demo Day <span class="time">20:25 · 3 min por persona</span></p>
+  <p class="statement">Su sitio, su plan, <em>tres minutos.</em></p>
+  <div class="grid g4">
+    <div class="card"><span class="k">0:00 – 0:30</span><p>Quién eres y para quién (tu posicionamiento).</p></div>
+    <div class="card"><span class="k">0:30 – 1:30</span><p>Tu sitio en vivo: qué ve la gente y qué hace después.</p></div>
+    <div class="card"><span class="k">1:30 – 2:30</span><p>Cómo llega gente, qué se automatiza y qué mides.</p></div>
+    <div class="card hl"><span class="k">2:30 – 3:00</span><p>Tu número: inversión, meta y la decisión que vas a tomar.</p></div>
+  </div>
+  <div class="row" style="margin-top:28px"><button class="btn primary" data-timer="3">Cronómetro 3 min</button></div>
+</section>
+
+<section class="slide dark" id="rubrica">
+  <p class="eyebrow">Demo Day · Rúbrica en vivo</p>
+  <h2>Califiquemos <em>juntos</em></h2>
+  <div class="exercise">
+    <div class="scorer" id="scorer">
+      <div class="crit"><div><b>Claridad en 5 segundos</b><span>¿Entiendo quién es, para quién y qué hago después?</span></div><input type="range" min="0" max="5" value="3" aria-label="Claridad"><output>3</output></div>
+      <div class="crit"><div><b>Historia y contenido</b><span>¿Hay gancho, tensión y una pieza pilar con derivados?</span></div><input type="range" min="0" max="5" value="3" aria-label="Historia"><output>3</output></div>
+      <div class="crit"><div><b>Listo para la IA (GEO)</b><span>Schema, llms.txt, preguntas reales respondidas.</span></div><input type="range" min="0" max="5" value="3" aria-label="GEO"><output>3</output></div>
+      <div class="crit"><div><b>Medición y automatización</b><span>GTM, evento clave, UTMs, al menos un flujo automático.</span></div><input type="range" min="0" max="5" value="3" aria-label="Medición"><output>3</output></div>
+      <div class="crit"><div><b>Distribución y ROI</b><span>Plan PESO creíble y un número que se puede defender.</span></div><input type="range" min="0" max="5" value="3" aria-label="ROI"><output>3</output></div>
+      <div class="total"><span class="small" style="color:#b9b9b9">Total sobre 25 · regresa a 3 antes del siguiente</span><strong id="score-total">15</strong><button class="btn" type="button" id="score-reset" style="color:#fff">Reiniciar</button></div>
+    </div>
+  </div>
+  <p class="note">Pide al grupo que diga el número de cada criterio en voz alta antes de moverlo. Feedback en una frase: lo mejor y lo siguiente que harías.</p>
 </section>
 
 <!-- ============ CIERRE ============ -->
 <section class="slide dark" id="cierre">
   <p class="eyebrow">Cierre del módulo</p>
-  <h2>De la idea al ROI, en tres sesiones</h2>
+  <h2>De la idea al ROI, <em>en tres sesiones</em></h2>
+  <div class="chart" data-chart="modulo"></div>
   <div class="grid g3">
-    <div class="card"><span class="k">Pensar</span><p>Contenido útil, consistente y rentable. Marca personal con posicionamiento, punto de vista, pruebas y presencia. Una estrategia que decide qué no publicar.</p></div>
-    <div class="card"><span class="k">Crear</span><p>El cliente es el héroe. Gancho, una idea, prueba y siguiente paso. Producción ligera, en lotes, con IA y con procedencia.</p></div>
-    <div class="card hl"><span class="k">Escalar y medir</span><p>Distribuye en los cuatro medios, automatiza lo repetible y defiende el ROI con un número, un aprendizaje y una decisión.</p></div>
+    <div class="card"><span class="k">Pensar</span><p>Contenido útil, consistente y rentable. Marca personal con posicionamiento, punto de vista, pruebas y presencia.</p></div>
+    <div class="card"><span class="k">Crear</span><p>El cliente es el héroe. Gancho, una idea, prueba y siguiente paso. Producción ligera, con IA y con procedencia.</p></div>
+    <div class="card hl"><span class="k">Escalar y medir</span><p>Un sitio propio que se publica solo, se distribuye con UTMs, se mide con GTM y se defiende con un número.</p></div>
+  </div>
+</section>
+
+<section class="slide red" id="graduacion">
+  <p class="eyebrow">Lo que sigue</p>
+  <p class="statement">No se llevan apuntes. Se llevan <em>un sitio en producción.</em></p>
+  <div class="grid g3">
+    <div class="card"><span class="k">Esta semana</span><p>Publica tu sitio con su URL en tu bio de LinkedIn e Instagram, con UTM.</p></div>
+    <div class="card"><span class="k">Este mes</span><p>Una pieza pilar y cinco derivados, cada uno con su hipótesis.</p></div>
+    <div class="card hl"><span class="k">En 90 días</span><p>Abre la calculadora con tus datos reales y toma tu primera decisión.</p></div>
   </div>
 </section>
 
@@ -424,6 +601,10 @@ MEDICIÓN
 <div class="timer" role="timer" aria-live="off"><strong>00:00</strong><button class="btn" type="button">Cerrar</button></div>
 <script src="/edem/edem.js" defer></script>
 <script src="/edem/edem-charts.js" defer></script>
+<script>
+document.querySelectorAll('[data-copy-code]').forEach(function(b){b.addEventListener('click',function(){var t=b.closest('.codebox').querySelector('pre').innerText;(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){b.textContent='Copiado ✓';setTimeout(function(){b.textContent='Copiar';},1600);}).catch(function(){});});});
+(function(){var sc=document.getElementById('scorer');if(!sc)return;var r=sc.querySelectorAll('input[type=range]');function u(){var t=0;r.forEach(function(i){i.nextElementSibling.textContent=i.value;t+=+i.value;});document.getElementById('score-total').textContent=t;}r.forEach(function(i){i.addEventListener('input',u);});document.getElementById('score-reset').addEventListener('click',function(){r.forEach(function(i){i.value=3;});u();});u();})();
+</script>
 <script>
 (function(){
   var box=document.getElementById('roi'); if(!box) return;

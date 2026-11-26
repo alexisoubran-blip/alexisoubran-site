@@ -61,7 +61,7 @@
     function render(){
       var data={};
       fields.forEach(function(f){ data[f.name]=f.value.trim(); });
-      out.innerHTML=tpl.replace(/\{(\w+)\}/g,function(_,k){ return data[k]?esc(data[k]):'<span class="ph">['+(box.querySelector('[name='+k+']').getAttribute('data-ph')||k)+']</span>'; });
+      out.innerHTML=tpl.split(/(\{\w+\})/).map(function(part){ var m=/^\{(\w+)\}$/.exec(part); if(!m) return esc(part); var k=m[1]; return data[k]?esc(data[k]):'<span class="ph">['+(box.querySelector('[name='+k+']').getAttribute('data-ph')||k)+']</span>'; }).join('');
       try{ localStorage.setItem(key,JSON.stringify(data)); }catch(e){}
     }
     fields.forEach(function(f){ f.addEventListener('input',render); });
