@@ -26,7 +26,11 @@ Alexis Soubran Imparte Alexis Soubran · CEO de Minimalist Agency
 
 Alexis Soubran, instructor del curso de GEO  Alexis SoubranCEO de Minimalist Agency · Profesor EDEM
 
-Google Premier Partner Meta Business Partner TikTok Marketing Partner Profesor en EDEM Autor de Oops, I Bought It Speaker en Merca2.0 y Kätedra
+Google Premier Partner Meta Business Partner TikTok Marketing Partner  EDEM Escuela de Mercadotecnia  Profesor  Minimalist Agency  CEO
+
+Marcas con las que ha trabajado Alexis Soubran
+
+[+70 marcas más](https://alexisoubran.com/about/#agency)
 
 El problema
 
